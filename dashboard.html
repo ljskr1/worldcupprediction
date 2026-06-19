@@ -135,8 +135,13 @@
             border-radius: var(--radius-md);
             padding: 5px;
             width: fit-content;
+            max-width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
             box-shadow: var(--shadow-sm);
         }
+        .nav-pills::-webkit-scrollbar { display: none; }
         .nav-pill {
             padding: 10px 22px;
             border-radius: 8px;
@@ -147,6 +152,11 @@
             border: none;
             background: transparent;
             font-family: var(--font-body);
+            white-space: nowrap;
+            flex-shrink: 0;
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
         }
         .nav-pill:hover { color: var(--text-primary); background: rgba(255,255,255,0.05); }
         .nav-pill.active {
@@ -697,23 +707,342 @@
             background: #ffffff;
         }
 
+        /* ─── TABLE SCROLL (CSS-only, no HTML changes) ─── */
+        .lb-table,
+        .mc-top-table,
+        .tau-table {
+            min-width: 580px;
+        }
+
+        /* Override inline overflow:hidden on leaderboard wrapper div */
+        #overview .lb-table { display: table; }
+        @media (max-width: 768px) {
+            #overview > .section-title + div {
+                overflow-x: auto !important;
+                -webkit-overflow-scrolling: touch;
+            }
+            #overview .lb-table { min-width: 580px; }
+        }
+        @media (max-width: 375px) {
+            #overview .lb-table { min-width: 520px; }
+        }
+
+        /* Methodology tables scroll on small screens */
+        @media (max-width: 768px) {
+            .method-card table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        }
+
         @media (max-width: 1024px) {
             .group-grid { grid-template-columns: repeat(2, 1fr); }
             .bracket-match-grid.cols-4 { grid-template-columns: repeat(2, 1fr); }
             .bracket-group-grid { grid-template-columns: repeat(3, 1fr); }
         }
+
         @media (max-width: 768px) {
-            .dashboard { padding: 20px 16px; }
-            .kpi-row { grid-template-columns: repeat(2, 1fr); }
-            .group-grid { grid-template-columns: 1fr; }
-            .podium-row { grid-template-columns: 1fr; }
-            .adv-grid { grid-template-columns: 1fr; }
+            .dashboard { padding: 20px 16px 36px; }
+
+            /* Header */
+            .dash-header { flex-direction: column; align-items: flex-start; gap: 8px; margin-bottom: 28px; padding-bottom: 18px; }
+            .dash-header h1 { font-size: 1.5rem; }
+
+            /* KPIs → 2-col */
+            .kpi-row { grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 24px; }
+            .kpi-card { padding: 14px 16px; }
+            .kpi-value { font-size: 1.65rem; }
+            .kpi-sub { font-size: 0.72rem; }
+
+            /* Nav pills scroll */
+            .nav-pills { width: 100%; margin-bottom: 24px; }
+
+            /* Champion hero */
+            .champion-hero { padding: 32px 20px; margin-bottom: 24px; }
+            .champion-hero .flag { font-size: 3rem; }
+            .champion-hero .name { font-size: 2rem; }
+            .champion-hero .pct { font-size: 0.95rem; }
+            .champion-hero .subtitle { font-size: 0.78rem; }
+
+            /* Podium */
+            .podium-row { grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 24px; }
+            .pod-card { padding: 12px 8px; }
+            .pod-card .flag { font-size: 1.5rem; }
+            .pod-card .team { font-size: 0.85rem; }
+            .pod-card .pct { font-size: 0.75rem; }
+
+            /* Leaderboard table → scrollable */
+            #overview > .section-title + div {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            /* Groups */
+            .group-grid { grid-template-columns: 1fr; gap: 12px; }
+
+            /* Advancement */
+            .adv-grid { grid-template-columns: 1fr; gap: 12px; }
+
+            /* Bracket */
             .bracket-match-grid.cols-4,
             .bracket-match-grid.cols-3,
             .bracket-match-grid.cols-2 { grid-template-columns: 1fr; }
-            .bracket-group-grid { grid-template-columns: repeat(2, 1fr); }
-            .dash-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+            .bracket-group-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
             .bracket-match-row .team-side .t-name { font-size: 0.72rem; }
+            .bracket-stage-header { padding: 12px 14px; font-size: 0.65rem; }
+            .bracket-stage-body { padding: 12px; }
+
+            /* Bracket winner hero */
+            .bracket-winner-hero { padding: 36px 20px; }
+            .bracket-winner-hero .trophy { font-size: 2.5rem; }
+            .bracket-winner-hero .winner-flag { font-size: 3.5rem; }
+            .bracket-winner-hero .winner-name { font-size: 2rem; }
+
+            /* Methodology */
+            .method-hero { padding: 28px 24px; margin-bottom: 24px; }
+            .method-hero h2 { font-size: 1.4rem; }
+            .method-hero p { font-size: 0.85rem; }
+            .method-card { padding: 24px 20px; margin-bottom: 18px; }
+            .method-card h3 { font-size: 1rem; }
+
+            /* Formula blocks → scroll */
+            .formula-block { padding: 16px 18px; font-size: 0.75rem; }
+            .method-card table.tau-table,
+            .method-card table.mc-top-table {
+                overflow-x: auto;
+                display: block;
+            }
+
+            /* Compare row → stack */
+            .compare-row { grid-template-columns: 1fr; gap: 12px; }
+            .compare-box .cb-val { font-size: 1.4rem; }
+
+            /* Pipeline */
+            .pipeline-step { gap: 14px; }
+            .pipeline-step-content h4 { font-size: 0.85rem; }
+            .pipeline-step-content p { font-size: 0.78rem; }
+            .pipeline-step-content .step-code { padding: 12px 14px; font-size: 0.7rem; }
+
+            /* Data inputs */
+            .data-input-grid { grid-template-columns: 1fr; }
+            .data-input-item { padding: 16px; }
+
+            /* Validation grid */
+            .validation-grid { grid-template-columns: 1fr; }
+
+            /* Section title */
+            .section-title { font-size: 1rem; }
+        }
+
+        @media (max-width: 480px) {
+            .dashboard { padding: 16px 12px 32px; }
+
+            /* Header */
+            .dash-header h1 { font-size: 1.3rem; }
+            .dash-header .meta { font-size: 0.62rem; }
+
+            /* KPIs → 2-col tighter */
+            .kpi-row { gap: 6px; }
+            .kpi-card { padding: 12px 12px; border-radius: var(--radius-md); }
+            .kpi-label { font-size: 0.6rem; letter-spacing: 1px; }
+            .kpi-value { font-size: 1.4rem; }
+            .kpi-sub { font-size: 0.65rem; margin-top: 4px; }
+
+            /* Champion hero */
+            .champion-hero { padding: 28px 16px; }
+            .champion-hero .flag { font-size: 2.5rem; }
+            .champion-hero .name { font-size: 1.6rem; }
+            .champion-hero .pct { font-size: 0.82rem; }
+            .champion-hero .subtitle { font-size: 0.72rem; line-height: 1.5; }
+
+            /* Podium */
+            .podium-row { gap: 6px; }
+            .pod-card { padding: 10px 6px; border-radius: var(--radius-md); }
+            .pod-card .medal { font-size: 1.2rem; }
+            .pod-card .flag { font-size: 1.3rem; }
+            .pod-card .team { font-size: 0.78rem; }
+            .pod-card .pct { font-size: 0.7rem; }
+
+            /* Nav pills - compact */
+            .nav-pills { gap: 4px; padding: 4px; }
+            .nav-pill { padding: 8px 16px; font-size: 0.75rem; }
+
+            /* Bracket */
+            .bracket-group-grid { grid-template-columns: 1fr 1fr; gap: 6px; }
+            .bracket-group-item { padding: 8px 10px; }
+            .bracket-group-item .g-row { font-size: 0.7rem; }
+            .bracket-stage-header { padding: 10px 12px; gap: 8px; font-size: 0.6rem; letter-spacing: 1.5px; }
+            .bracket-match-row { padding: 10px 12px; gap: 6px; }
+            .bracket-match-row .team-side .t-name { font-size: 0.68rem; }
+            .bracket-match-row .team-side .t-prob { font-size: 0.62rem; }
+            .bracket-match-row .vs { font-size: 0.5rem; }
+
+            /* Bracket winner hero */
+            .bracket-winner-hero { padding: 28px 16px; }
+            .bracket-winner-hero .trophy { font-size: 2rem; }
+            .bracket-winner-hero .winner-flag { font-size: 2.8rem; }
+            .bracket-winner-hero .winner-name { font-size: 1.6rem; }
+            .bracket-winner-hero .winner-label { font-size: 0.6rem; letter-spacing: 2px; }
+
+            /* Methodology */
+            .method-hero { padding: 24px 18px; margin-bottom: 20px; }
+            .method-hero .m-label { font-size: 0.6rem; letter-spacing: 2px; }
+            .method-hero h2 { font-size: 1.2rem; }
+            .method-hero p { font-size: 0.8rem; }
+            .method-card { padding: 20px 16px; }
+            .method-card h3 { font-size: 0.9rem; gap: 8px; }
+            .method-card p, .method-card li { font-size: 0.82rem; }
+            .method-card li { padding: 5px 0 5px 18px; }
+
+            /* Formula blocks */
+            .formula-block { padding: 14px 14px; font-size: 0.7rem; line-height: 1.7; overflow-x: auto; }
+
+            /* Tau table → scroll */
+            .tau-table { min-width: 440px; }
+
+            /* Compare */
+            .compare-box { padding: 16px; }
+            .compare-box .cb-val { font-size: 1.2rem; }
+            .compare-box .cb-desc { font-size: 0.72rem; }
+
+            /* Pipeline */
+            .pipeline-step { gap: 12px; }
+            .pipeline-step-num { width: 30px; height: 30px; font-size: 0.68rem; }
+            .pipeline-step:not(:last-child)::after { left: 14px; top: 32px; }
+            .pipeline-step-content { padding-bottom: 22px; }
+            .pipeline-step-content .step-code { font-size: 0.65rem; padding: 10px 12px; }
+
+            /* Data inputs */
+            .data-input-item { padding: 14px; }
+            .data-input-item .dii-title { font-size: 0.82rem; }
+            .data-input-item .dii-desc { font-size: 0.78rem; }
+            .data-input-item .dii-range { font-size: 0.62rem; }
+
+            /* Validation */
+            .validation-stat { padding: 16px; }
+            .validation-stat .vs-val { font-size: 1.3rem; }
+
+            /* MC top table → scroll */
+            .mc-top-table { min-width: 480px; }
+        }
+
+        @media (max-width: 375px) {
+            /* iPhone SE / small phones */
+            .dashboard { padding: 14px 10px 28px; }
+
+            /* KPIs → single column */
+            .kpi-row { grid-template-columns: 1fr 1fr; gap: 6px; }
+            .kpi-card { padding: 10px 10px; }
+            .kpi-label { font-size: 0.55rem; letter-spacing: 0.8px; margin-bottom: 4px; }
+            .kpi-value { font-size: 1.2rem; }
+
+            /* Champion hero */
+            .champion-hero { padding: 22px 14px; }
+            .champion-hero .label { font-size: 0.6rem; letter-spacing: 1.5px; }
+            .champion-hero .flag { font-size: 2.2rem; margin-bottom: 4px; }
+            .champion-hero .name { font-size: 1.35rem; }
+            .champion-hero .pct { font-size: 0.75rem; }
+            .champion-hero .subtitle { font-size: 0.68rem; }
+
+            /* Podium */
+            .podium-row { grid-template-columns: 1fr 1fr 1fr; gap: 4px; }
+            .pod-card { padding: 8px 4px; }
+            .pod-card .medal { font-size: 1rem; margin-bottom: 4px; }
+            .pod-card .flag { font-size: 1.1rem; }
+            .pod-card .team { font-size: 0.7rem; }
+            .pod-card .pct { font-size: 0.65rem; }
+
+            /* Nav pills - tighter */
+            .nav-pill { padding: 8px 12px; font-size: 0.7rem; min-height: 40px; }
+
+            /* Leaderboard scroll */
+            .lb-table { min-width: 520px; }
+
+            /* Bracket group grid */
+            .bracket-group-grid { grid-template-columns: 1fr; }
+            .bracket-group-item .g-row { font-size: 0.68rem; }
+            .bracket-third-bar .bar-teams { gap: 2px 10px; }
+            .bracket-third-bar .bar-teams span { font-size: 0.7rem; }
+
+            /* Bracket match rows */
+            .bracket-match-row { padding: 8px 10px; gap: 4px; }
+            .bracket-match-row .team-side .t-name { font-size: 0.65rem; }
+            .bracket-match-row .team-side .t-prob { font-size: 0.58rem; }
+
+            /* Bracket winner hero */
+            .bracket-winner-hero { padding: 24px 12px; }
+            .bracket-winner-hero .winner-name { font-size: 1.35rem; }
+
+            /* Methodology */
+            .method-hero { padding: 20px 14px; }
+            .method-hero h2 { font-size: 1.1rem; }
+            .method-card { padding: 18px 14px; }
+            .method-card h3 { font-size: 0.85rem; }
+
+            /* Formula */
+            .formula-block { font-size: 0.65rem; padding: 12px; }
+
+            /* Pipeline */
+            .pipeline-step-num { width: 28px; height: 28px; font-size: 0.62rem; }
+            .pipeline-step:not(:last-child)::after { left: 13px; top: 30px; }
+
+            /* Section title */
+            .section-title { font-size: 0.9rem; margin-bottom: 14px; }
+
+            /* Comparison */
+            .compare-row { gap: 10px; }
+            .compare-box { padding: 14px 12px; }
+            .compare-box .cb-val { font-size: 1.1rem; }
+        }
+
+        @media (max-width: 320px) {
+            /* Ultra-small screens */
+            .kpi-row { grid-template-columns: 1fr; }
+            .podium-row { grid-template-columns: 1fr; }
+            .pod-card { text-align: center; padding: 12px; }
+
+            .champion-hero .name { font-size: 1.2rem; }
+            .champion-hero .flag { font-size: 2rem; }
+
+            .bracket-winner-hero .winner-flag { font-size: 2.2rem; }
+            .bracket-winner-hero .winner-name { font-size: 1.2rem; }
+
+            .method-hero h2 { font-size: 1rem; }
+            .method-card { padding: 16px 12px; }
+        }
+
+        /* ─── TOUCH-FRIENDLY INTERACTIVE ELEMENTS ─── */
+        @media (pointer: coarse) {
+            .nav-pill { min-height: 44px; min-width: 44px; }
+            .adv-team { min-height: 44px; }
+            .match-mini { min-height: 36px; }
+        }
+
+        /* ─── LANDSCAPE PHONE ─── */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .dashboard { padding: 12px 16px 24px; }
+            .champion-hero { padding: 20px 16px; }
+            .champion-hero .flag { font-size: 2rem; }
+            .champion-hero .name { font-size: 1.3rem; }
+            .bracket-winner-hero { padding: 20px 16px; }
+            .bracket-winner-hero .winner-flag { font-size: 2.5rem; }
+            .bracket-winner-hero .winner-name { font-size: 1.3rem; }
+        }
+
+        /* ─── TABLET LANDSCAPE ─── */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .dashboard { padding: 22px 24px 40px; }
+            .group-grid { grid-template-columns: repeat(2, 1fr); }
+            .bracket-group-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        /* ─── LARGE DESKTOP / ULTRAWIDE ─── */
+        @media (min-width: 1600px) {
+            .dashboard { max-width: 1800px; }
+            .group-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+
+        /* ─── PRINT ─── */
+        @media print {
+            .nav-pills { display: none; }
+            .dashboard { padding: 0; }
         }
 
         /* ─── METHODOLOGY PANEL ─── */
