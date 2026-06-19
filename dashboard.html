@@ -2191,20 +2191,6 @@ function renderGroups() {
                 <span>Group ${g}</span>
                 <span class="g-letter">${g}</span>
             </div>
-            <table class="standings-mini">
-                <thead><tr><th></th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th></tr></thead>
-                <tbody>
-                ${data.t.map((t,i) => `
-                    <tr class="pos-${i+1}">
-                        <td style="color:var(--text-muted);font-family:var(--font-mono);font-size:0.72rem;">${i+1}</td>
-                        <td class="t-name">${t.f} ${t.n}</td>
-                        <td>${t.p}</td><td>${t.w}</td><td>${t.d}</td><td>${t.l}</td>
-                        <td class="gd-col" style="color:${t.gd>=0?'var(--win-color)':'var(--loss-color)'}">${t.gd>0?'+':''}${t.gd}</td>
-                        <td class="pts-col">${t.pts}</td>
-                    </tr>
-                `).join('')}
-                </tbody>
-            </table>
             <div class="match-section">
                 <div class="match-section-title">Matches</div>
                 ${data.m.map(m => `
