@@ -2196,7 +2196,7 @@ function renderGroups() {
                 ${data.m.map(m => `
                     <div class="match-mini">
                         <span class="m-teams">${m.t1} vs ${m.t2}</span>
-                        <span class="m-score">${m.a ? m.sc : (m.pw > m.pl ? m.t1 + ' Win' : m.pw < m.pl ? m.t2 + ' Win' : 'Draw')}</span>
+                        <span class="m-score">${m.pw > m.pl ? m.t1 + ' Win' : m.pw < m.pl ? m.t2 + ' Win' : 'Draw'}</span>
                         <span class="m-probs">
                             <span class="p-win">${m.pw.toFixed(0)}</span>
                             <span class="p-draw">${m.pd.toFixed(0)}</span>
