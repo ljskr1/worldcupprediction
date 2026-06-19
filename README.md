@@ -141,54 +141,6 @@ python3 -m http.server 8080
 # Then visit http://localhost:8080/dashboard.html
 ```
 
-## Hosting on the Web
-
-### Option 1: GitHub Pages (simplest)
-
-```bash
-# Push to GitHub
-git init
-git add .
-git commit -m "World Cup 2026 prediction engine"
-git remote add origin https://github.com/YOUR_USERNAME/worldcuppreiction.git
-git push -u origin main
-
-# Enable GitHub Pages
-# Go to repo → Settings → Pages → Source: "Deploy from a branch" → Branch: main
-# Your dashboard will be live at: https://YOUR_USERNAME.github.io/worldcuppreiction/dashboard.html
-```
-
-### Option 2: Vercel
-
-```bash
-# Install Vercel CLI
-npm i -g vercel
-
-# Deploy
-vercel --prod
-
-# Gets a URL like: https://worldcuppreiction.vercel.app/dashboard.html
-```
-
-### Option 3: Netlify
-
-```bash
-# Drag-and-drop the folder to https://app.netlify.com/drop
-# Or use CLI:
-npm i -g netlify-cli
-netlify deploy --prod --dir=.
-```
-
-### Option 4: Cloudflare Pages
-
-```bash
-# Push to GitHub, then connect in Cloudflare Pages dashboard
-# Or use Wrangler:
-npx wrangler pages deploy . --project-name=worldcup-2026
-```
-
-**Recommended for LinkedIn**: GitHub Pages. Free, fast, reliable, and the URL looks professional.
-
 ## Technical Notes
 
 - **ρ = -0.13**: Standard Dixon-Coles correlation parameter from academic literature
