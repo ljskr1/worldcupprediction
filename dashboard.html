@@ -46,14 +46,18 @@
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
-body {
-    font-family: var(--font-body);
-    font-size: 16px;
-    background: var(--bg-deep);
-    color: var(--text-primary);
-    min-height: 100vh;
-    overflow-x: auto;
-}
+        html {
+            overflow-x: auto;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-size: 16px;
+            background: var(--bg-deep);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: auto;
+        }
 
         body::before,
         body::after {
@@ -711,7 +715,7 @@ body {
         .lb-table,
         .mc-top-table,
         .tau-table {
-            min-width: 580px;
+            width: 100%;
         }
 
         /* Override inline overflow:hidden on leaderboard wrapper div */
@@ -721,10 +725,10 @@ body {
                 overflow-x: auto !important;
                 -webkit-overflow-scrolling: touch;
             }
-            #overview .lb-table { min-width: 580px; }
+            #overview .lb-table { width: 100%; }
         }
         @media (max-width: 375px) {
-            #overview .lb-table { min-width: 520px; }
+            #overview .lb-table { width: 100%; }
         }
 
         /* Methodology tables scroll on small screens */
@@ -895,7 +899,7 @@ body {
             .formula-block { padding: 14px 14px; font-size: 0.7rem; line-height: 1.7; overflow-x: auto; }
 
             /* Tau table → scroll */
-            .tau-table { min-width: 440px; }
+            .tau-table { width: 100%; }
 
             /* Compare */
             .compare-box { padding: 16px; }
@@ -920,7 +924,7 @@ body {
             .validation-stat .vs-val { font-size: 1.3rem; }
 
             /* MC top table → scroll */
-            .mc-top-table { min-width: 480px; }
+            .mc-top-table { width: 100%; }
         }
 
         @media (max-width: 375px) {
