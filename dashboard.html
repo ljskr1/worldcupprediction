@@ -60,7 +60,7 @@
             display: none !important;
         }
 
-        .dashboard { position: relative; z-index: 1; padding: 24px 32px 48px; max-width: 1600px; margin: 0 auto; }
+        .dashboard { position: relative; z-index: 1; padding: 24px 32px 48px; width: 100%; max-width: 100%; margin: 0 auto; }
 
         /* ─── HEADER ─── */
         .dash-header {
@@ -1035,7 +1035,7 @@
 
         /* ─── LARGE DESKTOP / ULTRAWIDE ─── */
         @media (min-width: 1600px) {
-            .dashboard { max-width: 1800px; }
+            .dashboard { max-width: 100%; padding: 24px 48px 48px; }
             .group-grid { grid-template-columns: repeat(4, 1fr); }
         }
 
