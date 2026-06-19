@@ -742,25 +742,28 @@ for g, g_teams in sorted(groups.items()):
                 g2, g1 = score
                 actual = True
             else:
-                # Predict using model
+                # Predict using model - W/D/L outcome only (no score prediction)
                 probs = predict_match(t1, t2, is_knockout=False)
                 p1 = probs["t1_win"]
                 pd = probs["draw"]
                 p2 = probs["t2_win"]
                 
-                # Determine outcome
+                # Determine outcome and assign dummy scores for GD/GF tracking
                 roll = random.random()
                 if roll < p1:
-                    g1, g2 = predict_score(t1, t2)
-                    if g1 <= g2:
-                        g1 = g2 + 1
+                    # Team 1 wins
+                    g1, g2 = 1, 0
+                    if random.random() < 0.3:
+                        g1 += 1
                 elif roll < p1 + pd:
-                    g1, g2 = predict_score(t1, t2)
+                    # Draw
+                    g1 = random.choice([0, 1, 2])
                     g2 = g1
                 else:
-                    g1, g2 = predict_score(t2, t1)
-                    if g2 <= g1:
-                        g2 = g1 + 1
+                    # Team 2 wins
+                    g1, g2 = 0, 1
+                    if random.random() < 0.3:
+                        g2 += 1
                 actual = False
             
             # Update standings
@@ -791,10 +794,21 @@ for g, g_teams in sorted(groups.items()):
             # Get predicted probabilities for display
             probs = predict_match(t1, t2, is_knockout=False)
             
+            # For predicted matches, show W/D/L instead of score
+            if actual:
+                score_display = f"{g1}-{g2}"
+            else:
+                if outcome == "Draw":
+                    score_display = "Draw"
+                elif outcome == t1:
+                    score_display = f"{t1} Win"
+                else:
+                    score_display = f"{t2} Win"
+            
             group_results[g].append({
                 "t1": t1,
                 "t2": t2,
-                "score": f"{g1}-{g2}",
+                "score": score_display,
                 "outcome": outcome,
                 "actual": actual,
                 "probs": {t1: round(probs["t1_win"], 3), "Draw": round(probs["draw"], 3), t2: round(probs["t2_win"], 3)}
@@ -1160,7 +1174,7 @@ md.append(f"1. 🥇 **{teams_data[champion]['flag']} {champion}** (World Cup Cha
 md.append(f"2. 🥈 **{teams_data[runner_up]['flag']} {runner_up}** (Runner-up)")
 md.append(f"3. 🥉 **{teams_data[third_name]['flag']} {third_name}** (Third Place)")
 
-with open("/Users/rock/worldcuppreiction/worldcup_2026_predictions.md", "w") as f:
+with open("/Users/rock/worldcupprediction/worldcup_2026_predictions.md", "w") as f:
     f.write("\n".join(md))
 
 print("Report generated: worldcup_2026_predictions.md")
@@ -1242,7 +1256,7 @@ js_content.append("const podium = " + json.dumps(js_podium, indent=2) + ";\n")
 
 js_content.append("const monteCarloLeaderboard = " + json.dumps(mc_leaderboard, indent=2) + ";")
 
-with open("/Users/rock/worldcuppreiction/data.js", "w") as f:
+with open("/Users/rock/worldcupprediction/data.js", "w") as f:
     f.write("\n".join(js_content))
 
 print("data.js generated successfully.")
