@@ -1,0 +1,41 @@
+name: Run World Cup Simulations
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'data.js'
+      - 'monte_carlo_results.json'
+      - 'worldcup_2026_predictions.md'
+      - 'README.md'
+      - '.gitignore'
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+
+jobs:
+  simulate:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Run World Cup Simulation Engine
+      run: |
+        python3 simulate_worldcup.py
+
+    - name: Run Monte Carlo Simulation
+      run: |
+        python3 monte_carlo_simulation.py
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git add data.js monte_carlo_results.json worldcup_2026_predictions.md
+        git diff --quiet && git diff --staged --quiet || (git commit -m "chore: auto-update simulation results and dashboard data [skip ci]" && git push)
