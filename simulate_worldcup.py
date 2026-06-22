@@ -1271,7 +1271,74 @@ js_podium = {
 js_content.append("const podium = " + json.dumps(js_podium, indent=2) + ";\n")
 
 js_content.append("const monteCarloLeaderboard = " + json.dumps(mc_leaderboard, indent=2) + ";\n")
-js_content.append("const monteCarloResults = " + json.dumps(mc_results, indent=2) + ";")
+js_content.append("const monteCarloResults = " + json.dumps(mc_results, indent=2) + ";\n")
+
+# Model Validation & Backtesting (evaluate on actual_results marked played)
+validation_matches = []
+correct_predictions = 0
+brier_sum = 0.0
+
+for (t1, t2), info in actual_results.items():
+    if info.get("played"):
+        score = info["score"]
+        g1, g2 = score
+        
+        if g1 > g2:
+            actual_outcome = t1
+        elif g1 < g2:
+            actual_outcome = t2
+        else:
+            actual_outcome = "Draw"
+            
+        # Predict using model
+        probs = predict_match(t1, t2, is_knockout=False)
+        p1 = probs["t1_win"]
+        pd = probs["draw"]
+        p2 = probs["t2_win"]
+        
+        # Model favorite predicted outcome
+        max_prob = max(p1, pd, p2)
+        if max_prob == p1:
+            pred_outcome = t1
+        elif max_prob == p2:
+            pred_outcome = t2
+        else:
+            pred_outcome = "Draw"
+            
+        is_correct = (pred_outcome == actual_outcome)
+        if is_correct:
+            correct_predictions += 1
+            
+        # Brier Score = sum of squared errors
+        o1 = 1.0 if actual_outcome == t1 else 0.0
+        od = 1.0 if actual_outcome == "Draw" else 0.0
+        o2 = 1.0 if actual_outcome == t2 else 0.0
+        
+        brier = (p1 - o1)**2 + (pd - od)**2 + (p2 - o2)**2
+        brier_sum += brier
+        
+        validation_matches.append({
+            "t1": t1,
+            "t2": t2,
+            "score": f"{g1}-{g2}",
+            "actual": actual_outcome,
+            "predicted": pred_outcome,
+            "correct": is_correct,
+            "probs": {t1: round(p1, 3), "Draw": round(pd, 3), t2: round(p2, 3)}
+        })
+
+num_played = len(validation_matches)
+accuracy = (correct_predictions / num_played) if num_played > 0 else 0
+avg_brier = (brier_sum / num_played) if num_played > 0 else 0
+
+validation_data = {
+    "accuracy": round(accuracy, 4),
+    "brierScore": round(avg_brier, 4),
+    "correctCount": correct_predictions,
+    "totalCount": num_played,
+    "matches": validation_matches
+}
+js_content.append("const modelValidation = " + json.dumps(validation_data, indent=2) + ";")
 
 with open("data.js", "w") as f:
     f.write("\n".join(js_content))

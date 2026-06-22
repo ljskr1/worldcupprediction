@@ -1859,48 +1859,39 @@
             </table>
         </div>
 
-        <div class="method-card">
-            <h3><span class="h-icon"></span> Model Validation</h3>
-            <p>The model's predictions are validated against known historical World Cup patterns:</p>
+        <div class="method-card" id="validation-card">
+            <h3><span class="h-icon"></span> Model Validation &amp; Performance (Backtesting)</h3>
+            <p>Stochastic prediction models are validated by backtesting them against completed tournament matches to measure predictive accuracy and probability calibration (Brier Score).</p>
 
             <div class="validation-grid" style="margin-top:20px;">
                 <div class="validation-stat">
-                    <div class="vs-val">~24%</div>
-                    <div class="vs-label">Basic Poisson draw rate</div>
-                    <div class="vs-note">Flat — identical for all matches</div>
+                    <div class="vs-val" id="val-accuracy">69.2%</div>
+                    <div class="vs-label">Predictive Accuracy</div>
+                    <div class="vs-note" id="val-correct-count">18/26 matches correct</div>
                 </div>
                 <div class="validation-stat">
-                    <div class="vs-val">16–29%</div>
-                    <div class="vs-label">Dixon-Coles draw range</div>
-                    <div class="vs-note">Varies by matchup strength</div>
+                    <div class="vs-val" id="val-brier">0.473</div>
+                    <div class="vs-label">Average Brier Score</div>
+                    <div class="vs-note">ranges 0 to 2 (lower is better)</div>
                 </div>
                 <div class="validation-stat">
-                    <div class="vs-val">25–27%</div>
-                    <div class="vs-label">Historical WC draw rate</div>
-                    <div class="vs-note">Real-world benchmark</div>
+                    <div class="vs-val" id="val-total-count">26</div>
+                    <div class="vs-label">Completed matches</div>
+                    <div class="vs-note">locked actual results</div>
                 </div>
             </div>
 
-            <div class="compare-row" style="margin-top:20px;">
-                <div class="compare-box wrong">
-                    <div class="cb-label">✗ Basic Poisson</div>
-                    <div class="cb-val" style="font-size:1.2rem;color:var(--loss-color)">Flat 24%</div>
-                    <div class="cb-desc">Every match has the same draw probability — unrealistic</div>
-                </div>
-                <div class="compare-box right">
-                    <div class="cb-label">✓ Dixon-Coles</div>
-                    <div class="cb-val" style="font-size:1.2rem;color:var(--accent-primary)">16% → 29%</div>
-                    <div class="cb-desc">Matches real-world draw distributions — validated</div>
-                </div>
+            <p style="margin-top:18px;"><strong>Match-by-Match Backtesting Audit:</strong></p>
+            <div style="max-height: 320px; overflow-y: auto; border: 1px solid var(--glass-border); border-radius: var(--radius-sm); margin-top: 10px; background: rgba(0,0,0,0.15)">
+                <table class="tau-table" style="margin:0; width: 100%;">
+                    <thead>
+                        <tr><th>Matchup</th><th style="text-align:center">Score</th><th>Model Forecast (Highest Probability)</th><th style="text-align:center">Result</th></tr>
+                    </thead>
+                    <tbody id="val-matches-body">
+                        <!-- Dynamic list of backtested matches -->
+                    </tbody>
+                </table>
             </div>
-
-            <ul style="margin-top:18px;">
-                <li>Dixon-Coles draw distribution (16–29%) matches real-world patterns (25–27% historical average)</li>
-                <li>26 actual group stage results are locked into the model — predictions build on real outcomes</li>
-                <li>Base goals (1.35) calibrated to historical World Cup scoring rates</li>
-                <li>Goal lambda clamped to [0.4, 3.5] prevents unrealistic extreme predictions</li>
-                <li>Form multiplier (0.85×–1.15×) prevents recent results from overpowering long-term ratings</li>
-            </ul>
         </div>
 
     </div>
@@ -2584,12 +2575,42 @@ function showPanel(id) {
     event.target.classList.add('active');
 }
 
+function renderValidation() {
+    if (typeof modelValidation === 'undefined') return;
+    
+    document.getElementById('val-accuracy').textContent = `${(modelValidation.accuracy * 100).toFixed(1)}%`;
+    document.getElementById('val-correct-count').textContent = `${modelValidation.correctCount}/${modelValidation.totalCount} matches correct`;
+    document.getElementById('val-brier').textContent = modelValidation.brierScore.toFixed(3);
+    document.getElementById('val-total-count').textContent = modelValidation.totalCount;
+    
+    const tbody = document.getElementById('val-matches-body');
+    if (tbody) {
+        tbody.innerHTML = modelValidation.matches.map(m => {
+            const predText = m.predicted === m.t1 ? 'Win' : m.predicted === m.t2 ? 'Win' : 'Draw';
+            const predFull = m.predicted === 'Draw' ? 'Draw' : `${m.predicted} ${predText}`;
+            const probPct = Math.round((m.probs[m.predicted] || 0) * 100);
+            const icon = m.correct ? '✅' : '❌';
+            const style = m.correct ? 'font-weight: 600; color: var(--text-primary);' : 'color: var(--text-secondary);';
+            
+            return `
+                <tr>
+                    <td style="font-size:0.78rem; font-weight:500; text-align:left; padding: 10px 14px;">${m.t1} vs ${m.t2}</td>
+                    <td style="text-align:center; font-family:var(--font-mono); font-size:0.78rem; padding: 10px 14px;">${m.score}</td>
+                    <td style="font-size:0.78rem; text-align:left; padding: 10px 14px; ${style}">${predFull} (${probPct}%)</td>
+                    <td style="text-align:center; font-size:0.75rem; padding: 10px 14px;">${icon}</td>
+                </tr>
+            `;
+        }).join('');
+    }
+}
+
 // Init
 updateHeroAndKPIs();
 renderLB();
 renderGroups();
 renderAdv();
 renderBracket();
+renderValidation();
 </script>
 </body>
 </html>
