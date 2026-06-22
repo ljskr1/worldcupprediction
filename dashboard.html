@@ -2502,15 +2502,52 @@ function updateHeroAndKPIs() {
         const thirdPct = thirdLB ? thirdLB.c.toFixed(1) : "4.5";
         
         const kpiCards = document.querySelectorAll('.kpi-card');
-        if (kpiCards.length >= 3) {
+        if (kpiCards.length >= 4) {
             kpiCards[0].querySelector('.kpi-value').textContent = championName;
             kpiCards[0].querySelector('.kpi-sub').textContent = `${champPct}% to win it all`;
             
             kpiCards[1].querySelector('.kpi-value').textContent = runnerUpName;
             kpiCards[1].querySelector('.kpi-sub').textContent = `${runnerPct}% championship prob`;
             
+            kpiCards[2].querySelector('.kpi-label').textContent = "Bronze Finisher";
             kpiCards[2].querySelector('.kpi-value').textContent = thirdName;
             kpiCards[2].querySelector('.kpi-sub').textContent = `${thirdPct}% — ranked 3rd`;
+
+            // Calculate biggest upset dynamically from played matches
+            let biggestUpsetMatch = null;
+            let lowestProb = 1.0;
+            if (typeof modelValidation !== 'undefined' && modelValidation.matches && modelValidation.matches.length > 0) {
+                for (const m of modelValidation.matches) {
+                    const probs = m.live.probs;
+                    const actual = m.actual;
+                    let actualProb = 0;
+                    if (actual === m.t1) {
+                        actualProb = probs[m.t1];
+                    } else if (actual === m.t2) {
+                        actualProb = probs[m.t2];
+                    } else if (actual === 'Draw') {
+                        actualProb = probs['Draw'];
+                    }
+                    if (actualProb < lowestProb && actualProb > 0) {
+                        lowestProb = actualProb;
+                        biggestUpsetMatch = m;
+                    }
+                }
+            }
+            if (biggestUpsetMatch) {
+                const pct = Math.round(lowestProb * 100);
+                if (biggestUpsetMatch.actual === 'Draw') {
+                    kpiCards[3].querySelector('.kpi-value').textContent = "Draw Match";
+                    kpiCards[3].querySelector('.kpi-sub').textContent = `${biggestUpsetMatch.t1} vs ${biggestUpsetMatch.t2} (${biggestUpsetMatch.score}) · ${pct}% prob`;
+                } else {
+                    kpiCards[3].querySelector('.kpi-value').textContent = biggestUpsetMatch.actual;
+                    const opponent = biggestUpsetMatch.actual === biggestUpsetMatch.t1 ? biggestUpsetMatch.t2 : biggestUpsetMatch.t1;
+                    kpiCards[3].querySelector('.kpi-sub').textContent = `Defeated ${opponent} (${biggestUpsetMatch.score}) · ${pct}% prob`;
+                }
+            } else {
+                kpiCards[3].querySelector('.kpi-value').textContent = "None yet";
+                kpiCards[3].querySelector('.kpi-sub').textContent = "No played matches recorded";
+            }
         }
         
         const champHero = document.querySelector('.champion-hero.live-hero');
