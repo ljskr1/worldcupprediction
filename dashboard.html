@@ -236,6 +236,75 @@
             color: var(--text-secondary);
         }
 
+        /* ─── SIDE-BY-SIDE COMPARISON ─── */
+        .side-by-side-predictions {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+        @media (max-width: 900px) {
+            .side-by-side-predictions {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+        .prediction-column {
+            display: flex;
+            flex-direction: column;
+        }
+        .prediction-column .column-header {
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .prediction-column .column-header .tag {
+            font-size: 0.6rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text-secondary);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+        .prediction-column .column-header .tag.live {
+            background: rgba(255, 255, 255, 0.15);
+            color: var(--text-primary);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .prediction-column .champion-hero {
+            padding: 24px;
+            margin-bottom: 16px;
+            border-radius: var(--radius-lg);
+        }
+        .prediction-column .champion-hero .flag {
+            font-size: clamp(2rem, 4vw, 3rem);
+        }
+        .prediction-column .champion-hero .name {
+            font-size: clamp(1.4rem, 3vw, 2.2rem);
+        }
+        .prediction-column .champion-hero .pct {
+            font-size: 0.85rem;
+        }
+        .prediction-column .champion-hero .subtitle {
+            font-size: 0.78rem;
+            margin-top: 6px;
+        }
+        .prediction-column .podium-row {
+            margin-bottom: 16px;
+            gap: 8px;
+        }
+        .prediction-column .pod-card {
+            padding: 12px;
+            border-radius: var(--radius-md);
+        }
+
         /* ─── LEADERBOARD ─── */
         .lb-table {
             width: 100%;
@@ -1525,47 +1594,86 @@
 
     <!-- ═══════ OVERVIEW ═══════ -->
     <div id="overview" class="panel active">
-        <div class="champion-hero">
-            <div class="label">Predicted World Champion</div>
-            <div class="flag">🇪🇸</div>
-            <div class="name">Spain</div>
-            <div class="pct">10.1% championship probability</div>
-            <div class="subtitle">28.2% reach semis · 17.3% reach final · Group H winners</div>
+        
+        <div class="side-by-side-predictions">
+            <!-- Left: Baseline (Pre-Tournament) -->
+            <div class="prediction-column">
+                <div class="column-header">Baseline Forecast <span class="tag">Pre-Tournament</span></div>
+                <div class="champion-hero">
+                    <div class="label">Predicted Champion</div>
+                    <div class="flag">🇪🇸</div>
+                    <div class="name">Spain</div>
+                    <div class="pct">10.1% championship prob</div>
+                    <div class="subtitle">28.2% reach semis · 17.3% reach final</div>
+                </div>
+                <div class="podium-row">
+                    <div class="pod-card">
+                        <div class="medal">🥈</div>
+                        <div class="flag">🇫🇷</div>
+                        <div class="team">France</div>
+                        <div class="pct">7.0%</div>
+                    </div>
+                    <div class="pod-card">
+                        <div class="medal">🥇</div>
+                        <div class="flag">🇪🇸</div>
+                        <div class="team">Spain</div>
+                        <div class="pct">10.1%</div>
+                    </div>
+                    <div class="pod-card">
+                        <div class="medal">🥉</div>
+                        <div class="flag">🇦🇷</div>
+                        <div class="team">Argentina</div>
+                        <div class="pct">9.0%</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Live (Real-Time) -->
+            <div class="prediction-column">
+                <div class="column-header" style="color: #fff;">Live Forecast <span class="tag live">Real-Time</span></div>
+                <div class="champion-hero live-hero">
+                    <div class="label">Predicted Champion</div>
+                    <div class="flag" id="live-champ-flag">🇪🇸</div>
+                    <div class="name" id="live-champ-name">Spain</div>
+                    <div class="pct" id="live-champ-pct">10.1% championship prob</div>
+                    <div class="subtitle" id="live-champ-sub">28.2% reach semis · 17.3% reach final</div>
+                </div>
+                <div class="podium-row live-podium">
+                    <div class="pod-card">
+                        <div class="medal">🥈</div>
+                        <div class="flag" id="live-pod2-flag">🇫🇷</div>
+                        <div class="team" id="live-pod2-name">France</div>
+                        <div class="pct" id="live-pod2-pct">7.0%</div>
+                    </div>
+                    <div class="pod-card">
+                        <div class="medal">🥇</div>
+                        <div class="flag" id="live-pod1-flag">🇪🇸</div>
+                        <div class="team" id="live-pod1-name">Spain</div>
+                        <div class="pct" id="live-pod1-pct">10.1%</div>
+                    </div>
+                    <div class="pod-card">
+                        <div class="medal">🥉</div>
+                        <div class="flag" id="live-pod3-flag">🇦🇷</div>
+                        <div class="team" id="live-pod3-name">Argentina</div>
+                        <div class="pct" id="live-pod3-pct">9.0%</div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="podium-row">
-            <div class="pod-card">
-                <div class="medal">🥈</div>
-                <div class="flag">🇫🇷</div>
-                <div class="team">France</div>
-                <div class="pct">7.0%</div>
-            </div>
-            <div class="pod-card">
-                <div class="medal">🥇</div>
-                <div class="flag">🇪🇸</div>
-                <div class="team">Spain</div>
-                <div class="pct">10.1%</div>
-            </div>
-            <div class="pod-card">
-                <div class="medal">🥉</div>
-                <div class="flag">🇦🇷</div>
-                <div class="team">Argentina</div>
-                <div class="pct">9.0%</div>
-            </div>
-        </div>
-
-        <div class="section-title"><span class="dot"></span> Full Championship Leaderboard</div>
+        <div class="section-title"><span class="dot"></span> Full Championship Leaderboard <span style="font-size:0.75rem; font-weight:normal; color:var(--text-secondary); margin-left:8px;">(Pre-Tournament vs. Live Projections)</span></div>
         <div style="background:var(--bg-card-solid);border:1px solid var(--glass-border);border-radius:var(--radius-lg);overflow:auto;">
             <table class="lb-table">
                 <thead>
                     <tr>
-                        <th>#</th>
-                        <th>Team</th>
-                        <th>Champion</th>
-                        <th style="width:140px"></th>
-                        <th>Final</th>
-                        <th>Semis</th>
-                        <th>Qualify</th>
+                        <th style="font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px;"># (Pre → Live)</th>
+                        <th style="font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px;">Team</th>
+                        <th style="font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px;">Champion (Pre / Live)</th>
+                        <th style="width:120px; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px;">Live Trend</th>
+                        <th style="font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px; text-align: center;">Championship Change</th>
+                        <th style="font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px;">Final (Pre / Live)</th>
+                        <th style="font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px;">Semis (Pre / Live)</th>
+                        <th style="font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px;">Qualify (Pre / Live)</th>
                     </tr>
                 </thead>
                 <tbody id="lb-body"></tbody>
@@ -2190,12 +2298,11 @@ const BRACKET = {
 // ─────── RENDER ───────
 
 // Dynamic data mapping from data.js variables with fallbacks
-let lbData = LB;
-let groupsData = GROUPS;
-let bracketData = BRACKET;
+const baselineLB = LB;
+let liveLB = [];
 
 if (typeof monteCarloLeaderboard !== 'undefined') {
-    lbData = monteCarloLeaderboard.map(t => ({
+    liveLB = monteCarloLeaderboard.map(t => ({
         r: t.rank,
         n: t.name,
         f: t.flag,
@@ -2204,7 +2311,19 @@ if (typeof monteCarloLeaderboard !== 'undefined') {
         s: t.sf * 100,
         q: (t.qualified !== undefined ? t.qualified : 0) * 100
     }));
+} else {
+    liveLB = LB.map(t => ({
+        r: t.r,
+        n: t.n,
+        f: t.f,
+        c: t.c,
+        fi: t.fi,
+        s: t.s,
+        q: t.q
+    }));
 }
+
+let lbData = liveLB;
 
 if (typeof groupStandings !== 'undefined' && typeof groupMatches !== 'undefined') {
     groupsData = {};
@@ -2300,7 +2419,7 @@ function updateHeroAndKPIs() {
             kpiCards[2].querySelector('.kpi-sub').textContent = `${thirdPct}% — ranked 3rd`;
         }
         
-        const champHero = document.querySelector('.champion-hero');
+        const champHero = document.querySelector('.champion-hero.live-hero');
         if (champHero) {
             champHero.querySelector('.flag').textContent = championFlag;
             champHero.querySelector('.name').textContent = championName;
@@ -2315,7 +2434,7 @@ function updateHeroAndKPIs() {
             champHero.querySelector('.subtitle').textContent = `${sfPct}% reach semis · ${finalPct}% reach final · Group ${groupLetter} winners`;
         }
         
-        const podCards = document.querySelectorAll('.pod-card');
+        const podCards = document.querySelectorAll('.live-podium .pod-card');
         if (podCards.length >= 3) {
             podCards[0].querySelector('.flag').textContent = runnerUpFlag;
             podCards[0].querySelector('.team').textContent = runnerUpName;
@@ -2333,18 +2452,52 @@ function updateHeroAndKPIs() {
 }
 
 function renderLB() {
-    const mx = lbData[0].c;
-    document.getElementById('lb-body').innerHTML = lbData.map(t => `
-        <tr>
-            <td class="rank-col">${t.r}</td>
-            <td><div class="team-col">${t.f} ${t.n}</div></td>
-            <td><span class="num gold">${t.c.toFixed(1)}%</span></td>
-            <td><div class="prob-bar"><div class="prob-bar-fill" style="width:${t.c/mx*100}%"></div></div></td>
-            <td><span class="num">${t.fi.toFixed(1)}%</span></td>
-            <td><span class="num teal">${t.s.toFixed(1)}%</span></td>
-            <td>${t.q.toFixed(1)}%</td>
-        </tr>
-    `).join('');
+    const mx = Math.max(...liveLB.map(t => t.c));
+    document.getElementById('lb-body').innerHTML = liveLB.map(t => {
+        const baseTeam = baselineLB.find(b => b.n === t.n) || { r: "-", c: 0, fi: 0, s: 0, q: 0 };
+        const diff = t.c - baseTeam.c;
+        let trendHtml = '';
+        if (diff > 0.05) {
+            trendHtml = `<span style="color:#00ff88; font-size:0.75rem; font-weight:600;">▲ +${diff.toFixed(1)}%</span>`;
+        } else if (diff < -0.05) {
+            trendHtml = `<span style="color:#ff3366; font-size:0.75rem; font-weight:600;">▼ ${diff.toFixed(1)}%</span>`;
+        } else {
+            trendHtml = `<span style="color:var(--text-muted); font-size:0.75rem;">—</span>`;
+        }
+        const rankDisplay = baseTeam.r === t.r ? `${t.r}` : `${baseTeam.r} → ${t.r}`;
+        return `
+            <tr>
+                <td class="rank-col" style="font-family:var(--font-mono); font-size:0.72rem; color:var(--text-secondary);">${rankDisplay}</td>
+                <td><div class="team-col">${t.f} ${t.n}</div></td>
+                <td>
+                    <div style="font-size:0.85rem; font-weight:700; white-space:nowrap;">
+                        <span style="color:var(--text-secondary); opacity:0.6; font-weight:normal; margin-right:4px;">${baseTeam.c.toFixed(1)}%</span>
+                        <span style="color:#fff; font-weight:700;">${t.c.toFixed(1)}%</span>
+                    </div>
+                </td>
+                <td><div class="prob-bar"><div class="prob-bar-fill" style="width:${t.c/mx*100}%"></div></div></td>
+                <td style="text-align:center;">${trendHtml}</td>
+                <td>
+                    <div style="font-size:0.85rem; white-space:nowrap;">
+                        <span style="color:var(--text-secondary); opacity:0.6; font-weight:normal; margin-right:4px;">${baseTeam.fi.toFixed(1)}%</span>
+                        <span style="font-weight:600; color:#fff;">${t.fi.toFixed(1)}%</span>
+                    </div>
+                </td>
+                <td>
+                    <div style="font-size:0.85rem; white-space:nowrap;">
+                        <span style="color:var(--text-secondary); opacity:0.6; font-weight:normal; margin-right:4px;">${baseTeam.s.toFixed(1)}%</span>
+                        <span style="font-weight:600; color:var(--text-primary);">${t.s.toFixed(1)}%</span>
+                    </div>
+                </td>
+                <td>
+                    <div style="font-size:0.85rem; white-space:nowrap;">
+                        <span style="color:var(--text-secondary); opacity:0.6; font-weight:normal; margin-right:4px;">${baseTeam.q.toFixed(1)}%</span>
+                        <span style="font-weight:600; color:#fff;">${t.q.toFixed(1)}%</span>
+                    </div>
+                </td>
+            </tr>
+        `;
+    }).join('');
 }
 
 function renderGroups() {
