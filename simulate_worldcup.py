@@ -1,723 +1,16 @@
 """
-FIFA World Cup 2026 Prediction Engine v2.0
+FIFA World Cup 2026 Prediction Engine v2.0 - Execution Runner
 
 BUSINESS CASE & ANALYTICAL METRIC ENGINE
 -----------------------------------------
-This prediction engine is designed to translate qualitative and quantitative football metrics 
-into actionable, probabilistic outcomes to support fan engagement, media storyboards, 
-and sports business risk modeling.
-
-Key Business Rules & Variables Elicited:
-1. Baseline Performance: FIFA Ranking Points mapped to Team Attack/Defense/Tactical capabilities.
-2. Momentum Factor: Recent Form weighting (last 10 matches) to capture current performance trends.
-3. Tactical Modifiers: Domain-specific parameters derived from defensive and offensive tactical ratings.
-4. Risk Factors (Injuries): Position-specific rating penalties (e.g., defender injury hurts defense; striker injury hurts attack).
-5. Home Field Advantage: Co-host multiplier (1.04x) for Mexico, Canada, and USA.
-6. Real-Time Inputs: Integration of completed tournament matches (locking in actual results) to keep predictions live and accurate.
-7. Dixon-Coles Draw Correction: Correcting standard Poisson draw-probability bias using historical soccer draw correlation (rho = -0.13).
+This script coordinates and executes the tournament simulations, generating the
+HTML dashboard data feed (data.js) and predictions report.
 """
 
 import math
 import json
 import random
-from collections import defaultdict
-
-# ============================================================
-# TEAM DATA: FIFA Rankings (June 2026), Recent Form, Ratings
-# ============================================================
-# FIFA Ranking points used as ELO baseline
-# Attack/Defense derived from FIFA ranking + recent form
-# Recent form: Last 10 matches W/D/L converted to form score
-
-teams_data = {
-    # Group A
-    "Mexico": {
-        "group": "A", "fifa_rank": 14, "fifa_pts": 1645,
-        "attack": 82, "defense": 80, "tactics": 82,
-        "flag": "🇲🇽",
-        "recent_form": {"w": 7, "d": 2, "l": 1},  # Last 10
-        "goals_scored_avg": 2.1, "goals_conceded_avg": 0.8,
-        "injuries": [],
-        "is_host": True
-    },
-    "South Africa": {
-        "group": "A", "fifa_rank": 60, "fifa_pts": 1045,
-        "attack": 65, "defense": 63, "tactics": 65,
-        "flag": "🇿🇦",
-        "recent_form": {"w": 4, "d": 3, "l": 3},
-        "goals_scored_avg": 1.2, "goals_conceded_avg": 1.4,
-        "injuries": [],
-        "is_host": False
-    },
-    "South Korea": {
-        "group": "A", "fifa_rank": 25, "fifa_pts": 1530,
-        "attack": 79, "defense": 76, "tactics": 80,
-        "flag": "🇰🇷",
-        "recent_form": {"w": 6, "d": 2, "l": 2},
-        "goals_scored_avg": 1.8, "goals_conceded_avg": 1.0,
-        "injuries": [],
-        "is_host": False
-    },
-    "Czechia": {
-        "group": "A", "fifa_rank": 40, "fifa_pts": 1295,
-        "attack": 74, "defense": 72, "tactics": 75,
-        "flag": "🇨🇿",
-        "recent_form": {"w": 5, "d": 2, "l": 3},
-        "goals_scored_avg": 1.5, "goals_conceded_avg": 1.2,
-        "injuries": [],
-        "is_host": False
-    },
-    
-    # Group B
-    "Canada": {
-        "group": "B", "fifa_rank": 30, "fifa_pts": 1480,
-        "attack": 76, "defense": 73, "tactics": 75,
-        "flag": "🇨🇦",
-        "recent_form": {"w": 5, "d": 3, "l": 2},
-        "goals_scored_avg": 1.6, "goals_conceded_avg": 1.1,
-        "injuries": ["Moise Bombito (Sidelined)"],
-        "is_host": True
-    },
-    "Bosnia and Herzegovina": {
-        "group": "B", "fifa_rank": 64, "fifa_pts": 1020,
-        "attack": 66, "defense": 64, "tactics": 65,
-        "flag": "🇧🇦",
-        "recent_form": {"w": 3, "d": 3, "l": 4},
-        "goals_scored_avg": 1.1, "goals_conceded_avg": 1.5,
-        "injuries": [],
-        "is_host": False
-    },
-    "Qatar": {
-        "group": "B", "fifa_rank": 56, "fifa_pts": 1080,
-        "attack": 70, "defense": 68, "tactics": 72,
-        "flag": "🇶🇦",
-        "recent_form": {"w": 5, "d": 2, "l": 3},
-        "goals_scored_avg": 1.4, "goals_conceded_avg": 1.2,
-        "injuries": [],
-        "is_host": False
-    },
-    "Switzerland": {
-        "group": "B", "fifa_rank": 19, "fifa_pts": 1595,
-        "attack": 78, "defense": 80, "tactics": 84,
-        "flag": "🇨🇭",
-        "recent_form": {"w": 6, "d": 3, "l": 1},
-        "goals_scored_avg": 1.7, "goals_conceded_avg": 0.8,
-        "injuries": [],
-        "is_host": False
-    },
-    
-    # Group C
-    "Brazil": {
-        "group": "C", "fifa_rank": 6, "fifa_pts": 1765,
-        "attack": 90, "defense": 87, "tactics": 86,
-        "flag": "🇧🇷",
-        "recent_form": {"w": 7, "d": 2, "l": 1},
-        "goals_scored_avg": 2.5, "goals_conceded_avg": 0.7,
-        "injuries": ["Rodrygo (Cruciate ligament tear)", "Eder Militao (Torn left biceps femoris tendon)"],
-        "is_host": False
-    },
-    "Morocco": {
-        "group": "C", "fifa_rank": 7, "fifa_pts": 1750,
-        "attack": 83, "defense": 85, "tactics": 90,
-        "flag": "🇲🇦",
-        "recent_form": {"w": 8, "d": 1, "l": 1},
-        "goals_scored_avg": 2.2, "goals_conceded_avg": 0.6,
-        "injuries": [],
-        "is_host": False
-    },
-    "Haiti": {
-        "group": "C", "fifa_rank": 83, "fifa_pts": 890,
-        "attack": 60, "defense": 58, "tactics": 58,
-        "flag": "🇭🇹",
-        "recent_form": {"w": 3, "d": 2, "l": 5},
-        "goals_scored_avg": 1.0, "goals_conceded_avg": 1.8,
-        "injuries": [],
-        "is_host": False
-    },
-    "Scotland": {
-        "group": "C", "fifa_rank": 42, "fifa_pts": 1270,
-        "attack": 73, "defense": 72, "tactics": 76,
-        "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-        "recent_form": {"w": 5, "d": 2, "l": 3},
-        "goals_scored_avg": 1.4, "goals_conceded_avg": 1.1,
-        "injuries": [],
-        "is_host": False
-    },
-    
-    # Group D
-    "United States": {
-        "group": "D", "fifa_rank": 17, "fifa_pts": 1610,
-        "attack": 81, "defense": 79, "tactics": 82,
-        "flag": "🇺🇸",
-        "recent_form": {"w": 7, "d": 1, "l": 2},
-        "goals_scored_avg": 2.3, "goals_conceded_avg": 0.9,
-        "injuries": [],
-        "is_host": True
-    },
-    "Paraguay": {
-        "group": "D", "fifa_rank": 41, "fifa_pts": 1285,
-        "attack": 70, "defense": 68, "tactics": 71,
-        "flag": "🇵🇾",
-        "recent_form": {"w": 4, "d": 3, "l": 3},
-        "goals_scored_avg": 1.3, "goals_conceded_avg": 1.3,
-        "injuries": [],
-        "is_host": False
-    },
-    "Australia": {
-        "group": "D", "fifa_rank": 27, "fifa_pts": 1510,
-        "attack": 75, "defense": 73, "tactics": 78,
-        "flag": "🇦🇺",
-        "recent_form": {"w": 6, "d": 2, "l": 2},
-        "goals_scored_avg": 1.7, "goals_conceded_avg": 1.0,
-        "injuries": [],
-        "is_host": False
-    },
-    "Türkiye": {
-        "group": "D", "fifa_rank": 22, "fifa_pts": 1555,
-        "attack": 80, "defense": 77, "tactics": 80,
-        "flag": "🇹🇷",
-        "recent_form": {"w": 6, "d": 2, "l": 2},
-        "goals_scored_avg": 1.9, "goals_conceded_avg": 0.9,
-        "injuries": [],
-        "is_host": False
-    },
-    
-    # Group E
-    "Germany": {
-        "group": "E", "fifa_rank": 10, "fifa_pts": 1700,
-        "attack": 88, "defense": 85, "tactics": 87,
-        "flag": "🇩🇪",
-        "recent_form": {"w": 7, "d": 1, "l": 2},
-        "goals_scored_avg": 2.6, "goals_conceded_avg": 0.8,
-        "injuries": ["Serge Gnabry (Torn adductor)"],
-        "is_host": False
-    },
-    "Curaçao": {
-        "group": "E", "fifa_rank": 82, "fifa_pts": 900,
-        "attack": 58, "defense": 56, "tactics": 57,
-        "flag": "🇨🇼",
-        "recent_form": {"w": 3, "d": 2, "l": 5},
-        "goals_scored_avg": 0.9, "goals_conceded_avg": 1.9,
-        "injuries": [],
-        "is_host": False
-    },
-    "Côte d'Ivoire": {
-        "group": "E", "fifa_rank": 33, "fifa_pts": 1405,
-        "attack": 77, "defense": 75, "tactics": 78,
-        "flag": "🇨🇮",
-        "recent_form": {"w": 6, "d": 2, "l": 2},
-        "goals_scored_avg": 1.7, "goals_conceded_avg": 1.0,
-        "injuries": [],
-        "is_host": False
-    },
-    "Ecuador": {
-        "group": "E", "fifa_rank": 23, "fifa_pts": 1545,
-        "attack": 78, "defense": 76, "tactics": 80,
-        "flag": "🇪🇨",
-        "recent_form": {"w": 5, "d": 3, "l": 2},
-        "goals_scored_avg": 1.6, "goals_conceded_avg": 1.0,
-        "injuries": [],
-        "is_host": False
-    },
-    
-    # Group F
-    "Netherlands": {
-        "group": "F", "fifa_rank": 8, "fifa_pts": 1735,
-        "attack": 87, "defense": 84, "tactics": 88,
-        "flag": "🇳🇱",
-        "recent_form": {"w": 7, "d": 2, "l": 1},
-        "goals_scored_avg": 2.3, "goals_conceded_avg": 0.7,
-        "injuries": ["Jurriën Timber (Groin injury)"],
-        "is_host": False
-    },
-    "Japan": {
-        "group": "F", "fifa_rank": 18, "fifa_pts": 1600,
-        "attack": 82, "defense": 79, "tactics": 86,
-        "flag": "🇯🇵",
-        "recent_form": {"w": 8, "d": 1, "l": 1},
-        "goals_scored_avg": 2.4, "goals_conceded_avg": 0.7,
-        "injuries": ["Kaoru Mitoma (Hamstring)", "Takumi Minamino (ACL tear)"],
-        "is_host": False
-    },
-    "Sweden": {
-        "group": "F", "fifa_rank": 38, "fifa_pts": 1320,
-        "attack": 76, "defense": 74, "tactics": 77,
-        "flag": "🇸🇪",
-        "recent_form": {"w": 5, "d": 2, "l": 3},
-        "goals_scored_avg": 1.5, "goals_conceded_avg": 1.1,
-        "injuries": [],
-        "is_host": False
-    },
-    "Tunisia": {
-        "group": "F", "fifa_rank": 45, "fifa_pts": 1230,
-        "attack": 71, "defense": 70, "tactics": 73,
-        "flag": "🇹🇳",
-        "recent_form": {"w": 4, "d": 3, "l": 3},
-        "goals_scored_avg": 1.3, "goals_conceded_avg": 1.2,
-        "injuries": [],
-        "is_host": False
-    },
-    
-    # Group G
-    "Belgium": {
-        "group": "G", "fifa_rank": 9, "fifa_pts": 1720,
-        "attack": 86, "defense": 83, "tactics": 85,
-        "flag": "🇧🇪",
-        "recent_form": {"w": 7, "d": 2, "l": 1},
-        "goals_scored_avg": 2.2, "goals_conceded_avg": 0.7,
-        "injuries": [],
-        "is_host": False
-    },
-    "Egypt": {
-        "group": "G", "fifa_rank": 29, "fifa_pts": 1490,
-        "attack": 74, "defense": 72, "tactics": 76,
-        "flag": "🇪🇬",
-        "recent_form": {"w": 6, "d": 2, "l": 2},
-        "goals_scored_avg": 1.6, "goals_conceded_avg": 1.0,
-        "injuries": [],
-        "is_host": False
-    },
-    "Iran": {
-        "group": "G", "fifa_rank": 20, "fifa_pts": 1585,
-        "attack": 76, "defense": 74, "tactics": 80,
-        "flag": "🇮🇷",
-        "recent_form": {"w": 7, "d": 1, "l": 2},
-        "goals_scored_avg": 1.8, "goals_conceded_avg": 0.8,
-        "injuries": [],
-        "is_host": False
-    },
-    "New Zealand": {
-        "group": "G", "fifa_rank": 85, "fifa_pts": 870,
-        "attack": 58, "defense": 57, "tactics": 60,
-        "flag": "🇳🇿",
-        "recent_form": {"w": 3, "d": 2, "l": 5},
-        "goals_scored_avg": 0.9, "goals_conceded_avg": 1.8,
-        "injuries": [],
-        "is_host": False
-    },
-    
-    # Group H
-    "Spain": {
-        "group": "H", "fifa_rank": 2, "fifa_pts": 1875,
-        "attack": 92, "defense": 90, "tactics": 94,
-        "flag": "🇪🇸",
-        "recent_form": {"w": 9, "d": 0, "l": 1},
-        "goals_scored_avg": 2.8, "goals_conceded_avg": 0.5,
-        "injuries": ["Fermin Lopez (Foot fracture)"],
-        "is_host": False
-    },
-    "Cabo Verde": {
-        "group": "H", "fifa_rank": 67, "fifa_pts": 1005,
-        "attack": 64, "defense": 62, "tactics": 63,
-        "flag": "🇨🇻",
-        "recent_form": {"w": 4, "d": 2, "l": 4},
-        "goals_scored_avg": 1.1, "goals_conceded_avg": 1.5,
-        "injuries": [],
-        "is_host": False
-    },
-    "Saudi Arabia": {
-        "group": "H", "fifa_rank": 61, "fifa_pts": 1040,
-        "attack": 68, "defense": 66, "tactics": 70,
-        "flag": "🇸🇦",
-        "recent_form": {"w": 4, "d": 3, "l": 3},
-        "goals_scored_avg": 1.2, "goals_conceded_avg": 1.3,
-        "injuries": [],
-        "is_host": False
-    },
-    "Uruguay": {
-        "group": "H", "fifa_rank": 16, "fifa_pts": 1625,
-        "attack": 84, "defense": 81, "tactics": 88,
-        "flag": "🇺🇾",
-        "recent_form": {"w": 7, "d": 1, "l": 2},
-        "goals_scored_avg": 2.1, "goals_conceded_avg": 0.8,
-        "injuries": [],
-        "is_host": False
-    },
-    
-    # Group I
-    "France": {
-        "group": "I", "fifa_rank": 3, "fifa_pts": 1870,
-        "attack": 91, "defense": 88, "tactics": 90,
-        "flag": "🇫🇷",
-        "recent_form": {"w": 8, "d": 1, "l": 1},
-        "goals_scored_avg": 2.7, "goals_conceded_avg": 0.6,
-        "injuries": ["Hugo Ekitike (Season-ending injury)"],
-        "is_host": False
-    },
-    "Senegal": {
-        "group": "I", "fifa_rank": 15, "fifa_pts": 1640,
-        "attack": 80, "defense": 78, "tactics": 82,
-        "flag": "🇸🇳",
-        "recent_form": {"w": 7, "d": 2, "l": 1},
-        "goals_scored_avg": 2.0, "goals_conceded_avg": 0.8,
-        "injuries": [],
-        "is_host": False
-    },
-    "Iraq": {
-        "group": "I", "fifa_rank": 57, "fifa_pts": 1075,
-        "attack": 66, "defense": 64, "tactics": 68,
-        "flag": "🇮🇶",
-        "recent_form": {"w": 4, "d": 3, "l": 3},
-        "goals_scored_avg": 1.2, "goals_conceded_avg": 1.3,
-        "injuries": [],
-        "is_host": False
-    },
-    "Norway": {
-        "group": "I", "fifa_rank": 31, "fifa_pts": 1460,
-        "attack": 78, "defense": 75, "tactics": 77,
-        "flag": "🇳🇴",
-        "recent_form": {"w": 5, "d": 2, "l": 3},
-        "goals_scored_avg": 1.6, "goals_conceded_avg": 1.1,
-        "injuries": [],
-        "is_host": False
-    },
-    
-    # Group J
-    "Argentina": {
-        "group": "J", "fifa_rank": 1, "fifa_pts": 1877,
-        "attack": 93, "defense": 90, "tactics": 93,
-        "flag": "🇦🇷",
-        "recent_form": {"w": 9, "d": 0, "l": 1},
-        "goals_scored_avg": 3.0, "goals_conceded_avg": 0.5,
-        "injuries": ["Juan Foyth (Achilles tendon rupture)"],
-        "is_host": False
-    },
-    "Algeria": {
-        "group": "J", "fifa_rank": 28, "fifa_pts": 1500,
-        "attack": 75, "defense": 73, "tactics": 76,
-        "flag": "🇩🇿",
-        "recent_form": {"w": 5, "d": 3, "l": 2},
-        "goals_scored_avg": 1.5, "goals_conceded_avg": 1.0,
-        "injuries": [],
-        "is_host": False
-    },
-    "Austria": {
-        "group": "J", "fifa_rank": 24, "fifa_pts": 1540,
-        "attack": 79, "defense": 76, "tactics": 82,
-        "flag": "🇦🇹",
-        "recent_form": {"w": 6, "d": 2, "l": 2},
-        "goals_scored_avg": 1.8, "goals_conceded_avg": 0.9,
-        "injuries": ["Christoph Baumgartner (Thigh injury)"],
-        "is_host": False
-    },
-    "Jordan": {
-        "group": "J", "fifa_rank": 63, "fifa_pts": 1030,
-        "attack": 64, "defense": 62, "tactics": 66,
-        "flag": "🇯🇴",
-        "recent_form": {"w": 4, "d": 2, "l": 4},
-        "goals_scored_avg": 1.1, "goals_conceded_avg": 1.4,
-        "injuries": [],
-        "is_host": False
-    },
-    
-    # Group K
-    "Portugal": {
-        "group": "K", "fifa_rank": 5, "fifa_pts": 1766,
-        "attack": 89, "defense": 86, "tactics": 88,
-        "flag": "🇵🇹",
-        "recent_form": {"w": 8, "d": 1, "l": 1},
-        "goals_scored_avg": 2.5, "goals_conceded_avg": 0.6,
-        "injuries": [],
-        "is_host": False
-    },
-    "Congo DR": {
-        "group": "K", "fifa_rank": 46, "fifa_pts": 1220,
-        "attack": 69, "defense": 67, "tactics": 70,
-        "flag": "🇨🇩",
-        "recent_form": {"w": 4, "d": 3, "l": 3},
-        "goals_scored_avg": 1.2, "goals_conceded_avg": 1.3,
-        "injuries": [],
-        "is_host": False
-    },
-    "Uzbekistan": {
-        "group": "K", "fifa_rank": 50, "fifa_pts": 1150,
-        "attack": 67, "defense": 65, "tactics": 69,
-        "flag": "🇺🇿",
-        "recent_form": {"w": 5, "d": 2, "l": 3},
-        "goals_scored_avg": 1.3, "goals_conceded_avg": 1.2,
-        "injuries": [],
-        "is_host": False
-    },
-    "Colombia": {
-        "group": "K", "fifa_rank": 13, "fifa_pts": 1655,
-        "attack": 85, "defense": 82, "tactics": 86,
-        "flag": "🇨🇴",
-        "recent_form": {"w": 7, "d": 2, "l": 1},
-        "goals_scored_avg": 2.2, "goals_conceded_avg": 0.7,
-        "injuries": [],
-        "is_host": False
-    },
-    
-    # Group L
-    "England": {
-        "group": "L", "fifa_rank": 4, "fifa_pts": 1827,
-        "attack": 90, "defense": 87, "tactics": 88,
-        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "recent_form": {"w": 8, "d": 1, "l": 1},
-        "goals_scored_avg": 2.6, "goals_conceded_avg": 0.6,
-        "injuries": [],
-        "is_host": False
-    },
-    "Croatia": {
-        "group": "L", "fifa_rank": 11, "fifa_pts": 1690,
-        "attack": 82, "defense": 80, "tactics": 88,
-        "flag": "🇭🇷",
-        "recent_form": {"w": 6, "d": 2, "l": 2},
-        "goals_scored_avg": 1.8, "goals_conceded_avg": 0.9,
-        "injuries": [],
-        "is_host": False
-    },
-    "Ghana": {
-        "group": "L", "fifa_rank": 73, "fifa_pts": 965,
-        "attack": 70, "defense": 68, "tactics": 70,
-        "flag": "🇬🇭",
-        "recent_form": {"w": 4, "d": 3, "l": 3},
-        "goals_scored_avg": 1.3, "goals_conceded_avg": 1.3,
-        "injuries": [],
-        "is_host": False
-    },
-    "Panama": {
-        "group": "L", "fifa_rank": 34, "fifa_pts": 1395,
-        "attack": 71, "defense": 69, "tactics": 72,
-        "flag": "🇵🇦",
-        "recent_form": {"w": 5, "d": 2, "l": 3},
-        "goals_scored_avg": 1.4, "goals_conceded_avg": 1.2,
-        "injuries": [],
-        "is_host": False
-    }
-}
-
-# ============================================================
-# ACTUAL RESULTS ALREADY PLAYED (as of June 18, 2026)
-# ============================================================
-actual_results = {
-    # Group A
-    ("Mexico", "South Africa"): {"score": (2, 0), "played": True},
-    ("South Korea", "Czechia"): {"score": (2, 1), "played": True},
-    ("Czechia", "South Africa"): {"score": (1, 1), "played": True},
-    
-    # Group B
-    ("Canada", "Bosnia and Herzegovina"): {"score": (1, 1), "played": True},
-    ("Switzerland", "Qatar"): {"score": (1, 1), "played": True},
-    ("Switzerland", "Bosnia and Herzegovina"): {"score": (4, 1), "played": True},
-    
-    # Group C
-    ("Brazil", "Morocco"): {"score": (1, 1), "played": True},
-    ("Scotland", "Haiti"): {"score": (1, 0), "played": True},
-    
-    # Group D
-    ("United States", "Paraguay"): {"score": (4, 1), "played": True},
-    ("Australia", "Türkiye"): {"score": (2, 0), "played": True},
-    
-    # Group E
-    ("Germany", "Curaçao"): {"score": (7, 1), "played": True},
-    ("Côte d'Ivoire", "Ecuador"): {"score": (1, 0), "played": True},
-    
-    # Group F
-    ("Netherlands", "Sweden"): {"score": (5, 1), "played": True},
-    ("Japan", "Tunisia"): {"score": (2, 1), "played": True},
-    
-    # Group G
-    ("Belgium", "Egypt"): {"score": (2, 1), "played": True},
-    ("Iran", "New Zealand"): {"score": (2, 0), "played": True},
-    
-    # Group H
-    ("Spain", "Cabo Verde"): {"score": (3, 0), "played": True},
-    ("Uruguay", "Saudi Arabia"): {"score": (3, 1), "played": True},
-    
-    # Group I
-    ("France", "Iraq"): {"score": (4, 1), "played": True},
-    ("Norway", "Senegal"): {"score": (3, 1), "played": True},
-    
-    # Group J
-    ("Argentina", "Algeria"): {"score": (3, 0), "played": True},
-    ("Austria", "Jordan"): {"score": (2, 0), "played": True},
-    
-    # Group K
-    ("Portugal", "Congo DR"): {"score": (1, 1), "played": True},
-    ("Uzbekistan", "Colombia"): {"score": (1, 3), "played": True},
-    
-    # Group L
-    ("England", "Croatia"): {"score": (4, 2), "played": True},
-    ("Ghana", "Panama"): {"score": (1, 0), "played": True},
-}
-
-# ============================================================
-# MODEL: Enhanced Dixon-Coles inspired Poisson
-# ============================================================
-
-def calculate_form_multiplier(recent_form):
-    """Convert W/D/L form to a multiplier (0.85 to 1.15)"""
-    total = recent_form["w"] + recent_form["d"] + recent_form["l"]
-    if total == 0:
-        return 1.0
-    form_pct = (recent_form["w"] * 3 + recent_form["d"]) / (total * 3)
-    # Map 0.0-1.0 form to 0.85-1.15 multiplier
-    return 0.85 + (form_pct * 0.30)
-
-def calculate_injury_impact(injuries):
-    """Calculate attack/defense penalty from injuries"""
-    attack_penalty = 0
-    defense_penalty = 0
-    
-    for injury in injuries:
-        inj_lower = injury.lower()
-        # Major injuries
-        is_major = any(term in inj_lower for term in ["acl", "achilles", "cruciate", "tendon", "season-ending", "biceps femoris"])
-        penalty = 5.0 if is_major else 2.5
-        
-        # Position-specific penalties
-        if any(term in inj_lower for term in ["militao", "timber", "foyth", "defender", "back", "keeper"]):
-            defense_penalty += penalty
-        elif any(term in inj_lower for term in ["rodrygo", "gnabry", "mitoma", "minamino", "ekitike", "baumgartner", "fermin"]):
-            attack_penalty += penalty
-        else:
-            attack_penalty += penalty * 0.5
-            defense_penalty += penalty * 0.5
-    
-    return attack_penalty, defense_penalty
-
-def get_effective_ratings(team_name):
-    """Calculate effective attack/defense ratings with all modifiers"""
-    t = teams_data[team_name]
-    
-    # Base ratings
-    attack = t["attack"]
-    defense = t["defense"]
-    
-    # Form multiplier
-    form_mult = calculate_form_multiplier(t["recent_form"])
-    
-    # Tactical modifier (slight boost for high tactics)
-    tactical_mult = 0.95 + (t["tactics"] / 1000.0)
-    
-    # Injury penalties
-    atk_pen, def_pen = calculate_injury_impact(t.get("injuries", []))
-    
-    # Home advantage (for co-hosts)
-    home_mult = 1.04 if t.get("is_host", False) else 1.0
-    
-    eff_attack = (attack * form_mult * tactical_mult * home_mult) - atk_pen
-    eff_defense = (defense * form_mult * tactical_mult) - def_pen
-    
-    return eff_attack, eff_defense
-
-def poisson_probability(lmbda, k):
-    """Calculate P(X = k) for Poisson distribution"""
-    if lmbda <= 0:
-        return 1.0 if k == 0 else 0.0
-    try:
-        return (math.exp(-lmbda) * (lmbda ** k)) / math.factorial(k)
-    except OverflowError:
-        return 0.0
-
-def dixon_coles_adjustment(p1_goals, p2_goals, lambda1, lambda2, rho=-0.13):
-    """
-    Dixon-Coles adjustment to better predict draws and low-scoring games.
-    
-    BUSINESS RULE: Standard Poisson models assume goal scoring is independent. 
-    However, in real football, low-scoring games are highly correlated (if Team A fails to 
-    score, Team B is statistically more likely to also fail to score).
-    
-    This function applies the Dixon-Coles adjustment factor (tau) to the joint Poisson 
-    probabilities to correct for this draw bias, varying draw probability based on matchup 
-    strength rather than using a flat average (~24%).
-    """
-    tau = 1.0
-    if p1_goals == 0 and p2_goals == 0:
-        tau = 1.0 - lambda1 * lambda2 * rho
-    elif p1_goals == 0 and p2_goals == 1:
-        tau = 1.0 + lambda1 * rho
-    elif p1_goals == 1 and p2_goals == 0:
-        tau = 1.0 + lambda2 * rho
-    elif p1_goals == 1 and p2_goals == 1:
-        tau = 1.0 - rho
-    else:
-        tau = 1.0
-    return tau
-
-def predict_match(team1, team2, is_knockout=False):
-    """
-    Predict match outcome using enhanced Poisson model with Dixon-Coles.
-    Returns dict with t1_win, draw, t2_win probabilities.
-    """
-    att1, def1 = get_effective_ratings(team1)
-    att2, def2 = get_effective_ratings(team2)
-    
-    # Global averages for normalization
-    avg_att = sum(t["attack"] for t in teams_data.values()) / len(teams_data)
-    avg_def = sum(t["defense"] for t in teams_data.values()) / len(teams_data)
-    
-    # Attack/Defense coefficients
-    att_coeff1 = att1 / avg_att
-    att_coeff2 = att2 / avg_att
-    def_coeff1 = avg_def / def1
-    def_coeff2 = avg_def / def2
-    
-    # Expected goals (base ~1.35 per team in neutral match)
-    base_goals = 1.35
-    lambda1 = base_goals * att_coeff1 * def_coeff2
-    lambda2 = base_goals * att_coeff2 * def_coeff1
-    
-    # Ensure reasonable bounds
-    lambda1 = max(0.4, min(3.5, lambda1))
-    lambda2 = max(0.4, min(3.5, lambda2))
-    
-    # Calculate goal probabilities using Poisson with Dixon-Coles
-    max_goals = 10
-    p_matrix = [[0.0] * (max_goals + 1) for _ in range(max_goals + 1)]
-    
-    for i in range(max_goals + 1):
-        for j in range(max_goals + 1):
-            p_poisson = poisson_probability(lambda1, i) * poisson_probability(lambda2, j)
-            tau = dixon_coles_adjustment(i, j, lambda1, lambda2, rho=-0.13)
-            p_matrix[i][j] = p_poisson * tau
-    
-    # Normalize
-    total = sum(sum(row) for row in p_matrix)
-    if total > 0:
-        for i in range(max_goals + 1):
-            for j in range(max_goals + 1):
-                p_matrix[i][j] /= total
-    
-    # Aggregate probabilities
-    p_t1_win = 0.0
-    p_draw = 0.0
-    p_t2_win = 0.0
-    
-    for i in range(max_goals + 1):
-        for j in range(max_goals + 1):
-            if i > j:
-                p_t1_win += p_matrix[i][j]
-            elif i == j:
-                p_draw += p_matrix[i][j]
-            else:
-                p_t2_win += p_matrix[i][j]
-    
-    if is_knockout:
-        # In knockout, draw resolves via extra time/penalties
-        # Weight by relative strength
-        p_adv1 = p_t1_win + p_draw * (lambda1 / (lambda1 + lambda2))
-        p_adv2 = p_t2_win + p_draw * (lambda2 / (lambda1 + lambda2))
-        return {"t1_win": p_adv1, "draw": 0.0, "t2_win": p_adv2}
-    
-    return {"t1_win": p_t1_win, "draw": p_draw, "t2_win": p_t2_win}
-
-def predict_score(team1, team2):
-    """Predict most likely score for a match"""
-    att1, def1 = get_effective_ratings(team1)
-    att2, def2 = get_effective_ratings(team2)
-    
-    avg_att = sum(t["attack"] for t in teams_data.values()) / len(teams_data)
-    avg_def = sum(t["defense"] for t in teams_data.values()) / len(teams_data)
-    
-    lambda1 = 1.35 * (att1 / avg_att) * (avg_def / def2)
-    lambda2 = 1.35 * (att2 / avg_att) * (avg_def / def1)
-    
-    lambda1 = max(0.4, min(3.5, lambda1))
-    lambda2 = max(0.4, min(3.5, lambda2))
-    
-    return round(lambda1), round(lambda2)
+from engine import teams_data, predict_match, get_effective_ratings, actual_results, predict_score
 
 # ============================================================
 # GROUP STAGE SIMULATION
@@ -880,14 +173,31 @@ def simulate_knockout_round(pairings, is_r32=False):
     winners = []
     
     for idx, (t1, t2) in enumerate(pairings):
-        probs = predict_match(t1, t2, is_knockout=True)
+        match_key = (t1, t2)
+        match_key_rev = (t2, t1)
+        actual = False
         
-        if probs["t1_win"] > probs["t2_win"]:
-            winner = t1
-            confidence = probs["t1_win"]
+        if match_key in actual_results and actual_results[match_key]["played"]:
+            g1, g2 = actual_results[match_key]["score"]
+            winner = t1 if g1 > g2 else t2
+            confidence = 1.0
+            actual = True
+            probs = {t1: 1.0 if winner == t1 else 0.0, "Draw": 0.0, t2: 1.0 if winner == t2 else 0.0}
+        elif match_key_rev in actual_results and actual_results[match_key_rev]["played"]:
+            g2, g1 = actual_results[match_key_rev]["score"]
+            winner = t1 if g1 > g2 else t2
+            confidence = 1.0
+            actual = True
+            probs = {t1: 1.0 if winner == t1 else 0.0, "Draw": 0.0, t2: 1.0 if winner == t2 else 0.0}
         else:
-            winner = t2
-            confidence = probs["t2_win"]
+            probs_data = predict_match(t1, t2, is_knockout=True)
+            if probs_data["t1_win"] > probs_data["t2_win"]:
+                winner = t1
+                confidence = probs_data["t1_win"]
+            else:
+                winner = t2
+                confidence = probs_data["t2_win"]
+            probs = {t1: round(probs_data["t1_win"], 3), "Draw": 0.0, t2: round(probs_data["t2_win"], 3)}
         
         results.append({
             "t1": t1,
@@ -895,7 +205,8 @@ def simulate_knockout_round(pairings, is_r32=False):
             "winner": winner,
             "confidence": round(confidence, 3),
             "match_num": idx + 1,
-            "probs": {t1: round(probs["t1_win"], 3), "Draw": 0.0, t2: round(probs["t2_win"], 3)}
+            "probs": probs,
+            "actual": actual
         })
         winners.append(winner)
     
@@ -913,28 +224,71 @@ for r in sf_results:
     loser = r["t2"] if r["winner"] == r["t1"] else r["t1"]
     sf_losers.append(loser)
 
-third_place_probs = predict_match(sf_losers[0], sf_losers[1], is_knockout=True)
+t1_tp, t2_tp = sf_losers[0], sf_losers[1]
+match_key_tp = (t1_tp, t2_tp)
+match_key_tp_rev = (t2_tp, t1_tp)
+actual_tp = False
+if match_key_tp in actual_results and actual_results[match_key_tp]["played"]:
+    g1, g2 = actual_results[match_key_tp]["score"]
+    winner_tp = t1_tp if g1 > g2 else t2_tp
+    confidence_tp = 1.0
+    actual_tp = True
+    probs_tp = {t1_tp: 1.0 if winner_tp == t1_tp else 0.0, "Draw": 0.0, t2_tp: 1.0 if winner_tp == t2_tp else 0.0}
+elif match_key_tp_rev in actual_results and actual_results[match_key_tp_rev]["played"]:
+    g2, g1 = actual_results[match_key_tp_rev]["score"]
+    winner_tp = t1_tp if g1 > g2 else t2_tp
+    confidence_tp = 1.0
+    actual_tp = True
+    probs_tp = {t1_tp: 1.0 if winner_tp == t1_tp else 0.0, "Draw": 0.0, t2_tp: 1.0 if winner_tp == t2_tp else 0.0}
+else:
+    third_place_probs = predict_match(t1_tp, t2_tp, is_knockout=True)
+    winner_tp = t1_tp if third_place_probs["t1_win"] > third_place_probs["t2_win"] else t2_tp
+    confidence_tp = max(third_place_probs["t1_win"], third_place_probs["t2_win"])
+    probs_tp = {t1_tp: round(third_place_probs["t1_win"], 3), "Draw": 0.0, t2_tp: round(third_place_probs["t1_win"], 3)}
+
 third_place_result = [{
-    "t1": sf_losers[0],
-    "t2": sf_losers[1],
-    "winner": sf_losers[0] if third_place_probs["t1_win"] > third_place_probs["t2_win"] else sf_losers[1],
-    "confidence": round(max(third_place_probs["t1_win"], third_place_probs["t2_win"]), 3),
+    "t1": t1_tp,
+    "t2": t2_tp,
+    "winner": winner_tp,
+    "confidence": round(confidence_tp, 3),
     "match_num": 1,
-    "probs": {sf_losers[0]: round(third_place_probs["t1_win"], 3), "Draw": 0.0, sf_losers[1]: round(third_place_probs["t2_win"], 3)}
+    "probs": probs_tp,
+    "actual": actual_tp
 }]
 
 # Final
-final_probs = predict_match(final_teams[0], final_teams[1], is_knockout=True)
-champion = final_teams[0] if final_probs["t1_win"] > final_probs["t2_win"] else final_teams[1]
-runner_up = final_teams[1] if champion == final_teams[0] else final_teams[0]
+t1_f, t2_f = final_teams[0], final_teams[1]
+match_key_f = (t1_f, t2_f)
+match_key_f_rev = (t2_f, t1_f)
+actual_f = False
+if match_key_f in actual_results and actual_results[match_key_f]["played"]:
+    g1, g2 = actual_results[match_key_f]["score"]
+    champion = t1_f if g1 > g2 else t2_f
+    confidence_f = 1.0
+    actual_f = True
+    probs_f = {t1_f: 1.0 if champion == t1_f else 0.0, "Draw": 0.0, t2_f: 1.0 if champion == t2_f else 0.0}
+elif match_key_f_rev in actual_results and actual_results[match_key_f_rev]["played"]:
+    g2, g1 = actual_results[match_key_f_rev]["score"]
+    champion = t1_f if g1 > g2 else t2_f
+    confidence_f = 1.0
+    actual_f = True
+    probs_f = {t1_f: 1.0 if champion == t1_f else 0.0, "Draw": 0.0, t2_f: 1.0 if champion == t2_f else 0.0}
+else:
+    final_probs = predict_match(t1_f, t2_f, is_knockout=True)
+    champion = t1_f if final_probs["t1_win"] > final_probs["t2_win"] else t2_f
+    confidence_f = max(final_probs["t1_win"], final_probs["t2_win"])
+    probs_f = {t1_f: round(final_probs["t1_win"], 3), "Draw": 0.0, t2_f: round(final_probs["t2_win"], 3)}
+
+runner_up = t2_f if champion == t1_f else t1_f
 
 final_result = [{
-    "t1": final_teams[0],
-    "t2": final_teams[1],
+    "t1": t1_f,
+    "t2": t2_f,
     "winner": champion,
-    "confidence": round(max(final_probs["t1_win"], final_probs["t2_win"]), 3),
+    "confidence": round(confidence_f, 3),
     "match_num": 1,
-    "probs": {final_teams[0]: round(final_probs["t1_win"], 3), "Draw": 0.0, final_teams[1]: round(final_probs["t2_win"], 3)}
+    "probs": probs_f,
+    "actual": actual_f
 }]
 
 third_name = third_place_result[0]["winner"]

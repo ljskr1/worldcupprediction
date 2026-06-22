@@ -11,26 +11,26 @@ This report uses an **Enhanced Dixon-Coles Poisson Model** with:
 ## 📊 Monte Carlo Simulation Results (10,000 Runs)
 | Pos | Team | Champion % | Reach Final % | Reach Semis % | Qualify % |
 |---|---|---|---|---|---|
-| 1 | 🇪🇸 Spain | **10.1%** | 17.3% | 28.2% | 99.8% |
-| 2 | 🇦🇷 Argentina | **9.0%** | 15.3% | 25.1% | 99.7% |
-| 3 | 🇫🇷 France | **7.0%** | 11.7% | 20.0% | 99.5% |
-| 4 | 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England | **6.7%** | 11.7% | 20.7% | 99.2% |
-| 5 | 🇵🇹 Portugal | **5.6%** | 9.8% | 17.3% | 83.8% |
-| 6 | 🇩🇪 Germany | **5.1%** | 10.0% | 18.7% | 99.7% |
-| 7 | 🇳🇱 Netherlands | **5.0%** | 9.9% | 18.2% | 99.4% |
-| 8 | 🇧🇪 Belgium | **4.6%** | 9.3% | 17.2% | 99.0% |
-| 9 | 🇲🇦 Morocco | **4.5%** | 9.0% | 16.9% | 89.7% |
-| 10 | 🇨🇴 Colombia | **4.1%** | 8.1% | 15.3% | 98.3% |
-| 11 | 🇲🇽 Mexico | **4.1%** | 8.2% | 15.8% | 97.9% |
-| 12 | 🇺🇾 Uruguay | **4.1%** | 8.6% | 17.0% | 99.3% |
-| 13 | 🇧🇷 Brazil | **3.8%** | 8.1% | 15.6% | 89.2% |
-| 14 | 🇺🇸 United States | **3.4%** | 6.9% | 14.6% | 99.2% |
-| 15 | 🇯🇵 Japan | **2.5%** | 5.5% | 12.4% | 96.2% |
-| 16 | 🇨🇭 Switzerland | **2.5%** | 5.4% | 12.4% | 100.0% |
-| 17 | 🇮🇷 Iran | **1.7%** | 4.0% | 9.0% | 97.9% |
-| 18 | 🇭🇷 Croatia | **1.7%** | 3.6% | 8.3% | 61.9% |
-| 19 | 🇦🇹 Austria | **1.6%** | 3.9% | 9.3% | 97.5% |
-| 20 | 🇸🇳 Senegal | **1.6%** | 3.4% | 7.1% | 55.0% |
+| 1 | 🇦🇷 Argentina | **9.6%** | 15.4% | 24.9% | 99.8% |
+| 2 | 🇪🇸 Spain | **8.1%** | 14.8% | 25.7% | 100.0% |
+| 3 | 🇫🇷 France | **8.1%** | 13.3% | 22.6% | 100.0% |
+| 4 | 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England | **6.9%** | 11.7% | 20.1% | 99.0% |
+| 5 | 🇵🇹 Portugal | **5.6%** | 9.9% | 18.1% | 85.8% |
+| 6 | 🇩🇪 Germany | **5.5%** | 11.7% | 20.7% | 100.0% |
+| 7 | 🇳🇱 Netherlands | **5.3%** | 10.3% | 19.4% | 100.0% |
+| 8 | 🇲🇦 Morocco | **5.3%** | 10.3% | 18.3% | 100.0% |
+| 9 | 🇧🇪 Belgium | **4.9%** | 9.3% | 18.5% | 89.3% |
+| 10 | 🇧🇷 Brazil | **4.8%** | 9.9% | 18.6% | 100.0% |
+| 11 | 🇲🇽 Mexico | **4.6%** | 9.3% | 17.6% | 100.0% |
+| 12 | 🇺🇸 United States | **4.1%** | 8.8% | 17.5% | 100.0% |
+| 13 | 🇨🇴 Colombia | **3.4%** | 6.6% | 13.7% | 98.3% |
+| 14 | 🇯🇵 Japan | **3.0%** | 6.6% | 13.9% | 100.0% |
+| 15 | 🇺🇾 Uruguay | **2.4%** | 5.3% | 10.2% | 64.0% |
+| 16 | 🇨🇭 Switzerland | **1.9%** | 4.3% | 10.3% | 100.0% |
+| 17 | 🇦🇹 Austria | **1.8%** | 4.0% | 9.9% | 98.6% |
+| 18 | 🇭🇷 Croatia | **1.8%** | 3.9% | 8.7% | 64.9% |
+| 19 | 🇨🇮 Côte d'Ivoire | **1.4%** | 3.1% | 8.5% | 94.5% |
+| 20 | 🇮🇷 Iran | **1.4%** | 3.2% | 7.4% | 69.6% |
 
 ## ⚽ Group Stage Results & Remaining Fixtures
 
@@ -38,216 +38,216 @@ This report uses an **Enhanced Dixon-Coles Poisson Model** with:
 | Match | Score | Outcome | Model Probabilities |
 |---|---|---|---|
 | 🇲🇽 Mexico vs 🇿🇦 South Africa | **2-0** ✓ | **Mexico Win** | Mexico: 58.9%, Draw: 24.2%, South Africa: 16.9% |
-| 🇲🇽 Mexico vs 🇰🇷 South Korea | Draw | Draw | Mexico: 41.8%, Draw: 28.3%, South Korea: 30.0% |
-| 🇲🇽 Mexico vs 🇨🇿 Czechia | Mexico Win | **Mexico Win** | Mexico: 48.0%, Draw: 27.3%, Czechia: 24.7% |
-| 🇿🇦 South Africa vs 🇰🇷 South Korea | Draw | Draw | South Africa: 21.2%, Draw: 26.4%, South Korea: 52.3% |
+| 🇲🇽 Mexico vs 🇰🇷 South Korea | **1-0** ✓ | **Mexico Win** | Mexico: 41.8%, Draw: 28.2%, South Korea: 30.0% |
+| 🇲🇽 Mexico vs 🇨🇿 Czechia | Draw | Draw | Mexico: 48.0%, Draw: 27.3%, Czechia: 24.7% |
+| 🇿🇦 South Africa vs 🇰🇷 South Korea | South Africa Win | **South Africa Win** | South Africa: 21.2%, Draw: 26.4%, South Korea: 52.4% |
 | 🇿🇦 South Africa vs 🇨🇿 Czechia | **1-1** ✓ | Draw | South Africa: 26.1%, Draw: 28.0%, Czechia: 46.0% |
-| 🇰🇷 South Korea vs 🇨🇿 Czechia | **2-1** ✓ | **South Korea Win** | South Korea: 41.5%, Draw: 28.6%, Czechia: 29.9% |
+| 🇰🇷 South Korea vs 🇨🇿 Czechia | **2-1** ✓ | **South Korea Win** | South Korea: 41.6%, Draw: 28.5%, Czechia: 29.9% |
 
 **Current Standings:**
 | Pos | Team | Pld | W | D | L | GF | GA | GD | Pts |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | 🇲🇽 Mexico ✅ | 3 | 2 | 1 | 0 | 5 | 1 | +4 | **7** |
-| 2 | 🇰🇷 South Korea ✅ | 3 | 1 | 2 | 0 | 4 | 3 | +1 | **5** |
-| 3 | 🇿🇦 South Africa ⏳ | 3 | 0 | 2 | 1 | 2 | 4 | -2 | **2** |
-| 4 | 🇨🇿 Czechia ❌ | 3 | 0 | 1 | 2 | 2 | 5 | -3 | **1** |
+| 1 | 🇲🇽 Mexico ✅ | 3 | 2 | 1 | 0 | 5 | 2 | +3 | **7** |
+| 2 | 🇿🇦 South Africa ✅ | 3 | 1 | 1 | 1 | 2 | 3 | -1 | **4** |
+| 3 | 🇰🇷 South Korea ✅ | 3 | 1 | 0 | 2 | 2 | 3 | -1 | **3** |
+| 4 | 🇨🇿 Czechia ❌ | 3 | 0 | 2 | 1 | 4 | 5 | -1 | **2** |
 
 ### Group B
 | Match | Score | Outcome | Model Probabilities |
 |---|---|---|---|
-| 🇨🇦 Canada vs 🇧🇦 Bosnia and Herzegovina | **1-1** ✓ | Draw | Canada: 49.6%, Draw: 26.8%, Bosnia and Herzegovina: 23.5% |
-| 🇨🇦 Canada vs 🇶🇦 Qatar | Draw | Draw | Canada: 41.8%, Draw: 28.2%, Qatar: 30.0% |
-| 🇨🇦 Canada vs 🇨🇭 Switzerland | Canada Win | **Canada Win** | Canada: 29.9%, Draw: 28.7%, Switzerland: 41.4% |
+| 🇨🇦 Canada vs 🇧🇦 Bosnia and Herzegovina | **1-1** ✓ | Draw | Canada: 49.7%, Draw: 26.8%, Bosnia and Herzegovina: 23.5% |
+| 🇨🇦 Canada vs 🇶🇦 Qatar | **6-0** ✓ | **Canada Win** | Canada: 41.8%, Draw: 28.2%, Qatar: 30.0% |
+| 🇨🇦 Canada vs 🇨🇭 Switzerland | Switzerland Win | **Switzerland Win** | Canada: 29.9%, Draw: 28.7%, Switzerland: 41.4% |
 | 🇧🇦 Bosnia and Herzegovina vs 🇶🇦 Qatar | Qatar Win | **Qatar Win** | Bosnia and Herzegovina: 28.5%, Draw: 28.4%, Qatar: 43.0% |
-| 🇧🇦 Bosnia and Herzegovina vs 🇨🇭 Switzerland | **1-4** ✓ | **Switzerland Win** | Bosnia and Herzegovina: 19.0%, Draw: 26.1%, Switzerland: 54.9% |
+| 🇧🇦 Bosnia and Herzegovina vs 🇨🇭 Switzerland | **1-4** ✓ | **Switzerland Win** | Bosnia and Herzegovina: 19.0%, Draw: 26.1%, Switzerland: 55.0% |
 | 🇶🇦 Qatar vs 🇨🇭 Switzerland | **1-1** ✓ | Draw | Qatar: 24.7%, Draw: 28.1%, Switzerland: 47.2% |
 
 **Current Standings:**
 | Pos | Team | Pld | W | D | L | GF | GA | GD | Pts |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | 🇨🇦 Canada ✅ | 3 | 1 | 2 | 0 | 4 | 3 | +1 | **5** |
-| 2 | 🇶🇦 Qatar ✅ | 3 | 1 | 2 | 0 | 4 | 3 | +1 | **5** |
-| 3 | 🇨🇭 Switzerland ✅ | 3 | 1 | 1 | 1 | 5 | 3 | +2 | **4** |
+| 1 | 🇨🇭 Switzerland ✅ | 3 | 2 | 1 | 0 | 6 | 2 | +4 | **7** |
+| 2 | 🇨🇦 Canada ✅ | 3 | 1 | 1 | 1 | 7 | 2 | +5 | **4** |
+| 3 | 🇶🇦 Qatar ✅ | 3 | 1 | 1 | 1 | 2 | 7 | -5 | **4** |
 | 4 | 🇧🇦 Bosnia and Herzegovina ❌ | 3 | 0 | 1 | 2 | 2 | 6 | -4 | **1** |
 
 ### Group C
 | Match | Score | Outcome | Model Probabilities |
 |---|---|---|---|
-| 🇧🇷 Brazil vs 🇲🇦 Morocco | **1-1** ✓ | Draw | Brazil: 34.0%, Draw: 29.4%, Morocco: 36.7% |
-| 🇧🇷 Brazil vs 🇭🇹 Haiti | Brazil Win | **Brazil Win** | Brazil: 68.3%, Draw: 20.5%, Haiti: 11.2% |
-| 🇧🇷 Brazil vs 🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland | Brazil Win | **Brazil Win** | Brazil: 49.4%, Draw: 27.3%, Scotland: 23.2% |
-| 🇲🇦 Morocco vs 🇭🇹 Haiti | Haiti Win | **Haiti Win** | Morocco: 69.0%, Draw: 20.4%, Haiti: 10.6% |
-| 🇲🇦 Morocco vs 🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland | Morocco Win | **Morocco Win** | Morocco: 50.4%, Draw: 27.5%, Scotland: 22.1% |
-| 🇭🇹 Haiti vs 🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland | **0-1** ✓ | **Scotland Win** | Haiti: 19.8%, Draw: 26.1%, Scotland: 54.1% |
+| 🇧🇷 Brazil vs 🇲🇦 Morocco | **1-1** ✓ | Draw | Brazil: 34.0%, Draw: 29.3%, Morocco: 36.7% |
+| 🇧🇷 Brazil vs 🇭🇹 Haiti | **3-0** ✓ | **Brazil Win** | Brazil: 68.3%, Draw: 20.4%, Haiti: 11.2% |
+| 🇧🇷 Brazil vs 🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland | Draw | Draw | Brazil: 49.5%, Draw: 27.3%, Scotland: 23.3% |
+| 🇲🇦 Morocco vs 🇭🇹 Haiti | Morocco Win | **Morocco Win** | Morocco: 69.0%, Draw: 20.4%, Haiti: 10.6% |
+| 🇲🇦 Morocco vs 🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland | **1-0** ✓ | **Morocco Win** | Morocco: 50.4%, Draw: 27.5%, Scotland: 22.1% |
+| 🇭🇹 Haiti vs 🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland | **0-1** ✓ | **Scotland Win** | Haiti: 19.8%, Draw: 26.0%, Scotland: 54.2% |
 
 **Current Standings:**
 | Pos | Team | Pld | W | D | L | GF | GA | GD | Pts |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | 🇧🇷 Brazil ✅ | 3 | 2 | 1 | 0 | 4 | 1 | +3 | **7** |
-| 2 | 🇲🇦 Morocco ✅ | 3 | 1 | 1 | 1 | 2 | 2 | +0 | **4** |
-| 3 | 🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland ✅ | 3 | 1 | 0 | 2 | 1 | 2 | -1 | **3** |
-| 4 | 🇭🇹 Haiti ❌ | 3 | 1 | 0 | 2 | 1 | 3 | -2 | **3** |
+| 1 | 🇲🇦 Morocco ✅ | 3 | 2 | 1 | 0 | 3 | 1 | +2 | **7** |
+| 2 | 🇧🇷 Brazil ✅ | 3 | 1 | 2 | 0 | 4 | 1 | +3 | **5** |
+| 3 | 🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland ✅ | 3 | 1 | 1 | 1 | 1 | 1 | +0 | **4** |
+| 4 | 🇭🇹 Haiti ❌ | 3 | 0 | 0 | 3 | 0 | 5 | -5 | **0** |
 
 ### Group D
 | Match | Score | Outcome | Model Probabilities |
 |---|---|---|---|
-| 🇺🇸 United States vs 🇵🇾 Paraguay | **4-1** ✓ | **United States Win** | United States: 51.9%, Draw: 26.4%, Paraguay: 21.7% |
-| 🇺🇸 United States vs 🇦🇺 Australia | Australia Win | **Australia Win** | United States: 43.5%, Draw: 28.1%, Australia: 28.4% |
-| 🇺🇸 United States vs 🇹🇷 Türkiye | United States Win | **United States Win** | United States: 39.5%, Draw: 28.5%, Türkiye: 32.0% |
-| 🇵🇾 Paraguay vs 🇦🇺 Australia | Australia Win | **Australia Win** | Paraguay: 28.0%, Draw: 28.4%, Australia: 43.6% |
-| 🇵🇾 Paraguay vs 🇹🇷 Türkiye | Türkiye Win | **Türkiye Win** | Paraguay: 24.7%, Draw: 27.6%, Türkiye: 47.7% |
+| 🇺🇸 United States vs 🇵🇾 Paraguay | **4-1** ✓ | **United States Win** | United States: 52.0%, Draw: 26.4%, Paraguay: 21.7% |
+| 🇺🇸 United States vs 🇦🇺 Australia | **2-0** ✓ | **United States Win** | United States: 43.5%, Draw: 28.1%, Australia: 28.4% |
+| 🇺🇸 United States vs 🇹🇷 Türkiye | United States Win | **United States Win** | United States: 39.5%, Draw: 28.4%, Türkiye: 32.0% |
+| 🇵🇾 Paraguay vs 🇦🇺 Australia | Paraguay Win | **Paraguay Win** | Paraguay: 28.0%, Draw: 28.4%, Australia: 43.6% |
+| 🇵🇾 Paraguay vs 🇹🇷 Türkiye | **1-0** ✓ | **Paraguay Win** | Paraguay: 24.7%, Draw: 27.5%, Türkiye: 47.7% |
 | 🇦🇺 Australia vs 🇹🇷 Türkiye | **2-0** ✓ | **Australia Win** | Australia: 31.8%, Draw: 28.8%, Türkiye: 39.4% |
 
 **Current Standings:**
 | Pos | Team | Pld | W | D | L | GF | GA | GD | Pts |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | 🇦🇺 Australia ✅ | 3 | 3 | 0 | 0 | 6 | 0 | +6 | **9** |
-| 2 | 🇺🇸 United States ✅ | 3 | 2 | 0 | 1 | 5 | 3 | +2 | **6** |
-| 3 | 🇹🇷 Türkiye ⏳ | 3 | 1 | 0 | 2 | 1 | 3 | -2 | **3** |
-| 4 | 🇵🇾 Paraguay ❌ | 3 | 0 | 0 | 3 | 1 | 7 | -6 | **0** |
+| 1 | 🇺🇸 United States ✅ | 3 | 3 | 0 | 0 | 7 | 1 | +6 | **9** |
+| 2 | 🇵🇾 Paraguay ✅ | 3 | 2 | 0 | 1 | 3 | 4 | -1 | **6** |
+| 3 | 🇦🇺 Australia ✅ | 3 | 1 | 0 | 2 | 2 | 3 | -1 | **3** |
+| 4 | 🇹🇷 Türkiye ❌ | 3 | 0 | 0 | 3 | 0 | 4 | -4 | **0** |
 
 ### Group E
 | Match | Score | Outcome | Model Probabilities |
 |---|---|---|---|
-| 🇩🇪 Germany vs 🇨🇼 Curaçao | **7-1** ✓ | **Germany Win** | Germany: 70.6%, Draw: 19.4%, Curaçao: 9.9% |
-| 🇩🇪 Germany vs 🇨🇮 Côte d'Ivoire | Draw | Draw | Germany: 44.6%, Draw: 28.4%, Côte d'Ivoire: 27.0% |
+| 🇩🇪 Germany vs 🇨🇼 Curaçao | **7-1** ✓ | **Germany Win** | Germany: 70.7%, Draw: 19.4%, Curaçao: 9.9% |
+| 🇩🇪 Germany vs 🇨🇮 Côte d'Ivoire | **2-1** ✓ | **Germany Win** | Germany: 44.7%, Draw: 28.4%, Côte d'Ivoire: 27.0% |
 | 🇩🇪 Germany vs 🇪🇨 Ecuador | Ecuador Win | **Ecuador Win** | Germany: 44.9%, Draw: 28.3%, Ecuador: 26.7% |
-| 🇨🇼 Curaçao vs 🇨🇮 Côte d'Ivoire | Draw | Draw | Curaçao: 14.9%, Draw: 23.3%, Côte d'Ivoire: 61.8% |
-| 🇨🇼 Curaçao vs 🇪🇨 Ecuador | Curaçao Win | **Curaçao Win** | Curaçao: 15.1%, Draw: 23.4%, Ecuador: 61.5% |
-| 🇨🇮 Côte d'Ivoire vs 🇪🇨 Ecuador | **1-0** ✓ | **Côte d'Ivoire Win** | Côte d'Ivoire: 35.7%, Draw: 29.0%, Ecuador: 35.2% |
+| 🇨🇼 Curaçao vs 🇨🇮 Côte d'Ivoire | Côte d'Ivoire Win | **Côte d'Ivoire Win** | Curaçao: 14.9%, Draw: 23.3%, Côte d'Ivoire: 61.8% |
+| 🇨🇼 Curaçao vs 🇪🇨 Ecuador | **0-0** ✓ | Draw | Curaçao: 15.1%, Draw: 23.4%, Ecuador: 61.5% |
+| 🇨🇮 Côte d'Ivoire vs 🇪🇨 Ecuador | **1-0** ✓ | **Côte d'Ivoire Win** | Côte d'Ivoire: 35.8%, Draw: 29.0%, Ecuador: 35.2% |
 
 **Current Standings:**
 | Pos | Team | Pld | W | D | L | GF | GA | GD | Pts |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | 🇨🇮 Côte d'Ivoire ✅ | 3 | 1 | 2 | 0 | 2 | 1 | +1 | **5** |
-| 2 | 🇩🇪 Germany ✅ | 3 | 1 | 1 | 1 | 8 | 3 | +5 | **4** |
-| 3 | 🇨🇼 Curaçao ✅ | 3 | 1 | 1 | 1 | 3 | 7 | -4 | **4** |
-| 4 | 🇪🇨 Ecuador ❌ | 3 | 1 | 0 | 2 | 1 | 3 | -2 | **3** |
+| 1 | 🇩🇪 Germany ✅ | 3 | 2 | 0 | 1 | 9 | 3 | +6 | **6** |
+| 2 | 🇨🇮 Côte d'Ivoire ✅ | 3 | 2 | 0 | 1 | 4 | 2 | +2 | **6** |
+| 3 | 🇪🇨 Ecuador ✅ | 3 | 1 | 1 | 1 | 1 | 1 | +0 | **4** |
+| 4 | 🇨🇼 Curaçao ❌ | 3 | 0 | 1 | 2 | 1 | 9 | -8 | **1** |
 
 ### Group F
 | Match | Score | Outcome | Model Probabilities |
 |---|---|---|---|
-| 🇳🇱 Netherlands vs 🇯🇵 Japan | Japan Win | **Japan Win** | Netherlands: 39.9%, Draw: 29.1%, Japan: 31.0% |
+| 🇳🇱 Netherlands vs 🇯🇵 Japan | **2-2** ✓ | Draw | Netherlands: 39.9%, Draw: 29.1%, Japan: 31.0% |
 | 🇳🇱 Netherlands vs 🇸🇪 Sweden | **5-1** ✓ | **Netherlands Win** | Netherlands: 47.8%, Draw: 27.4%, Sweden: 24.8% |
-| 🇳🇱 Netherlands vs 🇹🇳 Tunisia | Tunisia Win | **Tunisia Win** | Netherlands: 53.5%, Draw: 26.1%, Tunisia: 20.5% |
-| 🇯🇵 Japan vs 🇸🇪 Sweden | Japan Win | **Japan Win** | Japan: 42.3%, Draw: 29.2%, Sweden: 28.6% |
-| 🇯🇵 Japan vs 🇹🇳 Tunisia | **2-1** ✓ | **Japan Win** | Japan: 47.8%, Draw: 28.3%, Tunisia: 24.0% |
-| 🇸🇪 Sweden vs 🇹🇳 Tunisia | Sweden Win | **Sweden Win** | Sweden: 40.9%, Draw: 28.8%, Tunisia: 30.3% |
+| 🇳🇱 Netherlands vs 🇹🇳 Tunisia | Netherlands Win | **Netherlands Win** | Netherlands: 53.5%, Draw: 26.0%, Tunisia: 20.5% |
+| 🇯🇵 Japan vs 🇸🇪 Sweden | Japan Win | **Japan Win** | Japan: 42.3%, Draw: 29.1%, Sweden: 28.6% |
+| 🇯🇵 Japan vs 🇹🇳 Tunisia | **4-0** ✓ | **Japan Win** | Japan: 47.8%, Draw: 28.3%, Tunisia: 24.0% |
+| 🇸🇪 Sweden vs 🇹🇳 Tunisia | **5-1** ✓ | **Sweden Win** | Sweden: 40.9%, Draw: 28.8%, Tunisia: 30.3% |
 
 **Current Standings:**
 | Pos | Team | Pld | W | D | L | GF | GA | GD | Pts |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | 🇯🇵 Japan ✅ | 3 | 3 | 0 | 0 | 4 | 1 | +3 | **9** |
-| 2 | 🇳🇱 Netherlands ✅ | 3 | 1 | 0 | 2 | 5 | 3 | +2 | **3** |
-| 3 | 🇹🇳 Tunisia ⏳ | 3 | 1 | 0 | 2 | 2 | 4 | -2 | **3** |
-| 4 | 🇸🇪 Sweden ❌ | 3 | 1 | 0 | 2 | 3 | 6 | -3 | **3** |
+| 1 | 🇳🇱 Netherlands ✅ | 3 | 2 | 1 | 0 | 9 | 3 | +6 | **7** |
+| 2 | 🇯🇵 Japan ✅ | 3 | 2 | 1 | 0 | 8 | 2 | +6 | **7** |
+| 3 | 🇸🇪 Sweden ⏳ | 3 | 1 | 0 | 2 | 6 | 8 | -2 | **3** |
+| 4 | 🇹🇳 Tunisia ❌ | 3 | 0 | 0 | 3 | 1 | 11 | -10 | **0** |
 
 ### Group G
 | Match | Score | Outcome | Model Probabilities |
 |---|---|---|---|
-| 🇧🇪 Belgium vs 🇪🇬 Egypt | **2-1** ✓ | **Belgium Win** | Belgium: 47.5%, Draw: 27.7%, Egypt: 24.9% |
-| 🇧🇪 Belgium vs 🇮🇷 Iran | Draw | Draw | Belgium: 44.1%, Draw: 28.3%, Iran: 27.6% |
-| 🇧🇪 Belgium vs 🇳🇿 New Zealand | Belgium Win | **Belgium Win** | Belgium: 69.8%, Draw: 19.8%, New Zealand: 10.4% |
-| 🇪🇬 Egypt vs 🇮🇷 Iran | Egypt Win | **Egypt Win** | Egypt: 32.4%, Draw: 28.9%, Iran: 38.6% |
-| 🇪🇬 Egypt vs 🇳🇿 New Zealand | Egypt Win | **Egypt Win** | Egypt: 58.1%, Draw: 24.8%, New Zealand: 17.1% |
-| 🇮🇷 Iran vs 🇳🇿 New Zealand | **2-0** ✓ | **Iran Win** | Iran: 61.3%, Draw: 23.6%, New Zealand: 15.1% |
+| 🇧🇪 Belgium vs 🇪🇬 Egypt | **1-1** ✓ | Draw | Belgium: 47.5%, Draw: 27.6%, Egypt: 24.9% |
+| 🇧🇪 Belgium vs 🇮🇷 Iran | **0-0** ✓ | Draw | Belgium: 44.1%, Draw: 28.2%, Iran: 27.6% |
+| 🇧🇪 Belgium vs 🇳🇿 New Zealand | Belgium Win | **Belgium Win** | Belgium: 69.9%, Draw: 19.8%, New Zealand: 10.4% |
+| 🇪🇬 Egypt vs 🇮🇷 Iran | Draw | Draw | Egypt: 32.5%, Draw: 28.9%, Iran: 38.6% |
+| 🇪🇬 Egypt vs 🇳🇿 New Zealand | **3-1** ✓ | **Egypt Win** | Egypt: 58.1%, Draw: 24.8%, New Zealand: 17.1% |
+| 🇮🇷 Iran vs 🇳🇿 New Zealand | **2-2** ✓ | Draw | Iran: 61.4%, Draw: 23.5%, New Zealand: 15.1% |
 
 **Current Standings:**
 | Pos | Team | Pld | W | D | L | GF | GA | GD | Pts |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | 🇧🇪 Belgium ✅ | 3 | 2 | 1 | 0 | 4 | 2 | +2 | **7** |
-| 2 | 🇪🇬 Egypt ✅ | 3 | 2 | 0 | 1 | 4 | 2 | +2 | **6** |
-| 3 | 🇮🇷 Iran ✅ | 3 | 1 | 1 | 1 | 3 | 3 | +0 | **4** |
-| 4 | 🇳🇿 New Zealand ❌ | 3 | 0 | 0 | 3 | 0 | 4 | -4 | **0** |
+| 1 | 🇪🇬 Egypt ✅ | 3 | 1 | 2 | 0 | 4 | 2 | +2 | **5** |
+| 2 | 🇧🇪 Belgium ✅ | 3 | 1 | 2 | 0 | 2 | 1 | +1 | **5** |
+| 3 | 🇮🇷 Iran ✅ | 3 | 0 | 3 | 0 | 2 | 2 | +0 | **3** |
+| 4 | 🇳🇿 New Zealand ❌ | 3 | 0 | 1 | 2 | 3 | 6 | -3 | **1** |
 
 ### Group H
 | Match | Score | Outcome | Model Probabilities |
 |---|---|---|---|
-| 🇪🇸 Spain vs 🇨🇻 Cabo Verde | **3-0** ✓ | **Spain Win** | Spain: 68.5%, Draw: 20.5%, Cabo Verde: 11.0% |
-| 🇪🇸 Spain vs 🇸🇦 Saudi Arabia | Spain Win | **Spain Win** | Spain: 63.6%, Draw: 22.7%, Saudi Arabia: 13.7% |
-| 🇪🇸 Spain vs 🇺🇾 Uruguay | Draw | Draw | Spain: 44.2%, Draw: 28.5%, Uruguay: 27.3% |
-| 🇨🇻 Cabo Verde vs 🇸🇦 Saudi Arabia | Cabo Verde Win | **Cabo Verde Win** | Cabo Verde: 30.8%, Draw: 28.7%, Saudi Arabia: 40.5% |
-| 🇨🇻 Cabo Verde vs 🇺🇾 Uruguay | Uruguay Win | **Uruguay Win** | Cabo Verde: 16.0%, Draw: 23.9%, Uruguay: 60.1% |
-| 🇸🇦 Saudi Arabia vs 🇺🇾 Uruguay | **1-3** ✓ | **Uruguay Win** | Saudi Arabia: 19.4%, Draw: 25.7%, Uruguay: 54.9% |
+| 🇪🇸 Spain vs 🇺🇾 Uruguay | Spain Win | **Spain Win** | Spain: 42.1%, Draw: 28.5%, Uruguay: 29.3% |
+| 🇪🇸 Spain vs 🇸🇦 Saudi Arabia | **4-0** ✓ | **Spain Win** | Spain: 60.1%, Draw: 24.0%, Saudi Arabia: 15.9% |
+| 🇪🇸 Spain vs 🇨🇻 Cabo Verde | **0-0** ✓ | Draw | Spain: 69.2%, Draw: 20.0%, Cabo Verde: 10.8% |
+| 🇺🇾 Uruguay vs 🇸🇦 Saudi Arabia | **1-1** ✓ | Draw | Uruguay: 53.1%, Draw: 26.4%, Saudi Arabia: 20.5% |
+| 🇺🇾 Uruguay vs 🇨🇻 Cabo Verde | **2-2** ✓ | Draw | Uruguay: 62.6%, Draw: 23.0%, Cabo Verde: 14.4% |
+| 🇸🇦 Saudi Arabia vs 🇨🇻 Cabo Verde | Draw | Draw | Saudi Arabia: 44.5%, Draw: 28.3%, Cabo Verde: 27.2% |
 
 **Current Standings:**
 | Pos | Team | Pld | W | D | L | GF | GA | GD | Pts |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | 🇪🇸 Spain ✅ | 3 | 2 | 1 | 0 | 4 | 0 | +4 | **7** |
-| 2 | 🇺🇾 Uruguay ✅ | 3 | 2 | 1 | 0 | 4 | 1 | +3 | **7** |
-| 3 | 🇨🇻 Cabo Verde ⏳ | 3 | 1 | 0 | 2 | 2 | 4 | -2 | **3** |
-| 4 | 🇸🇦 Saudi Arabia ❌ | 3 | 0 | 0 | 3 | 1 | 6 | -5 | **0** |
+| 1 | 🇪🇸 Spain ✅ | 3 | 2 | 1 | 0 | 5 | 0 | +5 | **7** |
+| 2 | 🇨🇻 Cabo Verde ✅ | 3 | 0 | 3 | 0 | 2 | 2 | +0 | **3** |
+| 3 | 🇺🇾 Uruguay ⏳ | 3 | 0 | 2 | 1 | 3 | 4 | -1 | **2** |
+| 4 | 🇸🇦 Saudi Arabia ❌ | 3 | 0 | 2 | 1 | 1 | 5 | -4 | **2** |
 
 ### Group I
 | Match | Score | Outcome | Model Probabilities |
 |---|---|---|---|
-| 🇫🇷 France vs 🇸🇳 Senegal | France Win | **France Win** | France: 43.3%, Draw: 28.8%, Senegal: 27.9% |
-| 🇫🇷 France vs 🇮🇶 Iraq | **4-1** ✓ | **France Win** | France: 62.2%, Draw: 23.4%, Iraq: 14.4% |
-| 🇫🇷 France vs 🇳🇴 Norway | Norway Win | **Norway Win** | France: 49.6%, Draw: 27.4%, Norway: 22.9% |
-| 🇸🇳 Senegal vs 🇮🇶 Iraq | Senegal Win | **Senegal Win** | Senegal: 54.3%, Draw: 26.0%, Iraq: 19.8% |
-| 🇸🇳 Senegal vs 🇳🇴 Norway | **1-3** ✓ | **Norway Win** | Senegal: 41.6%, Draw: 28.6%, Norway: 29.8% |
-| 🇮🇶 Iraq vs 🇳🇴 Norway | Draw | Draw | Iraq: 24.5%, Draw: 27.5%, Norway: 48.1% |
+| 🇫🇷 France vs 🇸🇳 Senegal | **3-1** ✓ | **France Win** | France: 45.4%, Draw: 28.5%, Senegal: 26.1% |
+| 🇫🇷 France vs 🇳🇴 Norway | France Win | **France Win** | France: 54.3%, Draw: 25.3%, Norway: 20.4% |
+| 🇫🇷 France vs 🇮🇶 Iraq | **4-1** ✓ | **France Win** | France: 64.9%, Draw: 22.1%, Iraq: 13.0% |
+| 🇸🇳 Senegal vs 🇳🇴 Norway | **1-3** ✓ | **Norway Win** | Senegal: 43.3%, Draw: 27.8%, Norway: 28.9% |
+| 🇸🇳 Senegal vs 🇮🇶 Iraq | Iraq Win | **Iraq Win** | Senegal: 54.3%, Draw: 26.2%, Iraq: 19.5% |
+| 🇳🇴 Norway vs 🇮🇶 Iraq | **4-1** ✓ | **Norway Win** | Norway: 47.9%, Draw: 26.7%, Iraq: 25.4% |
 
 **Current Standings:**
 | Pos | Team | Pld | W | D | L | GF | GA | GD | Pts |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | 🇳🇴 Norway ✅ | 3 | 2 | 1 | 0 | 5 | 2 | +3 | **7** |
-| 2 | 🇫🇷 France ✅ | 3 | 2 | 0 | 1 | 5 | 2 | +3 | **6** |
-| 3 | 🇸🇳 Senegal ✅ | 3 | 1 | 0 | 2 | 2 | 4 | -2 | **3** |
-| 4 | 🇮🇶 Iraq ❌ | 3 | 0 | 1 | 2 | 2 | 6 | -4 | **1** |
+| 1 | 🇫🇷 France ✅ | 3 | 3 | 0 | 0 | 8 | 2 | +6 | **9** |
+| 2 | 🇳🇴 Norway ✅ | 3 | 2 | 0 | 1 | 7 | 3 | +4 | **6** |
+| 3 | 🇮🇶 Iraq ⏳ | 3 | 1 | 0 | 2 | 3 | 8 | -5 | **3** |
+| 4 | 🇸🇳 Senegal ❌ | 3 | 0 | 0 | 3 | 2 | 7 | -5 | **0** |
 
 ### Group J
 | Match | Score | Outcome | Model Probabilities |
 |---|---|---|---|
-| 🇦🇷 Argentina vs 🇩🇿 Algeria | **3-0** ✓ | **Argentina Win** | Argentina: 54.9%, Draw: 25.4%, Algeria: 19.6% |
-| 🇦🇷 Argentina vs 🇦🇹 Austria | Argentina Win | **Argentina Win** | Argentina: 50.9%, Draw: 26.7%, Austria: 22.4% |
-| 🇦🇷 Argentina vs 🇯🇴 Jordan | Jordan Win | **Jordan Win** | Argentina: 68.8%, Draw: 20.0%, Jordan: 11.2% |
-| 🇩🇿 Algeria vs 🇦🇹 Austria | Draw | Draw | Algeria: 32.0%, Draw: 29.0%, Austria: 39.0% |
-| 🇩🇿 Algeria vs 🇯🇴 Jordan | Jordan Win | **Jordan Win** | Algeria: 49.3%, Draw: 27.3%, Jordan: 23.5% |
-| 🇦🇹 Austria vs 🇯🇴 Jordan | **2-0** ✓ | **Austria Win** | Austria: 52.9%, Draw: 26.5%, Jordan: 20.6% |
+| 🇦🇷 Argentina vs 🇩🇿 Algeria | **3-0** ✓ | **Argentina Win** | Argentina: 52.9%, Draw: 26.1%, Algeria: 21.0% |
+| 🇦🇷 Argentina vs 🇦🇹 Austria | Austria Win | **Austria Win** | Argentina: 51.9%, Draw: 26.6%, Austria: 21.4% |
+| 🇦🇷 Argentina vs 🇯🇴 Jordan | Argentina Win | **Argentina Win** | Argentina: 69.7%, Draw: 19.8%, Jordan: 10.5% |
+| 🇩🇿 Algeria vs 🇦🇹 Austria | Algeria Win | **Algeria Win** | Algeria: 34.9%, Draw: 29.2%, Austria: 36.0% |
+| 🇩🇿 Algeria vs 🇯🇴 Jordan | Draw | Draw | Algeria: 52.7%, Draw: 26.4%, Jordan: 20.9% |
+| 🇦🇹 Austria vs 🇯🇴 Jordan | **3-1** ✓ | **Austria Win** | Austria: 52.9%, Draw: 26.6%, Jordan: 20.5% |
 
 **Current Standings:**
 | Pos | Team | Pld | W | D | L | GF | GA | GD | Pts |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | 🇦🇷 Argentina ✅ | 3 | 2 | 0 | 1 | 5 | 1 | +4 | **6** |
-| 2 | 🇯🇴 Jordan ✅ | 3 | 2 | 0 | 1 | 2 | 2 | +0 | **6** |
-| 3 | 🇦🇹 Austria ✅ | 3 | 1 | 1 | 1 | 4 | 4 | +0 | **4** |
-| 4 | 🇩🇿 Algeria ❌ | 3 | 0 | 1 | 2 | 2 | 6 | -4 | **1** |
+| 1 | 🇦🇹 Austria ✅ | 3 | 2 | 0 | 1 | 5 | 3 | +2 | **6** |
+| 2 | 🇦🇷 Argentina ✅ | 3 | 2 | 0 | 1 | 4 | 2 | +2 | **6** |
+| 3 | 🇩🇿 Algeria ✅ | 3 | 1 | 1 | 1 | 4 | 5 | -1 | **4** |
+| 4 | 🇯🇴 Jordan ❌ | 3 | 0 | 1 | 2 | 3 | 6 | -3 | **1** |
 
 ### Group K
 | Match | Score | Outcome | Model Probabilities |
 |---|---|---|---|
-| 🇵🇹 Portugal vs 🇨🇩 Congo DR | **1-1** ✓ | Draw | Portugal: 59.6%, Draw: 24.1%, Congo DR: 16.2% |
-| 🇵🇹 Portugal vs 🇺🇿 Uzbekistan | Uzbekistan Win | **Uzbekistan Win** | Portugal: 60.4%, Draw: 23.8%, Uzbekistan: 15.8% |
-| 🇵🇹 Portugal vs 🇨🇴 Colombia | Portugal Win | **Portugal Win** | Portugal: 39.8%, Draw: 28.7%, Colombia: 31.5% |
-| 🇨🇩 Congo DR vs 🇺🇿 Uzbekistan | Congo DR Win | **Congo DR Win** | Congo DR: 36.2%, Draw: 29.0%, Uzbekistan: 34.8% |
-| 🇨🇩 Congo DR vs 🇨🇴 Colombia | Colombia Win | **Colombia Win** | Congo DR: 19.2%, Draw: 25.6%, Colombia: 55.2% |
-| 🇺🇿 Uzbekistan vs 🇨🇴 Colombia | **1-3** ✓ | **Colombia Win** | Uzbekistan: 18.7%, Draw: 25.4%, Colombia: 55.9% |
+| 🇵🇹 Portugal vs 🇨🇴 Colombia | Portugal Win | **Portugal Win** | Portugal: 41.1%, Draw: 28.7%, Colombia: 30.2% |
+| 🇵🇹 Portugal vs 🇨🇩 Congo DR | **1-1** ✓ | Draw | Portugal: 62.4%, Draw: 23.1%, Congo DR: 14.5% |
+| 🇵🇹 Portugal vs 🇺🇿 Uzbekistan | Uzbekistan Win | **Uzbekistan Win** | Portugal: 63.0%, Draw: 22.8%, Uzbekistan: 14.1% |
+| 🇨🇴 Colombia vs 🇨🇩 Congo DR | Draw | Draw | Colombia: 56.5%, Draw: 25.4%, Congo DR: 18.2% |
+| 🇨🇴 Colombia vs 🇺🇿 Uzbekistan | **3-1** ✓ | **Colombia Win** | Colombia: 57.2%, Draw: 25.1%, Uzbekistan: 17.7% |
+| 🇨🇩 Congo DR vs 🇺🇿 Uzbekistan | Draw | Draw | Congo DR: 36.0%, Draw: 29.2%, Uzbekistan: 34.8% |
 
 **Current Standings:**
 | Pos | Team | Pld | W | D | L | GF | GA | GD | Pts |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | 🇨🇴 Colombia ✅ | 3 | 2 | 0 | 1 | 4 | 2 | +2 | **6** |
-| 2 | 🇵🇹 Portugal ✅ | 3 | 1 | 1 | 1 | 2 | 2 | +0 | **4** |
-| 3 | 🇨🇩 Congo DR ✅ | 3 | 1 | 1 | 1 | 2 | 2 | +0 | **4** |
-| 4 | 🇺🇿 Uzbekistan ❌ | 3 | 1 | 0 | 2 | 2 | 4 | -2 | **3** |
+| 1 | 🇵🇹 Portugal ✅ | 3 | 1 | 1 | 1 | 3 | 2 | +1 | **4** |
+| 2 | 🇨🇴 Colombia ✅ | 3 | 1 | 1 | 1 | 5 | 5 | +0 | **4** |
+| 3 | 🇺🇿 Uzbekistan ✅ | 3 | 1 | 1 | 1 | 2 | 3 | -1 | **4** |
+| 4 | 🇨🇩 Congo DR ❌ | 3 | 0 | 3 | 0 | 3 | 3 | +0 | **3** |
 
 ### Group L
 | Match | Score | Outcome | Model Probabilities |
 |---|---|---|---|
-| 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England vs 🇭🇷 Croatia | **4-2** ✓ | **England Win** | England: 44.2%, Draw: 28.3%, Croatia: 27.5% |
-| 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England vs 🇬🇭 Ghana | Draw | Draw | England: 59.4%, Draw: 24.2%, Ghana: 16.4% |
-| 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England vs 🇵🇦 Panama | Panama Win | **Panama Win** | England: 57.0%, Draw: 25.0%, Panama: 17.9% |
-| 🇭🇷 Croatia vs 🇬🇭 Ghana | Ghana Win | **Ghana Win** | Croatia: 50.3%, Draw: 27.1%, Ghana: 22.6% |
-| 🇭🇷 Croatia vs 🇵🇦 Panama | Croatia Win | **Croatia Win** | Croatia: 47.9%, Draw: 27.6%, Panama: 24.5% |
-| 🇬🇭 Ghana vs 🇵🇦 Panama | **1-0** ✓ | **Ghana Win** | Ghana: 33.3%, Draw: 28.9%, Panama: 37.8% |
+| 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England vs 🇭🇷 Croatia | **4-2** ✓ | **England Win** | England: 42.5%, Draw: 28.9%, Croatia: 28.6% |
+| 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England vs 🇬🇭 Ghana | England Win | **England Win** | England: 63.4%, Draw: 22.6%, Ghana: 14.0% |
+| 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England vs 🇵🇦 Panama | England Win | **England Win** | England: 56.1%, Draw: 25.4%, Panama: 18.5% |
+| 🇭🇷 Croatia vs 🇬🇭 Ghana | Croatia Win | **Croatia Win** | Croatia: 55.3%, Draw: 25.9%, Ghana: 18.8% |
+| 🇭🇷 Croatia vs 🇵🇦 Panama | Panama Win | **Panama Win** | Croatia: 48.0%, Draw: 28.0%, Panama: 24.0% |
+| 🇬🇭 Ghana vs 🇵🇦 Panama | **1-0** ✓ | **Ghana Win** | Ghana: 29.0%, Draw: 28.6%, Panama: 42.4% |
 
 **Current Standings:**
 | Pos | Team | Pld | W | D | L | GF | GA | GD | Pts |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | 🇬🇭 Ghana ✅ | 3 | 2 | 1 | 0 | 4 | 1 | +3 | **7** |
-| 2 | 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England ✅ | 3 | 1 | 1 | 1 | 5 | 4 | +1 | **4** |
-| 3 | 🇵🇦 Panama ✅ | 3 | 1 | 0 | 2 | 1 | 2 | -1 | **3** |
+| 1 | 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England ✅ | 3 | 3 | 0 | 0 | 7 | 2 | +5 | **9** |
+| 2 | 🇵🇦 Panama ✅ | 3 | 1 | 0 | 2 | 2 | 2 | +0 | **3** |
+| 3 | 🇬🇭 Ghana ⏳ | 3 | 1 | 0 | 2 | 1 | 3 | -2 | **3** |
 | 4 | 🇭🇷 Croatia ❌ | 3 | 1 | 0 | 2 | 3 | 6 | -3 | **3** |
 
 ## 🏆 Knockout Stage Predictions
@@ -255,60 +255,60 @@ This report uses an **Enhanced Dixon-Coles Poisson Model** with:
 ### Round of 32
 | Match | Matchup | Predicted Winner | Win Probability |
 |---|---|---|---|
-| Match 1 | 🇲🇽 Mexico vs 🇨🇭 Switzerland | **🇲🇽 Mexico** | 54.7% |
-| Match 2 | 🇨🇦 Canada vs 🇦🇹 Austria | **🇦🇹 Austria** | 53.6% |
-| Match 3 | 🇧🇷 Brazil vs 🇮🇷 Iran | **🇧🇷 Brazil** | 59.8% |
-| Match 4 | 🇦🇺 Australia vs 🇨🇩 Congo DR | **🇦🇺 Australia** | 60.7% |
-| Match 5 | 🇨🇮 Côte d'Ivoire vs 🇨🇼 Curaçao | **🇨🇮 Côte d'Ivoire** | 77.9% |
-| Match 6 | 🇯🇵 Japan vs 🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland | **🇯🇵 Japan** | 61.0% |
-| Match 7 | 🇧🇪 Belgium vs 🇵🇦 Panama | **🇧🇪 Belgium** | 69.0% |
-| Match 8 | 🇪🇸 Spain vs 🇸🇳 Senegal | **🇪🇸 Spain** | 63.3% |
-| Match 9 | 🇳🇴 Norway vs 🇰🇷 South Korea | **🇰🇷 South Korea** | 53.5% |
-| Match 10 | 🇦🇷 Argentina vs 🇶🇦 Qatar | **🇦🇷 Argentina** | 76.5% |
-| Match 11 | 🇨🇴 Colombia vs 🇲🇦 Morocco | **🇲🇦 Morocco** | 52.2% |
-| Match 12 | 🇬🇭 Ghana vs 🇺🇸 United States | **🇺🇸 United States** | 68.4% |
-| Match 13 | 🇩🇪 Germany vs 🇳🇱 Netherlands | **🇩🇪 Germany** | 50.1% |
-| Match 14 | 🇪🇬 Egypt vs 🇺🇾 Uruguay | **🇺🇾 Uruguay** | 61.6% |
-| Match 15 | 🇫🇷 France vs 🇯🇴 Jordan | **🇫🇷 France** | 80.8% |
-| Match 16 | 🇵🇹 Portugal vs 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England | **🏴󠁧󠁢󠁥󠁮󠁧󠁿 England** | 50.9% |
+| Match 1 | 🇲🇽 Mexico vs 🇪🇨 Ecuador | **🇲🇽 Mexico** | 59.2% |
+| Match 2 | 🇨🇭 Switzerland vs 🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland | **🇨🇭 Switzerland** | 59.9% |
+| Match 3 | 🇲🇦 Morocco vs 🇩🇿 Algeria | **🇲🇦 Morocco** | 62.4% |
+| Match 4 | 🇺🇸 United States vs 🇺🇿 Uzbekistan | **🇺🇸 United States** | 72.8% |
+| Match 5 | 🇩🇪 Germany vs 🇶🇦 Qatar | **🇩🇪 Germany** | 70.1% |
+| Match 6 | 🇳🇱 Netherlands vs 🇮🇷 Iran | **🇳🇱 Netherlands** | 60.3% |
+| Match 7 | 🇪🇬 Egypt vs 🇰🇷 South Korea | **🇰🇷 South Korea** | 54.9% |
+| Match 8 | 🇪🇸 Spain vs 🇦🇺 Australia | **🇪🇸 Spain** | 66.8% |
+| Match 9 | 🇫🇷 France vs 🇿🇦 South Africa | **🇫🇷 France** | 80.9% |
+| Match 10 | 🇦🇹 Austria vs 🇨🇦 Canada | **🇦🇹 Austria** | 53.1% |
+| Match 11 | 🇵🇹 Portugal vs 🇧🇷 Brazil | **🇵🇹 Portugal** | 54.7% |
+| Match 12 | 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England vs 🇵🇾 Paraguay | **🏴󠁧󠁢󠁥󠁮󠁧󠁿 England** | 74.7% |
+| Match 13 | 🇨🇮 Côte d'Ivoire vs 🇯🇵 Japan | **🇯🇵 Japan** | 55.3% |
+| Match 14 | 🇧🇪 Belgium vs 🇨🇻 Cabo Verde | **🇧🇪 Belgium** | 81.1% |
+| Match 15 | 🇳🇴 Norway vs 🇦🇷 Argentina | **🇦🇷 Argentina** | 72.6% |
+| Match 16 | 🇨🇴 Colombia vs 🇵🇦 Panama | **🇨🇴 Colombia** | 67.0% |
 
 ### Round of 16
 | Match | Matchup | Predicted Winner | Win Probability |
 |---|---|---|---|
-| Match 1 | 🇲🇽 Mexico vs 🇦🇹 Austria | **🇲🇽 Mexico** | 58.2% |
-| Match 2 | 🇧🇷 Brazil vs 🇦🇺 Australia | **🇧🇷 Brazil** | 62.3% |
-| Match 3 | 🇨🇮 Côte d'Ivoire vs 🇯🇵 Japan | **🇯🇵 Japan** | 55.3% |
-| Match 4 | 🇧🇪 Belgium vs 🇪🇸 Spain | **🇪🇸 Spain** | 58.2% |
-| Match 5 | 🇰🇷 South Korea vs 🇦🇷 Argentina | **🇦🇷 Argentina** | 66.5% |
-| Match 6 | 🇲🇦 Morocco vs 🇺🇸 United States | **🇲🇦 Morocco** | 54.9% |
-| Match 7 | 🇩🇪 Germany vs 🇺🇾 Uruguay | **🇩🇪 Germany** | 52.6% |
-| Match 8 | 🇫🇷 France vs 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England | **🏴󠁧󠁢󠁥󠁮󠁧󠁿 England** | 50.9% |
+| Match 1 | 🇲🇽 Mexico vs 🇨🇭 Switzerland | **🇲🇽 Mexico** | 54.7% |
+| Match 2 | 🇲🇦 Morocco vs 🇺🇸 United States | **🇲🇦 Morocco** | 54.9% |
+| Match 3 | 🇩🇪 Germany vs 🇳🇱 Netherlands | **🇩🇪 Germany** | 50.1% |
+| Match 4 | 🇰🇷 South Korea vs 🇪🇸 Spain | **🇪🇸 Spain** | 63.4% |
+| Match 5 | 🇫🇷 France vs 🇦🇹 Austria | **🇫🇷 France** | 66.2% |
+| Match 6 | 🇵🇹 Portugal vs 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England | **🇵🇹 Portugal** | 50.4% |
+| Match 7 | 🇯🇵 Japan vs 🇧🇪 Belgium | **🇧🇪 Belgium** | 55.4% |
+| Match 8 | 🇦🇷 Argentina vs 🇨🇴 Colombia | **🇦🇷 Argentina** | 60.9% |
 
 ### Quarterfinals
 | Match | Matchup | Predicted Winner | Win Probability |
 |---|---|---|---|
-| Match 1 | 🇲🇽 Mexico vs 🇧🇷 Brazil | **🇧🇷 Brazil** | 51.6% |
-| Match 2 | 🇯🇵 Japan vs 🇪🇸 Spain | **🇪🇸 Spain** | 63.2% |
-| Match 3 | 🇦🇷 Argentina vs 🇲🇦 Morocco | **🇦🇷 Argentina** | 56.3% |
-| Match 4 | 🇩🇪 Germany vs 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England | **🏴󠁧󠁢󠁥󠁮󠁧󠁿 England** | 54.9% |
+| Match 1 | 🇲🇽 Mexico vs 🇲🇦 Morocco | **🇲🇦 Morocco** | 53.3% |
+| Match 2 | 🇩🇪 Germany vs 🇪🇸 Spain | **🇪🇸 Spain** | 54.2% |
+| Match 3 | 🇫🇷 France vs 🇵🇹 Portugal | **🇫🇷 France** | 51.8% |
+| Match 4 | 🇧🇪 Belgium vs 🇦🇷 Argentina | **🇦🇷 Argentina** | 58.6% |
 
 ### Semifinals
 | Match | Matchup | Predicted Winner | Win Probability |
 |---|---|---|---|
-| Match 1 | 🇧🇷 Brazil vs 🇪🇸 Spain | **🇪🇸 Spain** | 58.5% |
-| Match 2 | 🇦🇷 Argentina vs 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England | **🇦🇷 Argentina** | 52.5% |
+| Match 1 | 🇲🇦 Morocco vs 🇪🇸 Spain | **🇪🇸 Spain** | 53.1% |
+| Match 2 | 🇫🇷 France vs 🇦🇷 Argentina | **🇦🇷 Argentina** | 52.4% |
 
 ### Third Place Playoff
 | Match | Matchup | Predicted Winner | Win Probability |
 |---|---|---|---|
-| Match 1 | 🇧🇷 Brazil vs 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England | **🏴󠁧󠁢󠁥󠁮󠁧󠁿 England** | 55.5% |
+| Match 1 | 🇲🇦 Morocco vs 🇫🇷 France | **🇫🇷 France** | 54.8% |
 
 ### Final
 | Match | Matchup | Predicted Winner | Win Probability |
 |---|---|---|---|
-| Match 1 | 🇪🇸 Spain vs 🇦🇷 Argentina | **🇪🇸 Spain** | 50.6% |
+| Match 1 | 🇪🇸 Spain vs 🇦🇷 Argentina | **🇦🇷 Argentina** | 54.1% |
 
 ## 🎖️ Final Tournament Podium
-1. 🥇 **🇪🇸 Spain** (World Cup Champion)
-2. 🥈 **🇦🇷 Argentina** (Runner-up)
-3. 🥉 **🏴󠁧󠁢󠁥󠁮󠁧󠁿 England** (Third Place)
+1. 🥇 **🇦🇷 Argentina** (World Cup Champion)
+2. 🥈 **🇪🇸 Spain** (Runner-up)
+3. 🥉 **🇫🇷 France** (Third Place)

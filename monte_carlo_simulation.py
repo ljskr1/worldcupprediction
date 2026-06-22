@@ -20,7 +20,7 @@ import math
 import random
 import json
 from collections import defaultdict
-from simulate_worldcup import teams_data, predict_match, get_effective_ratings
+from engine import teams_data, predict_match, get_effective_ratings, actual_results
 
 # Run 10,000 simulations
 NUM_SIMULATIONS = 10000
@@ -61,30 +61,47 @@ for sim in range(NUM_SIMULATIONS):
                 t1 = g_teams[i]
                 t2 = g_teams[j]
                 
-                probs = predict_match(t1, t2, is_knockout=False)
+                # Check actual result
+                match_key = (t1, t2)
+                match_key_rev = (t2, t1)
                 
-                p_win1 = probs["t1_win"]
-                p_draw = probs["draw"]
-                p_win2 = probs["t2_win"]
-                
-                roll = random.random()
-                if roll < p_win1:
-                    # Team 1 wins
-                    standings[t1]["pts"] += 3
-                    # Simulate goal difference (typically 1 to 3 goals)
-                    gd = random.choice([1, 1, 2, 3])
-                    standings[t1]["gd"] += gd
-                    standings[t2]["gd"] -= gd
-                elif roll < p_win1 + p_draw:
-                    # Draw
-                    standings[t1]["pts"] += 1
-                    standings[t2]["pts"] += 1
+                if match_key in actual_results and actual_results[match_key]["played"]:
+                    g1, g2 = actual_results[match_key]["score"]
+                    standings[t1]["pts"] += 3 if g1 > g2 else (1 if g1 == g2 else 0)
+                    standings[t2]["pts"] += 3 if g2 > g1 else (1 if g1 == g2 else 0)
+                    standings[t1]["gd"] += (g1 - g2)
+                    standings[t2]["gd"] += (g2 - g1)
+                elif match_key_rev in actual_results and actual_results[match_key_rev]["played"]:
+                    g2, g1 = actual_results[match_key_rev]["score"]
+                    standings[t1]["pts"] += 3 if g1 > g2 else (1 if g1 == g2 else 0)
+                    standings[t2]["pts"] += 3 if g2 > g1 else (1 if g1 == g2 else 0)
+                    standings[t1]["gd"] += (g1 - g2)
+                    standings[t2]["gd"] += (g2 - g1)
                 else:
-                    # Team 2 wins
-                    standings[t2]["pts"] += 3
-                    gd = random.choice([1, 1, 2, 3])
-                    standings[t2]["gd"] += gd
-                    standings[t1]["gd"] -= gd
+                    probs = predict_match(t1, t2, is_knockout=False)
+                    
+                    p_win1 = probs["t1_win"]
+                    p_draw = probs["draw"]
+                    p_win2 = probs["t2_win"]
+                    
+                    roll = random.random()
+                    if roll < p_win1:
+                        # Team 1 wins
+                        standings[t1]["pts"] += 3
+                        # Simulate goal difference (typically 1 to 3 goals)
+                        gd = random.choice([1, 1, 2, 3])
+                        standings[t1]["gd"] += gd
+                        standings[t2]["gd"] -= gd
+                    elif roll < p_win1 + p_draw:
+                        # Draw
+                        standings[t1]["pts"] += 1
+                        standings[t2]["pts"] += 1
+                    else:
+                        # Team 2 wins
+                        standings[t2]["pts"] += 3
+                        gd = random.choice([1, 1, 2, 3])
+                        standings[t2]["gd"] += gd
+                        standings[t1]["gd"] -= gd
                     
         # Sort standings: Pts, GD, then team strength average rating
         sorted_standings = sorted(
@@ -155,9 +172,18 @@ for sim in range(NUM_SIMULATIONS):
     # Play R32 -> 16 winners advance
     r16_teams = []
     for t1, t2 in r32_matches:
-        probs = predict_match(t1, t2, is_knockout=True)
-        roll = random.random()
-        winner = t1 if roll < probs["t1_win"] else t2
+        match_key = (t1, t2)
+        match_key_rev = (t2, t1)
+        if match_key in actual_results and actual_results[match_key]["played"]:
+            g1, g2 = actual_results[match_key]["score"]
+            winner = t1 if g1 > g2 else t2
+        elif match_key_rev in actual_results and actual_results[match_key_rev]["played"]:
+            g2, g1 = actual_results[match_key_rev]["score"]
+            winner = t1 if g1 > g2 else t2
+        else:
+            probs = predict_match(t1, t2, is_knockout=True)
+            roll = random.random()
+            winner = t1 if roll < probs["t1_win"] else t2
         stats[winner]["r16"] += 1
         r16_teams.append(winner)
         
@@ -166,9 +192,18 @@ for sim in range(NUM_SIMULATIONS):
     for i in range(8):
         t1 = r16_teams[2*i]
         t2 = r16_teams[2*i + 1]
-        probs = predict_match(t1, t2, is_knockout=True)
-        roll = random.random()
-        winner = t1 if roll < probs["t1_win"] else t2
+        match_key = (t1, t2)
+        match_key_rev = (t2, t1)
+        if match_key in actual_results and actual_results[match_key]["played"]:
+            g1, g2 = actual_results[match_key]["score"]
+            winner = t1 if g1 > g2 else t2
+        elif match_key_rev in actual_results and actual_results[match_key_rev]["played"]:
+            g2, g1 = actual_results[match_key_rev]["score"]
+            winner = t1 if g1 > g2 else t2
+        else:
+            probs = predict_match(t1, t2, is_knockout=True)
+            roll = random.random()
+            winner = t1 if roll < probs["t1_win"] else t2
         stats[winner]["qf"] += 1
         qf_teams.append(winner)
         
@@ -177,9 +212,18 @@ for sim in range(NUM_SIMULATIONS):
     for i in range(4):
         t1 = qf_teams[2*i]
         t2 = qf_teams[2*i + 1]
-        probs = predict_match(t1, t2, is_knockout=True)
-        roll = random.random()
-        winner = t1 if roll < probs["t1_win"] else t2
+        match_key = (t1, t2)
+        match_key_rev = (t2, t1)
+        if match_key in actual_results and actual_results[match_key]["played"]:
+            g1, g2 = actual_results[match_key]["score"]
+            winner = t1 if g1 > g2 else t2
+        elif match_key_rev in actual_results and actual_results[match_key_rev]["played"]:
+            g2, g1 = actual_results[match_key_rev]["score"]
+            winner = t1 if g1 > g2 else t2
+        else:
+            probs = predict_match(t1, t2, is_knockout=True)
+            roll = random.random()
+            winner = t1 if roll < probs["t1_win"] else t2
         stats[winner]["sf"] += 1
         sf_teams.append(winner)
         
@@ -188,18 +232,36 @@ for sim in range(NUM_SIMULATIONS):
     for i in range(2):
         t1 = sf_teams[2*i]
         t2 = sf_teams[2*i + 1]
-        probs = predict_match(t1, t2, is_knockout=True)
-        roll = random.random()
-        winner = t1 if roll < probs["t1_win"] else t2
+        match_key = (t1, t2)
+        match_key_rev = (t2, t1)
+        if match_key in actual_results and actual_results[match_key]["played"]:
+            g1, g2 = actual_results[match_key]["score"]
+            winner = t1 if g1 > g2 else t2
+        elif match_key_rev in actual_results and actual_results[match_key_rev]["played"]:
+            g2, g1 = actual_results[match_key_rev]["score"]
+            winner = t1 if g1 > g2 else t2
+        else:
+            probs = predict_match(t1, t2, is_knockout=True)
+            roll = random.random()
+            winner = t1 if roll < probs["t1_win"] else t2
         stats[winner]["final"] += 1
         final_teams.append(winner)
         
     # Play Final -> 1 Champion
     t1 = final_teams[0]
     t2 = final_teams[1]
-    probs = predict_match(t1, t2, is_knockout=True)
-    roll = random.random()
-    champion = t1 if roll < probs["t1_win"] else t2
+    match_key = (t1, t2)
+    match_key_rev = (t2, t1)
+    if match_key in actual_results and actual_results[match_key]["played"]:
+        g1, g2 = actual_results[match_key]["score"]
+        champion = t1 if g1 > g2 else t2
+    elif match_key_rev in actual_results and actual_results[match_key_rev]["played"]:
+        g2, g1 = actual_results[match_key_rev]["score"]
+        champion = t1 if g1 > g2 else t2
+    else:
+        probs = predict_match(t1, t2, is_knockout=True)
+        roll = random.random()
+        champion = t1 if roll < probs["t1_win"] else t2
     stats[champion]["champion"] += 1
 
 # Calculate probabilities

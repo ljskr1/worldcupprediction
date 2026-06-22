@@ -10,6 +10,8 @@ on:
       - 'worldcup_2026_predictions.md'
       - 'README.md'
       - '.gitignore'
+  schedule:
+    - cron: '0 */6 * * *'  # Runs every 6 hours
   workflow_dispatch: # Allows manual trigger from GitHub UI
 
 jobs:
