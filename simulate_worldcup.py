@@ -1,12 +1,20 @@
 """
 FIFA World Cup 2026 Prediction Engine v2.0
-Enhanced model using:
-- FIFA Rankings as ELO baseline
-- Dixon-Coles adjustment for draw probability
-- Recent form weighting (last 10 matches)
-- Actual played results integration
-- Proper home advantage calibration
-- Goal expectancy based on attack-defense differential
+
+BUSINESS CASE & ANALYTICAL METRIC ENGINE
+-----------------------------------------
+This prediction engine is designed to translate qualitative and quantitative football metrics 
+into actionable, probabilistic outcomes to support fan engagement, media storyboards, 
+and sports business risk modeling.
+
+Key Business Rules & Variables Elicited:
+1. Baseline Performance: FIFA Ranking Points mapped to Team Attack/Defense/Tactical capabilities.
+2. Momentum Factor: Recent Form weighting (last 10 matches) to capture current performance trends.
+3. Tactical Modifiers: Domain-specific parameters derived from defensive and offensive tactical ratings.
+4. Risk Factors (Injuries): Position-specific rating penalties (e.g., defender injury hurts defense; striker injury hurts attack).
+5. Home Field Advantage: Co-host multiplier (1.04x) for Mexico, Canada, and USA.
+6. Real-Time Inputs: Integration of completed tournament matches (locking in actual results) to keep predictions live and accurate.
+7. Dixon-Coles Draw Correction: Correcting standard Poisson draw-probability bias using historical soccer draw correlation (rho = -0.13).
 """
 
 import math
@@ -606,7 +614,14 @@ def poisson_probability(lmbda, k):
 def dixon_coles_adjustment(p1_goals, p2_goals, lambda1, lambda2, rho=-0.13):
     """
     Dixon-Coles adjustment to better predict draws and low-scoring games.
-    rho parameter controls correlation between team scores (typically -0.1 to -0.2)
+    
+    BUSINESS RULE: Standard Poisson models assume goal scoring is independent. 
+    However, in real football, low-scoring games are highly correlated (if Team A fails to 
+    score, Team B is statistically more likely to also fail to score).
+    
+    This function applies the Dixon-Coles adjustment factor (tau) to the joint Poisson 
+    probabilities to correct for this draw bias, varying draw probability based on matchup 
+    strength rather than using a flat average (~24%).
     """
     tau = 1.0
     if p1_goals == 0 and p2_goals == 0:
@@ -1097,7 +1112,8 @@ for idx, p in enumerate(mc_results[:15]):
         "flag": p["flag"],
         "champion": round(p["champion"], 4),
         "final": round(p["final"], 4),
-        "sf": round(p["sf"], 4)
+        "sf": round(p["sf"], 4),
+        "qualified": round(p["qualified"], 4)
     })
 
 # Generate Markdown Report
@@ -1174,7 +1190,7 @@ md.append(f"1. 🥇 **{teams_data[champion]['flag']} {champion}** (World Cup Cha
 md.append(f"2. 🥈 **{teams_data[runner_up]['flag']} {runner_up}** (Runner-up)")
 md.append(f"3. 🥉 **{teams_data[third_name]['flag']} {third_name}** (Third Place)")
 
-with open("/Users/rock/worldcupprediction/worldcup_2026_predictions.md", "w") as f:
+with open("worldcup_2026_predictions.md", "w") as f:
     f.write("\n".join(md))
 
 print("Report generated: worldcup_2026_predictions.md")
@@ -1254,9 +1270,10 @@ js_podium = {
 }
 js_content.append("const podium = " + json.dumps(js_podium, indent=2) + ";\n")
 
-js_content.append("const monteCarloLeaderboard = " + json.dumps(mc_leaderboard, indent=2) + ";")
+js_content.append("const monteCarloLeaderboard = " + json.dumps(mc_leaderboard, indent=2) + ";\n")
+js_content.append("const monteCarloResults = " + json.dumps(mc_results, indent=2) + ";")
 
-with open("/Users/rock/worldcupprediction/data.js", "w") as f:
+with open("data.js", "w") as f:
     f.write("\n".join(js_content))
 
 print("data.js generated successfully.")

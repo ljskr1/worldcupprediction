@@ -1,8 +1,20 @@
-# FIFA World Cup 2026 — Prediction Engine
+# FIFA World Cup 2026 — Prediction Engine & Business Intelligence Dashboard
 
-A statistical prediction engine for the FIFA World Cup 2026 using the **Dixon-Coles Poisson model** with **Monte Carlo simulation** (10,000 runs). Includes an interactive dark-mode dashboard.
+A statistical prediction engine and Business Intelligence (BI) dashboard for the FIFA World Cup 2026, combining the **Dixon-Coles Poisson model** with a **10,000-run Monte Carlo simulation**.
 
 ![Dashboard Preview](dashboard-groups-v2.png)
+
+---
+
+## 💼 Business Case & BA Portfolio Context
+
+As a **Business Analyst / Business Lead (BA/BL)**, my goal is to bridge the gap between complex data science models and executive-level business decisions. This project demonstrates how a technical statistical engine can be translated into a clean, standalone BI dashboard that provides media companies, sponsor brands, and fan engagement teams with actionable insights.
+
+### Key Business Analyst Competencies Demonstrated:
+1. **Requirements Gathering & Domain Logic Mapping**: Elicited and incorporated football-specific business rules such as co-host home advantage (1.04x rating multiplier), recent form dynamics (mapping last 10 match W/D/L to a 0.85x–1.15x momentum modifier), and position-specific injury impacts (2.5–5.0 point penalties based on injury severity and position).
+2. **Business Rule Correctness (Dixon-Coles Model)**: Identified that standard Poisson models apply flat draw probabilities (~24%), which fails to reflect real-world football outcomes. Implemented the Dixon-Coles adjustment (using a historical correlation parameter $\rho = -0.13$) to dynamically adjust draw expectations (between 16% and 29%) based on matchup parity.
+3. **Data Integrity & Quality Assurance**: Structured the engine to consume real-time inputs. Locked in 26 completed tournament matches to ensure simulated outcomes are grounded in current, actual standings rather than purely theoretical baselines.
+4. **Data Visualization & BI Design**: Designed and built a standalone, high-performance dark-mode dashboard (HTML/CSS/JS) to serve as the stakeholder interface. Translates simulation data into key performance indicators (KPIs), group-by-group advancement matrices, and interactive bracket maps.
 
 ## Quick Start
 
@@ -99,7 +111,7 @@ Seed: `42` (reproducible)
 ## Project Structure
 
 ```
-worldcuppreiction/
+worldcupprediction/
 ├── simulate_worldcup.py      # Main prediction engine (Dixon-Coles + MC)
 ├── monte_carlo_simulation.py # Secondary MC script (imports from above)
 ├── dashboard.html            # Dark-mode BI/BA dashboard (standalone HTML)
@@ -127,8 +139,8 @@ worldcuppreiction/
 
 ```bash
 # Clone
-git clone https://github.com/YOUR_USERNAME/worldcuppreiction.git
-cd worldcuppreiction
+git clone https://github.com/YOUR_USERNAME/worldcupprediction.git
+cd worldcupprediction
 
 # Run prediction engine
 python3 simulate_worldcup.py

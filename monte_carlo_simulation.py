@@ -1,3 +1,21 @@
+"""
+FIFA World Cup 2026 - Monte Carlo Stochastic Risk Simulator
+
+BUSINESS ANALYTICS OVERVIEW:
+----------------------------
+While a single deterministic simulation model yields a single static tournament path, 
+sports markets and media stakeholders require stochastic risk analysis to understand the 
+range of possible outcomes. 
+
+This module executes 10,000 independent simulations (Monte Carlo runs) using the 
+Poisson + Dixon-Coles match prediction engine to aggregate event probabilities (qualification, 
+knockout stage reaches, and championship rates).
+
+Business Rules & Assumptions:
+1. Replicability: Random seed is locked at `42` for auditability and consistent data delivery.
+2. Portability: Outputs are saved to relative directories to ensure integration with other BI systems.
+"""
+
 import math
 import random
 import json
@@ -207,7 +225,7 @@ for idx, p in enumerate(probabilities[:15]):
     print(f"{idx+1}. {p['flag']} {p['name']}: Champion={p['champion']:.1%}, Final={p['final']:.1%}, Semis={p['sf']:.1%}")
 
 # Write to file
-with open("/Users/rock/worldcuppreiction/monte_carlo_results.json", "w") as f:
+with open("monte_carlo_results.json", "w") as f:
     json.dump(probabilities, f, indent=2)
 
-print("Results written to /Users/rock/worldcuppreiction/monte_carlo_results.json")
+print("Results written to monte_carlo_results.json")

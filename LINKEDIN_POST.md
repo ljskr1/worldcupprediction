@@ -141,3 +141,43 @@ Source code + dashboard on GitHub. Link in comments.
 #FIFA #WorldCup2026 #DataScience #MonteCarlo #Football
 
 ---
+
+## Option C — Business Intelligence & Insight Delivery focused (Recommended - Subtle BA/BL presentation)
+
+---
+
+**How do you translate a complex predictive model into clear, stakeholder-ready business insights?**
+
+For the FIFA World Cup 2026, I wanted to go beyond gut feeling and build a structured **Business Intelligence (BI) tool** powered by a custom **Dixon-Coles Poisson + Monte Carlo simulation engine**.
+
+Rather than just writing raw code, I focused on translating complex statistical models into business-ready insights. Here is how I structured the requirements and domain logic:
+
+📊 **1. Requirements Mapping & Domain Modeling**:
+To ensure the prediction model was grounded in reality, I gathered and codified soccer-specific rules into quantitative variables:
+- **Momentum Weights**: Built a recent form multiplier (0.85x to 1.15x) based on the last 10 matches to account for current team streaks.
+- **Risk Modifiers**: Modeled position-specific injuries (e.g., defender injuries impact defensive ratings; forward injuries impact attack).
+- **External Variables**: Incorporated a home advantage multiplier (1.04x) for co-host nations (USA, Canada, Mexico).
+- **Data Integrity**: Locked in 26 completed group-stage match scores to make predictions dynamic and current.
+
+⚽ **2. Business Logic Validation (Dixon-Coles)**:
+Standard Poisson prediction models assume goal events are independent, resulting in a flat ~24% draw rate across all match parity levels. Real soccer doesn't work that way. I integrated the **Dixon-Coles adjustment ($\rho = -0.13$)** to correct for low-scoring draw correlation, allowing draw probabilities to dynamically scale from 16% to 29% depending on matchup parity. 
+
+🎲 **3. Stochastic Risk Simulation**:
+Running the tournament once is just one scenario. Football is chaos. I ran a **10,000-run Monte Carlo simulation** to aggregate tournament outcomes into clear probability percentages.
+- Spain (11.5%) and Argentina (10.6%) lead the pack as title favorites.
+- No team exceeds a 12% win probability, highlighting the high risk and volatility of tournament knockout stages.
+
+🖥️ **4. BI Dashboard & Stakeholder Communication**:
+What good is data if stakeholders can't read it? I translated the raw Python outputs (`data.js`) into an interactive, high-fidelity dark-mode dashboard (standalone HTML, zero dependencies).
+- **KPI Summary Cards**: World Cup winner, runner-up, and top title favorites.
+- **Advancement Tracker**: Live bubble-chart representation of teams through, on the bubble, or eliminated.
+- **Bracket View**: Vertical knockout visualization mapping paths from the Round of 32 down to the Final.
+
+By translating statistical complexity into visual decision-making metrics, this project highlights how modeling can drive strategic stakeholder communication and risk assessment.
+
+Check out the full repository and dashboard below!
+
+#DataAnalytics #BusinessIntelligence #DataVisualization #MonteCarlo #FIFAWorldCup2026 #ProductManagement #DecisionSupport
+
+---
+

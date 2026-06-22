@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>World Cup 2026 — Prediction Dashboard</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="data.js"></script>
     <style>
         :root {
             --bg-deep: #0a0a0a;
@@ -52,7 +53,7 @@
 
         body {
             font-family: var(--font-body);
-            font-size: 16px;
+            font-size: clamp(14px, 1.2vw, 18px);
             background: var(--bg-deep);
             color: var(--text-primary);
             min-height: 100vh;
@@ -76,7 +77,7 @@
             border-bottom: 1px solid var(--glass-border);
         }
         .dash-header h1 {
-            font-size: 1.75rem;
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
             font-weight: 700;
             letter-spacing: -0.5px;
             color: var(--text-primary);
@@ -114,7 +115,7 @@
             margin-bottom: 8px;
         }
         .kpi-value {
-            font-size: 2rem;
+            font-size: clamp(1.5rem, 2.5vw, 2.5rem);
             font-weight: 700;
             letter-spacing: -1px;
             line-height: 1;
@@ -149,7 +150,7 @@
         .nav-pill {
             padding: 10px 22px;
             border-radius: 8px;
-            font-size: 0.82rem;
+            font-size: clamp(0.75rem, 1.2vw, 0.95rem);
             font-weight: 600;
             cursor: pointer;
             color: var(--text-secondary);
@@ -192,16 +193,16 @@
             color: var(--text-secondary);
             margin-bottom: 12px;
         }
-        .champion-hero .flag { font-size: 4rem; margin-bottom: 8px; }
+        .champion-hero .flag { font-size: clamp(3rem, 5vw, 5rem); margin-bottom: 8px; }
         .champion-hero .name {
-            font-size: 2.5rem;
+            font-size: clamp(2rem, 4vw, 3.5rem);
             font-weight: 700;
             letter-spacing: -1px;
             margin-bottom: 4px;
         }
         .champion-hero .pct {
             font-family: var(--font-mono);
-            font-size: 1.1rem;
+            font-size: clamp(0.9rem, 1.5vw, 1.3rem);
             color: var(--text-secondary);
         }
         .champion-hero .subtitle {
@@ -226,9 +227,9 @@
             box-shadow: var(--shadow-sm);
         }
 
-        .pod-card .medal { font-size: 1.5rem; margin-bottom: 8px; }
-        .pod-card .flag { font-size: 2rem; margin-bottom: 4px; }
-        .pod-card .team { font-weight: 700; font-size: 1rem; margin-bottom: 2px; }
+        .pod-card .medal { font-size: clamp(1.2rem, 2vw, 1.8rem); margin-bottom: 8px; }
+        .pod-card .flag { font-size: clamp(1.5rem, 2.5vw, 2.5rem); margin-bottom: 4px; }
+        .pod-card .team { font-weight: 700; font-size: clamp(0.9rem, 1.5vw, 1.2rem); margin-bottom: 2px; }
         .pod-card .pct {
             font-family: var(--font-mono);
             font-size: 0.85rem;
@@ -243,7 +244,7 @@
         .lb-table thead th {
             text-align: left;
             padding: 12px 16px;
-            font-size: 0.75rem;
+            font-size: clamp(0.65rem, 1vw, 0.85rem);
             text-transform: uppercase;
             letter-spacing: 1.5px;
             color: var(--text-muted);
@@ -254,7 +255,7 @@
         .lb-table tbody td {
             padding: 14px 16px;
             border-bottom: 1px solid rgba(255,255,255,0.02);
-            font-size: 0.88rem;
+            font-size: clamp(0.8rem, 1.2vw, 1rem);
         }
         .lb-table tbody tr:hover td { background: rgba(255,255,255,0.02); }
 
@@ -374,7 +375,7 @@
             display: flex;
             align-items: center;
             padding: 5px 0;
-            font-size: 0.76rem;
+            font-size: clamp(0.7rem, 1.1vw, 0.9rem);
             gap: 6px;
         }
         .match-mini .m-teams {
@@ -433,7 +434,7 @@
             justify-content: space-between;
             padding: 8px 0;
             border-bottom: 1px solid rgba(255,255,255,0.02);
-            font-size: 0.85rem;
+            font-size: clamp(0.8rem, 1.2vw, 1rem);
         }
         .adv-team:last-child { border-bottom: none; }
         .adv-team .t-info { display: flex; align-items: center; gap: 8px; font-weight: 500; }
@@ -617,7 +618,7 @@
             flex-shrink: 0;
         }
         .bracket-match-row .team-side .t-name {
-            font-size: 0.8rem;
+            font-size: clamp(0.7rem, 1.1vw, 0.9rem);
             font-weight: 500;
             white-space: nowrap;
             overflow: hidden;
@@ -671,17 +672,17 @@
             display: none;
         }
         .bracket-winner-hero .trophy {
-            font-size: 3.2rem;
+            font-size: clamp(2.5rem, 4vw, 4rem);
             margin-bottom: 6px;
             filter: none;
         }
         .bracket-winner-hero .winner-flag {
-            font-size: 4.5rem;
+            font-size: clamp(3.5rem, 6vw, 6rem);
             margin-bottom: 8px;
             filter: none;
         }
         .bracket-winner-hero .winner-name {
-            font-size: 2.4rem;
+            font-size: clamp(1.8rem, 3.5vw, 3rem);
             font-weight: 700;
             letter-spacing: -1px;
             margin-bottom: 6px;
@@ -697,7 +698,7 @@
 
         /* ─── UTILITIES ─── */
         .section-title {
-            font-size: 1.1rem;
+            font-size: clamp(1rem, 1.8vw, 1.4rem);
             font-weight: 700;
             margin-bottom: 20px;
             display: flex;
@@ -1069,7 +1070,7 @@
             margin-bottom: 12px;
         }
         .method-hero h2 {
-            font-size: 1.8rem;
+            font-size: clamp(1.4rem, 2.5vw, 2.2rem);
             font-weight: 700;
             letter-spacing: -0.5px;
             margin-bottom: 10px;
@@ -1077,7 +1078,7 @@
         }
         .method-hero p {
             color: var(--text-secondary);
-            font-size: 0.92rem;
+            font-size: clamp(0.85rem, 1.3vw, 1.05rem);
             line-height: 1.6;
             max-width: 720px;
         }
@@ -2171,9 +2172,154 @@ const BRACKET = {
 };
 
 // ─────── RENDER ───────
+// ─────── RENDER ───────
+
+// Dynamic data mapping from data.js variables with fallbacks
+let lbData = LB;
+let groupsData = GROUPS;
+let bracketData = BRACKET;
+
+if (typeof monteCarloLeaderboard !== 'undefined') {
+    lbData = monteCarloLeaderboard.map(t => ({
+        r: t.rank,
+        n: t.name,
+        f: t.flag,
+        c: t.champion * 100,
+        fi: t.final * 100,
+        s: t.sf * 100,
+        q: (t.qualified !== undefined ? t.qualified : 0) * 100
+    }));
+}
+
+if (typeof groupStandings !== 'undefined' && typeof groupMatches !== 'undefined') {
+    groupsData = {};
+    for (const g of Object.keys(groupStandings)) {
+        groupsData[g] = {
+            t: groupStandings[g].map(t => {
+                let s = "3";
+                if (t.status.includes("Winner") || t.status.includes("Runner-up") || t.status.includes("Best 3rd")) {
+                    s = "q";
+                } else if (t.status.includes("Eliminated")) {
+                    s = "e";
+                }
+                return {
+                    n: t.name,
+                    f: t.flag,
+                    p: t.pld,
+                    w: t.w,
+                    d: t.d,
+                    l: t.l,
+                    gf: t.gf,
+                    ga: t.ga,
+                    gd: t.gd,
+                    pts: t.pts,
+                    s: s
+                };
+            }),
+            m: groupMatches[g].map(m => {
+                return {
+                    t1: m.t1,
+                    t2: m.t2,
+                    sc: m.score,
+                    pw: (m.probs[m.t1] || 0) * 100,
+                    pd: (m.probs["Draw"] || 0) * 100,
+                    pl: (m.probs[m.t2] || 0) * 100,
+                    a: m.actual ? 1 : 0
+                };
+            })
+        };
+    }
+}
+
+if (typeof knockoutStages !== 'undefined') {
+    const stageMap = {
+        "R32": "Round of 32",
+        "R16": "Round of 16",
+        "QF": "Quarterfinals",
+        "SF": "Semifinals",
+        "Final": "Final"
+    };
+    bracketData = {};
+    for (const [key, stageName] of Object.entries(stageMap)) {
+        if (knockoutStages[key]) {
+            bracketData[stageName] = knockoutStages[key].map(m => {
+                return {
+                    n: m.matchNum,
+                    t1: m.t1,
+                    t2: m.t2,
+                    w: m.winner,
+                    p1: (m.probs[m.t1] || 0) * 100,
+                    p2: (m.probs[m.t2] || 0) * 100
+                };
+            });
+        }
+    }
+}
+
+function updateHeroAndKPIs() {
+    if (typeof podium !== 'undefined' && typeof monteCarloLeaderboard !== 'undefined') {
+        const championName = podium.champion.name;
+        const championFlag = podium.champion.flag;
+        const runnerUpName = podium.runnerUp.name;
+        const runnerUpFlag = podium.runnerUp.flag;
+        const thirdName = podium.third.name;
+        const thirdFlag = podium.third.flag;
+        
+        const champLB = lbData.find(t => t.n === championName);
+        const runnerLB = lbData.find(t => t.n === runnerUpName);
+        const thirdLB = lbData.find(t => t.n === thirdName);
+        
+        const champPct = champLB ? champLB.c.toFixed(1) : "10.1";
+        const runnerPct = runnerLB ? runnerLB.c.toFixed(1) : "7.0";
+        const thirdPct = thirdLB ? thirdLB.c.toFixed(1) : "4.5";
+        
+        const kpiCards = document.querySelectorAll('.kpi-card');
+        if (kpiCards.length >= 3) {
+            kpiCards[0].querySelector('.kpi-value').textContent = championName;
+            kpiCards[0].querySelector('.kpi-sub').textContent = `${champPct}% to win it all`;
+            
+            kpiCards[1].querySelector('.kpi-value').textContent = runnerUpName;
+            kpiCards[1].querySelector('.kpi-sub').textContent = `${runnerPct}% championship prob`;
+            
+            kpiCards[2].querySelector('.kpi-value').textContent = thirdName;
+            kpiCards[2].querySelector('.kpi-sub').textContent = `${thirdPct}% — ranked 3rd`;
+        }
+        
+        const champHero = document.querySelector('.champion-hero');
+        if (champHero) {
+            champHero.querySelector('.flag').textContent = championFlag;
+            champHero.querySelector('.name').textContent = championName;
+            champHero.querySelector('.pct').textContent = `${champPct}% championship probability`;
+            
+            const sfPct = champLB ? champLB.s.toFixed(1) : "28.2";
+            const finalPct = champLB ? champLB.fi.toFixed(1) : "17.3";
+            let groupLetter = "H";
+            if (typeof teams !== 'undefined' && teams[championName]) {
+                groupLetter = teams[championName].group;
+            }
+            champHero.querySelector('.subtitle').textContent = `${sfPct}% reach semis · ${finalPct}% reach final · Group ${groupLetter} winners`;
+        }
+        
+        const podCards = document.querySelectorAll('.pod-card');
+        if (podCards.length >= 3) {
+            podCards[0].querySelector('.flag').textContent = runnerUpFlag;
+            podCards[0].querySelector('.team').textContent = runnerUpName;
+            podCards[0].querySelector('.pct').textContent = `${runnerPct}%`;
+            
+            podCards[1].querySelector('.flag').textContent = championFlag;
+            podCards[1].querySelector('.team').textContent = championName;
+            podCards[1].querySelector('.pct').textContent = `${champPct}%`;
+            
+            podCards[2].querySelector('.flag').textContent = thirdFlag;
+            podCards[2].querySelector('.team').textContent = thirdName;
+            podCards[2].querySelector('.pct').textContent = `${thirdPct}%`;
+        }
+    }
+}
+
 function renderLB() {
-    const mx = LB[0].c;
-    document.getElementById('lb-body').innerHTML = LB.map(t => `
+    const mx = lbData[0].c;
+    document.getElementById('lb-body').innerHTML = lbData.map(t => `
         <tr>
             <td class="rank-col">${t.r}</td>
             <td><div class="team-col">${t.f} ${t.n}</div></td>
@@ -2189,7 +2335,7 @@ function renderLB() {
 function renderGroups() {
     const el = document.getElementById('group-grid');
     let h = '';
-    for (const [g, data] of Object.entries(GROUPS)) {
+    for (const [g, data] of Object.entries(groupsData)) {
         h += `<div class="group-panel">
             <div class="group-panel-header">
                 <span>Group ${g}</span>
@@ -2216,41 +2362,85 @@ function renderGroups() {
 }
 
 function renderAdv() {
-    const advTeams = [
-        {n:"South Korea",f:"🇰🇷",p:76.7,g:"A"},
-        {n:"Canada",f:"🇨🇦",p:74.7,g:"B"},
-        {n:"Scotland",f:"🏴󠁧󠁢󠁳󠁣󠁴󠁿",p:64.9,g:"C"},
-        {n:"United States",f:"🇺🇸",p:79.3,g:"D"},
-        {n:"Germany",f:"🇩🇪",p:89.1,g:"E"},
-        {n:"Netherlands",f:"🇳🇱",p:82.9,g:"F"},
-        {n:"Belgium",f:"🇧🇪",p:89.3,g:"G"},
-        {n:"Spain",f:"🇪🇸",p:92.0,g:"H"},
-        {n:"France",f:"🇫🇷",p:87.0,g:"I"},
-        {n:"Argentina",f:"🇦🇷",p:91.3,g:"J"},
-        {n:"Portugal",f:"🇵🇹",p:88.9,g:"K"},
-        {n:"England",f:"🏴󠁧󠁢󠁥󠁮󠁧󠁿",p:88.6,g:"L"},
-        {n:"Mexico",f:"🇲🇽",p:85.5,g:"A"},
-        {n:"Switzerland",f:"🇨🇭",p:83.6,g:"B"},
-        {n:"Morocco",f:"🇲🇦",p:88.6,g:"C"},
-        {n:"Türkiye",f:"🇹🇷",p:74.3,g:"D"},
-        {n:"Côte d'Ivoire",f:"🇨🇮",p:77.3,g:"E"},
-        {n:"Japan",f:"🇯🇵",p:75.7,g:"F"},
-        {n:"Iran",f:"🇮🇷",p:77.7,g:"G"},
-        {n:"Uruguay",f:"🇺🇾",p:84.3,g:"H"},
-        {n:"Norway",f:"🇳🇴",p:66.1,g:"I"},
-        {n:"Austria",f:"🇦🇹",p:73.0,g:"J"},
-        {n:"Congo DR",f:"🇨🇩",p:47.1,g:"K"},
-        {n:"Ghana",f:"🇬🇭",p:47.7,g:"L"}
+    let groupWinners = [];
+    let groupRunners = [];
+    let groupThirds = [];
+    let groupEliminated = [];
+
+    if (typeof groupStandings === 'undefined' || typeof monteCarloResults === 'undefined') {
+        const fallbackAdvTeams = [
+            {n:"South Korea",f:"🇰🇷",p:76.7,g:"A"},
+            {n:"Canada",f:"🇨🇦",p:74.7,g:"B"},
+            {n:"Scotland",f:"🏴󠁧󠁢󠁳󠁣󠁴󠁿",p:64.9,g:"C"},
+            {n:"United States",f:"🇺🇸",p:79.3,g:"D"},
+            {n:"Germany",f:"🇩🇪",p:89.1,g:"E"},
+            {n:"Netherlands",f:"🇳🇱",p:82.9,g:"F"},
+            {n:"Belgium",f:"🇧🇪",p:89.3,g:"G"},
+            {n:"Spain",f:"🇪🇸",p:92.0,g:"H"},
+            {n:"France",f:"🇫🇷",p:87.0,g:"I"},
+            {n:"Argentina",f:"🇦🇷",p:91.3,g:"J"},
+            {n:"Portugal",f:"🇵🇹",p:88.9,g:"K"},
+            {n:"England",f:"🏴󠁧󠁢󠁥󠁮󠁧󠁿",p:88.6,g:"L"},
+            {n:"Mexico",f:"🇲🇽",p:85.5,g:"A"},
+            {n:"Switzerland",f:"🇨🇭",p:83.6,g:"B"},
+            {n:"Morocco",f:"🇲🇦",p:88.6,g:"C"},
+            {n:"Türkiye",f:"🇹🇷",p:74.3,g:"D"},
+            {n:"Côte d'Ivoire",f:"🇨🇮",p:77.3,g:"E"},
+            {n:"Japan",f:"🇯🇵",p:75.7,g:"F"},
+            {n:"Iran",f:"🇮🇷",p:77.7,g:"G"},
+            {n:"Uruguay",f:"🇺🇾",p:84.3,g:"H"},
+            {n:"Norway",f:"🇳🇴",p:66.1,g:"I"},
+            {n:"Austria",f:"🇦🇹",p:73.0,g:"J"},
+            {n:"Congo DR",f:"🇨🇩",p:47.1,g:"K"},
+            {n:"Ghana",f:"🇬🇭",p:47.7,g:"L"}
+        ];
+        groupWinners = fallbackAdvTeams.slice(0, 12);
+        groupRunners = fallbackAdvTeams.slice(12, 24);
+        groupThirds = [
+            {n:"Czechia",f:"🇨🇿",p:63.6,g:"A"},{n:"Bosnia & Herz.",f:"🇧🇦",p:46.5,g:"B"},
+            {n:"Brazil",f:"🇧🇷",p:86.9,g:"C"},{n:"Australia",f:"🇦🇺",p:67.2,g:"D"},
+            {n:"Ecuador",f:"🇪🇨",p:77.7,g:"E"},{n:"Sweden",f:"🇸🇪",p:61.8,g:"F"},
+            {n:"Egypt",f:"🇪🇬",p:72.3,g:"G"},{n:"Saudi Arabia",f:"🇸🇦",p:48.0,g:"H"},
+            {n:"Senegal",f:"🇸🇳",p:77.0,g:"I"},{n:"Algeria",f:"🇩🇿",p:64.9,g:"J"},
+            {n:"Colombia",f:"🇨🇴",p:83.6,g:"K"},{n:"Croatia",f:"🇭🇷",p:77.6,g:"L"}
+        ];
+        groupEliminated = [
+            {n:"South Africa",f:"🇿🇦",p:0,g:"A"},{n:"Qatar",f:"🇶🇦",p:0,g:"B"},
+            {n:"Haiti",f:"🇭🇹",p:0,g:"C"},{n:"Paraguay",f:"🇵🇾",p:0,g:"D"},
+            {n:"Curaçao",f:"🇨🇼",p:0,g:"E"},{n:"Tunisia",f:"🇹🇳",p:0,g:"F"},
+            {n:"New Zealand",f:"🇳🇿",p:0,g:"G"},{n:"Cabo Verde",f:"🇨🇻",p:0,g:"H"},
+            {n:"Iraq",f:"🇮🇶",p:0,g:"I"},{n:"Jordan",f:"🇯🇴",p:0,g:"J"},
+            {n:"Uzbekistan",f:"🇺🇿",p:0,g:"K"},{n:"Panama",f:"🇵🇦",p:0,g:"L"}
+        ];
+    } else {
+        const qualLookup = {};
+        monteCarloResults.forEach(t => {
+            qualLookup[t.name] = t.qualified * 100;
+        });
+
+        for (const [g, standings] of Object.entries(groupStandings)) {
+            const t1 = standings[0];
+            groupWinners.push({ n: t1.name, f: t1.flag, p: qualLookup[t1.name] || 0, g: g });
+            
+            const t2 = standings[1];
+            groupRunners.push({ n: t2.name, f: t2.flag, p: qualLookup[t2.name] || 0, g: g });
+
+            const t3 = standings[2];
+            groupThirds.push({ n: t3.name, f: t3.flag, p: qualLookup[t3.name] || 0, g: g });
+
+            const t4 = standings[3];
+            groupEliminated.push({ n: t4.name, f: t4.flag, p: qualLookup[t4.name] || 0, g: g });
+        }
+    }
+
+    const chunks = [
+        { title: 'Group Winners (12)', teams: groupWinners },
+        { title: 'Runners-Up (12)', teams: groupRunners },
+        { title: 'Best 3rd Place', teams: groupThirds },
+        { title: 'Eliminated', teams: groupEliminated }
     ];
 
     const el = document.getElementById('adv-grid');
-    const chunks = [
-        {title:'Group Winners (12)', teams: advTeams.filter(t => ['A','B','C','D','E','F','G','H','I','J','K','L'].includes(t.g) && advTeams.indexOf(t) < 12)},
-        {title:'Runners-Up (12)', teams: advTeams.filter(t => advTeams.indexOf(t) >= 12 && advTeams.indexOf(t) < 24)},
-        {title:'Best 3rd Place', teams: [{n:"Czechia",f:"🇨🇿",p:63.6,g:"A"},{n:"Bosnia & Herz.",f:"🇧🇦",p:46.5,g:"B"},{n:"Brazil",f:"🇧🇷",p:86.9,g:"C"},{n:"Australia",f:"🇦🇺",p:67.2,g:"D"},{n:"Ecuador",f:"🇪🇨",p:77.7,g:"E"},{n:"Sweden",f:"🇸🇪",p:61.8,g:"F"},{n:"Egypt",f:"🇪🇬",p:72.3,g:"G"},{n:"Saudi Arabia",f:"🇸🇦",p:48.0,g:"H"},{n:"Senegal",f:"🇸🇳",p:77.0,g:"I"},{n:"Algeria",f:"🇩🇿",p:64.9,g:"J"},{n:"Colombia",f:"🇨🇴",p:83.6,g:"K"},{n:"Croatia",f:"🇭🇷",p:77.6,g:"L"}]},
-        {title:'Eliminated', teams: [{n:"South Africa",f:"🇿🇦",p:0,g:"A"},{n:"Qatar",f:"🇶🇦",p:0,g:"B"},{n:"Haiti",f:"🇭🇹",p:0,g:"C"},{n:"Paraguay",f:"🇵🇾",p:0,g:"D"},{n:"Curaçao",f:"🇨🇼",p:0,g:"E"},{n:"Tunisia",f:"🇹🇳",p:0,g:"F"},{n:"New Zealand",f:"🇳🇿",p:0,g:"G"},{n:"Cabo Verde",f:"🇨🇻",p:0,g:"H"},{n:"Iraq",f:"🇮🇶",p:0,g:"I"},{n:"Jordan",f:"🇯🇴",p:0,g:"J"},{n:"Uzbekistan",f:"🇺🇿",p:0,g:"K"},{n:"Panama",f:"🇵🇦",p:0,g:"L"}]}
-    ];
-
     el.innerHTML = chunks.map(c => `
         <div class="adv-card">
             <h3>${c.title}</h3>
@@ -2265,23 +2455,30 @@ function renderAdv() {
 }
 
 function renderBracket() {
-    // Build team → flag lookup from GROUPS
     const teamFlag = {};
     const groupAdvance = [];
-    for (const [g, data] of Object.entries(GROUPS)) {
+    for (const [g, data] of Object.entries(groupsData)) {
         data.t.forEach(t => { teamFlag[t.n] = t.f; });
         groupAdvance.push({ group: g, first: data.t[0], second: data.t[1] });
     }
 
-    // Best 3rd-place teams that advance
-    const bestThird = [
+    let bestThird = [
         {n:"Czechia",f:"🇨🇿",g:"A"},{n:"Bosnia & Herz.",f:"🇧🇦",g:"B"},
         {n:"Brazil",f:"🇧🇷",g:"C"},{n:"Australia",f:"🇦🇺",g:"D"},
-        {n:"Ecuador",f:"🇪🇨",g:"E"},{n:"Sweden",f:"🇸🇪",g:"F"},
+        {n:"Ecuador",f:"🇪🇨",p:77.7,g:"E"},{n:"Sweden",f:"🇸🇪",g:"F"},
         {n:"Egypt",f:"🇪🇬",g:"G"},{n:"Saudi Arabia",f:"🇸🇦",g:"H"},
         {n:"Senegal",f:"🇸🇳",g:"I"},{n:"Algeria",f:"🇩🇿",g:"J"},
         {n:"Colombia",f:"🇨🇴",g:"K"},{n:"Croatia",f:"🇭🇷",g:"L"}
     ];
+    if (typeof groupStandings !== 'undefined') {
+        bestThird = [];
+        for (const [g, standings] of Object.entries(groupStandings)) {
+            const t3 = standings[2];
+            if (t3.status.includes("Advanced")) {
+                bestThird.push({ n: t3.name, f: t3.flag, g: g });
+            }
+        }
+    }
 
     const roundLabels = {
         "Round of 32": "ROUND OF 32",
@@ -2294,7 +2491,6 @@ function renderBracket() {
 
     let html = '';
 
-    // ── 1. GROUP STAGE SUMMARY ──
     html += `
         <div class="bracket-stage">
             <div class="bracket-stage-header">
@@ -2320,15 +2516,14 @@ function renderBracket() {
                 <div class="bracket-third-bar">
                     <div class="bar-label">Best 3rd-Place Qualifiers</div>
                     <div class="bar-teams">
-                        ${bestThird.map(t => `<span>${t.f} ${t.n}</span>`).join('')}
+                        ${bestThird.map(t => `<span>${t.f} ${t.n || t.name}</span>`).join('')}
                     </div>
                 </div>
             </div>
         </div>`;
 
-    // ── 2. KNOCKOUT ROUNDS ──
     for (const round of rounds) {
-        const matches = BRACKET[round];
+        const matches = bracketData[round];
         const count = matches.length;
         const cols = count >= 8 ? 4 : count >= 4 ? 2 : count >= 2 ? 2 : 1;
 
@@ -2365,12 +2560,17 @@ function renderBracket() {
             </div>`;
     }
 
-    // ── 3. WINNER HERO ──
+    let championFlag = "🇪🇸";
+    let championName = "Spain";
+    if (typeof podium !== 'undefined') {
+        championFlag = podium.champion.flag;
+        championName = podium.champion.name;
+    }
     html += `
         <div class="bracket-winner-hero">
             <div class="trophy">🏆</div>
-            <div class="winner-flag">🇪🇸</div>
-            <div class="winner-name">Spain</div>
+            <div class="winner-flag">${championFlag}</div>
+            <div class="winner-name">${championName}</div>
             <div class="winner-label">World Champion 2026</div>
         </div>`;
 
@@ -2385,6 +2585,7 @@ function showPanel(id) {
 }
 
 // Init
+updateHeroAndKPIs();
 renderLB();
 renderGroups();
 renderAdv();
