@@ -746,6 +746,10 @@ validation_data = {
 }
 js_content.append("const modelValidation = " + json.dumps(validation_data, indent=2) + ";")
 
+from datetime import datetime
+last_updated_str = datetime.utcnow().strftime("%b %d").upper()
+js_content.append(f'const lastUpdated = "{last_updated_str}";')
+
 with open("data.js", "w") as f:
     f.write("\n".join(js_content))
 

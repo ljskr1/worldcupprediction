@@ -1489,7 +1489,7 @@
         <div>
             <h1>World Cup <span>2026</span></h1>
         </div>
-        <div class="meta">DIXON-COLES MODEL · 10K SIMS · UPDATED JUN 19</div>
+        <div class="meta">DIXON-COLES MODEL · 10K SIMS · <span id="update-date">UPDATED JUN 19</span></div>
     </div>
 
     <!-- KPI ROW -->
@@ -2650,6 +2650,9 @@ function renderValidation() {
 }
 
 // Init
+if (typeof lastUpdated !== 'undefined') {
+    document.getElementById('update-date').textContent = `UPDATED ${lastUpdated}`;
+}
 updateHeroAndKPIs();
 renderLB();
 renderGroups();
