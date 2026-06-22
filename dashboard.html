@@ -1518,11 +1518,9 @@
 
     <!-- NAV -->
     <div class="nav-pills">
-        <button class="nav-pill active" onclick="showPanel('overview')">Overview</button>
-        <button class="nav-pill" onclick="showPanel('groups')">Groups A–L</button>
-        <button class="nav-pill" onclick="showPanel('advancement')">Advancement</button>
-        <button class="nav-pill" onclick="showPanel('bracket')">Bracket</button>
-        <button class="nav-pill" onclick="showPanel('methodology')">Methodology</button>
+        <button class="nav-pill active" onclick="showPanel('overview')">Overview &amp; Projections</button>
+        <button class="nav-pill" onclick="showPanel('groups')">Groups &amp; Brackets</button>
+        <button class="nav-pill" onclick="showPanel('methodology')">Model &amp; Backtesting</button>
     </div>
 
     <!-- ═══════ OVERVIEW ═══════ -->
@@ -1557,7 +1555,7 @@
         </div>
 
         <div class="section-title"><span class="dot"></span> Full Championship Leaderboard</div>
-        <div style="background:var(--bg-card-solid);border:1px solid var(--glass-border);border-radius:var(--radius-lg);overflow:auto;">
+        <div style="background:var(--bg-card-solid);border:1px solid var(--glass-border);border-radius:var(--radius-lg);overflow:auto;margin-bottom:32px;">
             <table class="lb-table">
                 <thead>
                     <tr>
@@ -1573,23 +1571,17 @@
                 <tbody id="lb-body"></tbody>
             </table>
         </div>
+
+        <div class="section-title" style="margin-top:48px;"><span class="dot"></span> Advancement Tracker</div>
+        <div class="adv-grid" id="adv-grid"></div>
     </div>
 
     <!-- ═══════ GROUPS ═══════ -->
     <div id="groups" class="panel">
         <div class="section-title"><span class="dot"></span> Group Stage — Predictions & Standings</div>
-        <div class="group-grid" id="group-grid"></div>
-    </div>
+        <div class="group-grid" id="group-grid" style="margin-bottom:32px;"></div>
 
-    <!-- ═══════ ADVANCEMENT ═══════ -->
-    <div id="advancement" class="panel">
-        <div class="section-title"><span class="dot"></span> Advancement Tracker</div>
-        <div class="adv-grid" id="adv-grid"></div>
-    </div>
-
-    <!-- ═══════ BRACKET ═══════ -->
-    <div id="bracket" class="panel">
-        <div class="section-title"><span class="dot"></span> Knockout Bracket — Path to Final</div>
+        <div class="section-title" style="margin-top:48px;"><span class="dot"></span> Knockout Bracket — Path to Final</div>
         <div class="final-bracket" id="bracket-container"></div>
     </div>
 
