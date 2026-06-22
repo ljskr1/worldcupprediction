@@ -1961,7 +1961,12 @@
 
         <div class="method-card" id="validation-card" style="grid-column: span 2;">
             <h3><span class="h-icon"></span> Model Validation &amp; Performance (Backtesting)</h3>
-            <p>Stochastic prediction models are validated by backtesting them against completed tournament matches to measure predictive accuracy and probability calibration (Brier Score).</p>
+            <p style="margin-bottom: 12px;">We validate the prediction model by backtesting it against actual completed tournament outcomes to measure how well it predicts winners (Accuracy) and how accurate its probability percentages are (Brier Score).</p>
+            <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--glass-border); border-radius: var(--radius-sm); padding: 14px 18px; margin-bottom: 24px; font-size: 0.8rem; line-height: 1.5; color: var(--text-secondary);">
+                <strong>💡 Layman Explanation of Metrics:</strong> 
+                <br>• <strong>Accuracy</strong> counts how many matches the model predicted correctly (winner or draw). E.g., 61.0% means it picked the correct outcome in 25 out of 41 played games.
+                <br>• <strong>Brier Score</strong> measures the accuracy of the <em>probabilities themselves</em> (lower is better, 0.0 is perfect). It penalizes the model for being overconfident on incorrect picks (e.g., predicting a 90% win chance for a team that loses). A lower Brier score means the model's confidence percentages are better calibrated.
+            </div>
 
             <div class="validation-grid" style="margin-top: 20px;">
                 <!-- Baseline Model Card -->
