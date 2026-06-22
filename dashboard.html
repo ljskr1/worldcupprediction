@@ -1963,41 +1963,46 @@
             <h3><span class="h-icon"></span> Model Validation &amp; Performance (Backtesting)</h3>
             <p>Stochastic prediction models are validated by backtesting them against completed tournament matches to measure predictive accuracy and probability calibration (Brier Score).</p>
 
-            <div class="validation-grid" style="margin-top:20px; display: grid; grid-template-columns: 1fr 1fr auto; gap: 20px;">
-                <div class="validation-stat-col" style="border-right: 1px solid var(--glass-border); padding-right: 20px;">
-                    <h4 style="margin-top:0; color:var(--text-secondary); font-size:11px; text-transform:uppercase; letter-spacing:0.5px; font-weight: 600;">Baseline Model (Pre-Tournament)</h4>
-                    <div style="display:flex; gap: 25px; margin-top: 10px;">
+            <div class="validation-grid" style="margin-top: 20px;">
+                <!-- Baseline Model Card -->
+                <div class="validation-stat" style="text-align: left; display: flex; flex-direction: column; justify-content: space-between;">
+                    <h4 style="margin-top:0; color:var(--text-secondary); font-size:11px; text-transform:uppercase; letter-spacing:0.5px; font-weight: 600; margin-bottom: 12px;">Baseline Model (Pre-Tournament)</h4>
+                    <div style="display:flex; justify-content: space-between; align-items: flex-end; gap: 20px;">
                         <div>
-                            <div class="vs-val" id="val-base-accuracy" style="font-size: 26px;">--%</div>
-                            <div class="vs-label" style="font-size: 10px;">Accuracy</div>
-                            <div class="vs-note" id="val-base-correct" style="font-size: 9px; white-space: nowrap;">--/-- correct</div>
+                            <div class="vs-val" id="val-base-accuracy" style="font-size: 26px; line-height: 1;">--%</div>
+                            <div class="vs-label" style="font-size: 10px; margin-top: 4px;">Accuracy</div>
+                            <div class="vs-note" id="val-base-correct" style="font-size: 9px; white-space: nowrap; margin-top: 2px;">--/-- correct</div>
                         </div>
-                        <div>
-                            <div class="vs-val" id="val-base-brier" style="font-size: 26px;">-.---</div>
-                            <div class="vs-label" style="font-size: 10px;">Brier Score</div>
-                            <div class="vs-note" style="font-size: 9px; white-space: nowrap;">Lower is better</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="validation-stat-col" style="padding-left: 10px; border-right: 1px solid var(--glass-border); padding-right: 20px;">
-                    <h4 style="margin-top:0; color:var(--accent-glow); font-size:11px; text-transform:uppercase; letter-spacing:0.5px; font-weight: 600;">Live Model (Dynamic Form)</h4>
-                    <div style="display:flex; gap: 25px; margin-top: 10px;">
-                        <div>
-                            <div class="vs-val" id="val-live-accuracy" style="font-size: 26px; color: var(--accent-glow);">--%</div>
-                            <div class="vs-label" style="font-size: 10px;">Accuracy</div>
-                            <div class="vs-note" id="val-live-correct" style="font-size: 9px; white-space: nowrap;">--/-- correct</div>
-                        </div>
-                        <div>
-                            <div class="vs-val" id="val-live-brier" style="font-size: 26px; color: var(--accent-glow);">-.---</div>
-                            <div class="vs-label" style="font-size: 10px;">Brier Score</div>
-                            <div class="vs-note" style="font-size: 9px; white-space: nowrap;">Lower is better</div>
+                        <div style="text-align: right;">
+                            <div class="vs-val" id="val-base-brier" style="font-size: 26px; line-height: 1;">-.---</div>
+                            <div class="vs-label" style="font-size: 10px; margin-top: 4px;">Brier Score</div>
+                            <div class="vs-note" style="font-size: 9px; white-space: nowrap; margin-top: 2px;">Lower is better</div>
                         </div>
                     </div>
                 </div>
-                <div class="validation-stat" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding-left: 15px; min-width: 110px;">
+
+                <!-- Live Model Card -->
+                <div class="validation-stat" style="text-align: left; display: flex; flex-direction: column; justify-content: space-between; border-color: rgba(255,255,255,0.15); background: rgba(255,255,255,0.02);">
+                    <h4 style="margin-top:0; color:var(--text-primary); font-size:11px; text-transform:uppercase; letter-spacing:0.5px; font-weight: 600; margin-bottom: 12px;">Live Model (Dynamic Form)</h4>
+                    <div style="display:flex; justify-content: space-between; align-items: flex-end; gap: 20px;">
+                        <div>
+                            <div class="vs-val" id="val-live-accuracy" style="font-size: 26px; line-height: 1; color: #fff;">--%</div>
+                            <div class="vs-label" style="font-size: 10px; margin-top: 4px;">Accuracy</div>
+                            <div class="vs-note" id="val-live-correct" style="font-size: 9px; white-space: nowrap; margin-top: 2px;">--/-- correct</div>
+                        </div>
+                        <div style="text-align: right;">
+                            <div class="vs-val" id="val-live-brier" style="font-size: 26px; line-height: 1; color: #fff;">-.---</div>
+                            <div class="vs-label" style="font-size: 10px; margin-top: 4px;">Brier Score</div>
+                            <div class="vs-note" style="font-size: 9px; white-space: nowrap; margin-top: 2px;">Lower is better</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Played Matches Card -->
+                <div class="validation-stat" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 110px;">
                     <div class="vs-val" id="val-total-count" style="font-size: 32px; line-height: 1; margin: 0;">--</div>
-                    <div class="vs-label" style="margin-top: 5px; font-size: 10px;">Played Matches</div>
-                    <div class="vs-note" style="font-size: 9px;">Locked Results</div>
+                    <div class="vs-label" style="margin-top: 6px; font-size: 10px;">Played Matches</div>
+                    <div class="vs-note" style="font-size: 9px; margin-top: 4px;">Locked Results</div>
                 </div>
             </div>
 
