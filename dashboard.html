@@ -1893,17 +1893,22 @@
                 </div>
             </div>
 
-            <p style="margin-top:22px; font-size: 0.85rem; color: var(--text-secondary);"><strong>Match-by-Match Backtesting Audit:</strong> Comparing pre-tournament baseline forecasts vs. dynamic live forecasts updated with in-tournament form results.</p>
+            <p style="margin-top:22px; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">
+                <strong>Side-by-Side Backtesting Comparison:</strong> Compare predictions generated before the World Cup started (Baseline Model) vs. predictions generated in real-time as the tournament progressed (Dynamic Live Model).
+                <br>• <strong>Baseline Forecast (Pre-Tourney):</strong> Uses original ratings locked before match 1.
+                <br>• <strong>Dynamic Live Forecast (Real-Time):</strong> Dynamically updates team ratings based on momentum and form from played matches.
+            </p>
             <div style="max-height: 350px; overflow-y: auto; border: 1px solid var(--glass-border); border-radius: var(--radius-sm); margin-top: 10px; background: rgba(0,0,0,0.15)">
                 <table class="tau-table" style="margin:0; width: 100%;">
                     <thead>
                         <tr>
                             <th style="text-align:left; padding: 10px 14px;">Matchup</th>
-                            <th style="text-align:center; padding: 10px 14px;">Actual Score</th>
-                            <th style="text-align:left; padding: 10px 14px;">Baseline Forecast</th>
+                            <th style="text-align:center; padding: 10px 14px;">Score</th>
+                            <th style="text-align:center; padding: 10px 14px;">Outcome</th>
+                            <th style="text-align:left; padding: 10px 14px;">Baseline Forecast (Pre-Tourney)</th>
                             <th style="text-align:center; padding: 10px 14px;">Base Correct</th>
-                            <th style="text-align:left; padding: 10px 14px;">Dynamic Live Forecast</th>
-                            <th style="text-align:center; padding: 10px 14px;">Live Correct</th>
+                            <th style="text-align:left; padding: 10px 14px; color: var(--accent-glow);">Dynamic Live Forecast (Real-Time)</th>
+                            <th style="text-align:center; padding: 10px 14px; color: var(--accent-glow);">Live Correct</th>
                         </tr>
                     </thead>
                     <tbody id="val-matches-body">
