@@ -170,3 +170,79 @@ The repository and live dashboard are fully open source!
 Check out the full repository and dashboard below!
 
 #DataAnalytics #BusinessIntelligence #DataVisualization #MonteCarlo #FIFAWorldCup2026 #ProductManagement #DecisionSupport
+
+---
+
+## Option D — Recruiter & Hiring Manager Focused (Skills & Architecture Showcase)
+
+---
+
+**I built and deployed an automated Dixon-Coles prediction pipeline and BI dashboard for the 2026 World Cup. Here is the engineering story.**
+
+As a software/data engineer, I love building systems that run themselves. This project is a complete end-to-end data product built from scratch.
+
+Here is the tech stack and engineering decisions:
+
+🛠️ **1. Data Engineering & Python Engine**
+* **The Model:** Implemented an academic-grade Dixon-Coles model in Python, solving the "draw correlation" issue of standard Poisson models by introducing a correlation parameter ($\rho = -0.13$).
+* **Stochastic Simulation:** Run a 10,000-iteration Monte Carlo simulation to play out all remaining group matches, calculate group standings tiebreakers, and simulate the knockout tree (Round of 32 down to the Final).
+* **Domain Logic:** Modeled position-specific injuries (e.g. key defender injuries penalize defensive metrics, winger injuries affect attack) and home advantage (1.04x rating multiplier).
+
+🚀 **2. DevOps & Pipeline Automation**
+* **Dynamic Cron Execution:** Configured a GitHub Actions workflow that triggers every hour.
+* **Automated Data Lifecycle:** The runner ingests live scores, updates team momentum/ratings, runs the 10,000 simulations, compiles the outputs into a web-ready JS payload, and deploys it automatically to GitHub Pages.
+
+🖥️ **3. Frontend & UX Engineering**
+* **Design Language:** Built a modern, dark-mode, glassmorphic BI dashboard using vanilla HTML/CSS/JS (zero dependencies, blazing-fast load times).
+* **Dynamic Visualizations:** Developed responsive side-by-side comparisons of pre-tournament baseline predictions vs. real-time live projections.
+* **Interactive Features:** Includes dynamic KPI card calculations (automatically showing the largest upset and bronze finisher of the tournament) and a copy-to-clipboard repository clone widget.
+
+📈 **4. Statistical Backtesting (Model Validation)**
+* Built a backtesting audit module to evaluate model accuracy and probability calibration using the Brier score on completed matches:
+  * **Baseline Model Accuracy:** 61.0% | Brier Score: 0.569
+  * **Live Model Accuracy:** 61.0% | Brier Score: 0.571
+  * *Insight:* The Baseline is slightly better calibrated, demonstrating that live form updates can introduce short-term noise—a common challenge in sports analytics.
+
+💼 **I am currently open to new roles in Software Engineering / Data Engineering.** If you're looking for an engineer who can translate complex data pipelines into clean, automated, user-facing production systems, let's connect!
+
+Full code and live dashboard links are in the comments.
+
+#SoftwareEngineering #DataEngineering #DevOps #Python #DataScience #DataVisualization #WebDevelopment #Hiring
+
+---
+
+## Option E — Fun, Personal, & Genuine (The Passion Project)
+
+---
+
+**What happens when a football fan gets bored and has too much coffee?** ☕⚽
+
+You end up building a prediction engine for the FIFA World Cup 2026 from scratch. 
+
+I wanted to see if I could build a model that predicts football matches better than my friends' group chat. It turned into a deep dive into sports science, academic modeling, and automated pipelines. 
+
+Here is what I learned and built:
+
+🧠 **1. Soccer is complicated (but math helps)**
+* Standard prediction models assume goal events are independent. But soccer is low-scoring and draws are correlated. I ended up implementing the **Dixon-Coles model**—an academic favorite that actually gets draw rates right (varying from 16% to 29% depending on matchup parity).
+
+🤕 **2. Modelling the chaos**
+* How do you model injuries? I created a system that penalizes a team's rating based on *where* the player plays. An ACL tear for a star center-back hurts the defense score way more than a winger's hamstring tweak. I also added a home-turf advantage boost for the co-hosts (Mexico, USA, Canada).
+
+🤖 **3. Running it on autopilot**
+* I didn't want to run this manually every day. I wrote a GitHub Actions workflow that runs every single hour. It pulls the latest match scores, updates team momentum, runs 10,000 tournament simulations, and pushes the new predictions directly to a live web dashboard.
+
+📉 **4. The honest truth (Backtesting)**
+* Sports analytics will humble you. I backtested the model match-by-match against all 41 played games, comparing my pre-tournament **Baseline Model** vs. the **Live Model** (dynamic form updates):
+  * **Baseline Accuracy:** 61.0% (Brier Score: 0.569)
+  * **Live Model Accuracy:** 61.0% (Brier Score: 0.571)
+  * Turns out, incorporating recent form actually introduced slightly more *noise* than a stable baseline rating! Football is full of surprises.
+
+🖥️ **5. The Dashboard**
+* I built a dark-mode web dashboard to visualize everything. It shows live championship trends (like Spain's chances dropping or Argentina's rising), standings, and brackets. I even added a little one-click copy widget so you can clone the repository and run the simulation engine on your own machine.
+
+It's completely open source and free to play with. 
+
+Check out the code, run a few simulations, and let me know in the comments: who do you think is winning the World Cup? 🏆
+
+#FIFAWorldCup #DataScience #OpenSource #Football #Coding #PersonalProject #MachineLearning #WebDesign
