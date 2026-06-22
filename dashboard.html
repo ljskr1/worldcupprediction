@@ -92,6 +92,54 @@
             letter-spacing: 0.5px;
         }
 
+        .clone-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 6px;
+        }
+        .clone-cta-text {
+            font-size: 0.72rem;
+            color: var(--text-secondary);
+            font-family: var(--font-sans);
+            font-weight: 500;
+            opacity: 0.85;
+        }
+
+        /* ─── FOOTER ─── */
+        .dash-footer {
+            margin-top: 60px;
+            padding-top: 24px;
+            border-top: 1px solid var(--glass-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+        .dash-footer a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.15s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .dash-footer a:hover {
+            color: var(--text-primary);
+        }
+        .dash-footer .footer-links {
+            display: flex;
+            gap: 16px;
+        }
+        .dash-footer .footer-links svg {
+            opacity: 0.75;
+            transition: opacity 0.15s ease;
+        }
+        .dash-footer a:hover svg {
+            opacity: 1;
+        }
+
         /* ─── KPI ROW ─── */
         .kpi-row {
             display: grid;
@@ -816,8 +864,12 @@
             .dashboard { padding: 20px 16px 36px; }
 
             /* Header */
-            .dash-header { flex-direction: column; align-items: flex-start; gap: 8px; margin-bottom: 28px; padding-bottom: 18px; }
+            .dash-header { flex-direction: column; align-items: flex-start; gap: 12px; margin-bottom: 28px; padding-bottom: 18px; }
             .dash-header h1 { font-size: 1.5rem; }
+            .clone-container { align-items: flex-start; width: 100%; }
+
+            /* Footer */
+            .dash-footer { flex-direction: column; gap: 12px; text-align: center; padding-top: 20px; margin-top: 40px; }
 
             /* KPIs → 2-col */
             .kpi-row { grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 24px; }
@@ -1561,13 +1613,16 @@
         </div>
         
         <!-- CLONE REPO WIDGET -->
-        <div class="clone-widget" style="display: flex; align-items: center; background: rgba(255,255,255,0.03); border: 1px solid var(--glass-border); border-radius: var(--radius-sm); padding: 8px 12px; gap: 8px; font-family: var(--font-mono); font-size: 0.72rem; box-shadow: var(--shadow-sm); max-width: 100%; overflow-x: auto; white-space: nowrap;">
-            <span style="color: var(--text-secondary); user-select: none;">$</span>
-            <span id="clone-cmd" style="color: var(--text-primary); font-weight: 500;">git clone https://github.com/ljskr1/worldcupprediction.git</span>
-            <button onclick="copyCloneCmd()" style="background: none; border: none; cursor: pointer; padding: 4px; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary); transition: color 0.15s, background 0.15s;" title="Copy to clipboard" onmouseover="this.style.color='var(--text-primary)'; this.style.background='rgba(255,255,255,0.05)';" onmouseout="this.style.color='var(--text-secondary)'; this.style.background='none';">
-                <svg id="copy-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="pointer-events: none;"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                <svg id="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00ff88" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display: none; pointer-events: none;"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            </button>
+        <div class="clone-container">
+            <span class="clone-cta-text">To run this model for yourself, clone the repository:</span>
+            <div class="clone-widget" style="display: flex; align-items: center; background: rgba(255,255,255,0.03); border: 1px solid var(--glass-border); border-radius: var(--radius-sm); padding: 8px 12px; gap: 8px; font-family: var(--font-mono); font-size: 0.72rem; box-shadow: var(--shadow-sm); max-width: 100%; overflow-x: auto; white-space: nowrap;">
+                <span style="color: var(--text-secondary); user-select: none;">$</span>
+                <span id="clone-cmd" style="color: var(--text-primary); font-weight: 500;">git clone https://github.com/ljskr1/worldcupprediction.git</span>
+                <button onclick="copyCloneCmd()" style="background: none; border: none; cursor: pointer; padding: 4px; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary); transition: color 0.15s, background 0.15s;" title="Copy to clipboard" onmouseover="this.style.color='var(--text-primary)'; this.style.background='rgba(255,255,255,0.05)';" onmouseout="this.style.color='var(--text-secondary)'; this.style.background='none';">
+                    <svg id="copy-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="pointer-events: none;"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    <svg id="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00ff88" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display: none; pointer-events: none;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </button>
+            </div>
         </div>
     </div>
 
@@ -2047,6 +2102,23 @@
         </div>
 
     </div>
+
+    <!-- FOOTER -->
+    <footer class="dash-footer">
+        <div>
+            &copy; 2026 World Cup Prediction Engine · Powered by Dixon-Coles &amp; Monte Carlo
+        </div>
+        <div class="footer-links">
+            <a href="https://github.com/ljskr1/worldcupprediction" target="_blank" rel="noopener noreferrer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                GitHub
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                LinkedIn
+            </a>
+        </div>
+    </footer>
 
 </div>
 
