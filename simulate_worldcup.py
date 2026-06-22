@@ -10,7 +10,7 @@ HTML dashboard data feed (data.js) and predictions report.
 import math
 import json
 import random
-from engine import teams_data, predict_match, get_effective_ratings, actual_results, predict_score
+from engine import teams_data, predict_match, get_effective_ratings, actual_results, predict_score, played_matches_chronological, update_team_form
 
 # ============================================================
 # GROUP STAGE SIMULATION
@@ -627,69 +627,121 @@ js_content.append("const podium = " + json.dumps(js_podium, indent=2) + ";\n")
 js_content.append("const monteCarloLeaderboard = " + json.dumps(mc_leaderboard, indent=2) + ";\n")
 js_content.append("const monteCarloResults = " + json.dumps(mc_results, indent=2) + ";\n")
 
-# Model Validation & Backtesting (evaluate on actual_results marked played)
-validation_matches = []
-correct_predictions = 0
-brier_sum = 0.0
+# Model Validation & Backtesting (evaluate on played_matches_chronological)
+import copy
 
-for (t1, t2), info in actual_results.items():
-    if info.get("played"):
-        score = info["score"]
-        g1, g2 = score
+baseline_correct = 0
+baseline_brier_sum = 0.0
+
+live_correct = 0
+live_brier_sum = 0.0
+
+# Deep copy of teams_data to mutate for the dynamic Live Model
+live_teams = copy.deepcopy(teams_data)
+
+validation_matches = []
+
+for match in played_matches_chronological:
+    t1, t2 = match["t1"], match["t2"]
+    g1, g2 = match["score"]
+    
+    # Actual outcome
+    if g1 > g2:
+        actual_outcome = t1
+        t1_result = "w"
+        t2_result = "l"
+    elif g1 < g2:
+        actual_outcome = t2
+        t1_result = "l"
+        t2_result = "w"
+    else:
+        actual_outcome = "Draw"
+        t1_result = "d"
+        t2_result = "d"
         
-        if g1 > g2:
-            actual_outcome = t1
-        elif g1 < g2:
-            actual_outcome = t2
-        else:
-            actual_outcome = "Draw"
-            
-        # Predict using model
-        probs = predict_match(t1, t2, is_knockout=False)
-        p1 = probs["t1_win"]
-        pd = probs["draw"]
-        p2 = probs["t2_win"]
+    # 1. Baseline Model Prediction (uses original teams_data)
+    b_probs = predict_match(t1, t2, is_knockout=False)  # Defaults to teams_data
+    bp1, bpd, bp2 = b_probs["t1_win"], b_probs["draw"], b_probs["t2_win"]
+    
+    b_max_prob = max(bp1, bpd, bp2)
+    if b_max_prob == bp1:
+        b_pred_outcome = t1
+    elif b_max_prob == bp2:
+        b_pred_outcome = t2
+    else:
+        b_pred_outcome = "Draw"
         
-        # Model favorite predicted outcome
-        max_prob = max(p1, pd, p2)
-        if max_prob == p1:
-            pred_outcome = t1
-        elif max_prob == p2:
-            pred_outcome = t2
-        else:
-            pred_outcome = "Draw"
-            
-        is_correct = (pred_outcome == actual_outcome)
-        if is_correct:
-            correct_predictions += 1
-            
-        # Brier Score = sum of squared errors
-        o1 = 1.0 if actual_outcome == t1 else 0.0
-        od = 1.0 if actual_outcome == "Draw" else 0.0
-        o2 = 1.0 if actual_outcome == t2 else 0.0
+    b_is_correct = (b_pred_outcome == actual_outcome)
+    if b_is_correct:
+        baseline_correct += 1
         
-        brier = (p1 - o1)**2 + (pd - od)**2 + (p2 - o2)**2
-        brier_sum += brier
+    bo1 = 1.0 if actual_outcome == t1 else 0.0
+    bod = 1.0 if actual_outcome == "Draw" else 0.0
+    bo2 = 1.0 if actual_outcome == t2 else 0.0
+    b_brier = (bp1 - bo1)**2 + (bpd - bod)**2 + (bp2 - bo2)**2
+    baseline_brier_sum += b_brier
+    
+    # 2. Live Model Prediction (uses live_teams BEFORE updating form)
+    l_probs = predict_match(t1, t2, is_knockout=False, teams_dict=live_teams)
+    lp1, lpd, lp2 = l_probs["t1_win"], l_probs["draw"], l_probs["t2_win"]
+    
+    l_max_prob = max(lp1, lpd, lp2)
+    if l_max_prob == lp1:
+        l_pred_outcome = t1
+    elif l_max_prob == lp2:
+        l_pred_outcome = t2
+    else:
+        l_pred_outcome = "Draw"
         
-        validation_matches.append({
-            "t1": t1,
-            "t2": t2,
-            "score": f"{g1}-{g2}",
-            "actual": actual_outcome,
-            "predicted": pred_outcome,
-            "correct": is_correct,
-            "probs": {t1: round(p1, 3), "Draw": round(pd, 3), t2: round(p2, 3)}
-        })
+    l_is_correct = (l_pred_outcome == actual_outcome)
+    if l_is_correct:
+        live_correct += 1
+        
+    l_brier = (lp1 - bo1)**2 + (lpd - bod)**2 + (lp2 - bo2)**2
+    live_brier_sum += l_brier
+    
+    # Record data for display in dashboard
+    validation_matches.append({
+        "t1": t1,
+        "t2": t2,
+        "score": f"{g1}-{g2}",
+        "actual": actual_outcome,
+        "date": match["date"],
+        "baseline": {
+            "predicted": b_pred_outcome,
+            "correct": b_is_correct,
+            "probs": {t1: round(bp1, 3), "Draw": round(bpd, 3), t2: round(bp2, 3)}
+        },
+        "live": {
+            "predicted": l_pred_outcome,
+            "correct": l_is_correct,
+            "probs": {t1: round(lp1, 3), "Draw": round(lpd, 3), t2: round(lp2, 3)}
+        }
+    })
+    
+    # 3. Update the Live Model's team form with the actual outcome!
+    update_team_form(live_teams, t1, t1_result)
+    update_team_form(live_teams, t2, t2_result)
 
 num_played = len(validation_matches)
-accuracy = (correct_predictions / num_played) if num_played > 0 else 0
-avg_brier = (brier_sum / num_played) if num_played > 0 else 0
+baseline_accuracy = (baseline_correct / num_played) if num_played > 0 else 0
+baseline_avg_brier = (baseline_brier_sum / num_played) if num_played > 0 else 0
+
+live_accuracy = (live_correct / num_played) if num_played > 0 else 0
+live_avg_brier = (live_brier_sum / num_played) if num_played > 0 else 0
 
 validation_data = {
-    "accuracy": round(accuracy, 4),
-    "brierScore": round(avg_brier, 4),
-    "correctCount": correct_predictions,
     "totalCount": num_played,
+    "baseline": {
+        "accuracy": round(baseline_accuracy, 4),
+        "brierScore": round(baseline_avg_brier, 4),
+        "correctCount": baseline_correct
+    },
+    "live": {
+        "accuracy": round(live_accuracy, 4),
+        "brierScore": round(live_avg_brier, 4),
+        "correctCount": live_correct
+    },
     "matches": validation_matches
 }
 js_content.append("const modelValidation = " + json.dumps(validation_data, indent=2) + ";")
@@ -707,3 +759,7 @@ for idx, p in enumerate(mc_results[:10]):
 print(f"\n🏆 Predicted Champion: {teams_data[champion]['flag']} {champion}")
 print(f"🥈 Runner-up: {teams_data[runner_up]['flag']} {runner_up}")
 print(f"🥉 Third: {teams_data[third_name]['flag']} {third_name}")
+
+print(f"\n=== BACKTESTING VALIDATION RESULTS ===")
+print(f"Baseline Model Accuracy: {baseline_accuracy:.2%} (Brier: {baseline_avg_brier:.3f})")
+print(f"Live Model Accuracy: {live_accuracy:.2%} (Brier: {live_avg_brier:.3f})")

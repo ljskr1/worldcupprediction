@@ -894,13 +894,13 @@ const groupStandings = {
       "name": "Mexico",
       "flag": "\ud83c\uddf2\ud83c\uddfd",
       "pld": 3,
-      "w": 2,
-      "d": 1,
+      "w": 3,
+      "d": 0,
       "l": 0,
       "gf": 5,
-      "ga": 2,
-      "gd": 3,
-      "pts": 7,
+      "ga": 0,
+      "gd": 5,
+      "pts": 9,
       "status": "Advanced (Winner)"
     },
     {
@@ -934,70 +934,83 @@ const groupStandings = {
       "flag": "\ud83c\udde8\ud83c\uddff",
       "pld": 3,
       "w": 0,
-      "d": 2,
-      "l": 1,
-      "gf": 4,
+      "d": 1,
+      "l": 2,
+      "gf": 2,
       "ga": 5,
-      "gd": -1,
-      "pts": 2,
+      "gd": -3,
+      "pts": 1,
       "status": "Eliminated"
     }
   ],
   "B": [
     {
-      "name": "Switzerland",
-      "flag": "\ud83c\udde8\ud83c\udded",
-      "pld": 3,
-      "w": 2,
-      "d": 1,
-      "l": 0,
-      "gf": 6,
-      "ga": 2,
-      "gd": 4,
-      "pts": 7,
-      "status": "Advanced (Winner)"
-    },
-    {
       "name": "Canada",
       "flag": "\ud83c\udde8\ud83c\udde6",
       "pld": 3,
       "w": 1,
-      "d": 1,
-      "l": 1,
-      "gf": 7,
-      "ga": 2,
-      "gd": 5,
-      "pts": 4,
-      "status": "Advanced (Runner-up)"
+      "d": 2,
+      "l": 0,
+      "gf": 9,
+      "ga": 3,
+      "gd": 6,
+      "pts": 5,
+      "status": "Advanced (Winner)"
     },
     {
-      "name": "Qatar",
-      "flag": "\ud83c\uddf6\ud83c\udde6",
+      "name": "Switzerland",
+      "flag": "\ud83c\udde8\ud83c\udded",
       "pld": 3,
       "w": 1,
-      "d": 1,
-      "l": 1,
-      "gf": 2,
-      "ga": 7,
-      "gd": -5,
-      "pts": 4,
-      "status": "Advanced (Best 3rd)"
+      "d": 2,
+      "l": 0,
+      "gf": 7,
+      "ga": 4,
+      "gd": 3,
+      "pts": 5,
+      "status": "Advanced (Runner-up)"
     },
     {
       "name": "Bosnia and Herzegovina",
       "flag": "\ud83c\udde7\ud83c\udde6",
       "pld": 3,
+      "w": 1,
+      "d": 1,
+      "l": 1,
+      "gf": 3,
+      "ga": 5,
+      "gd": -2,
+      "pts": 4,
+      "status": "Advanced (Best 3rd)"
+    },
+    {
+      "name": "Qatar",
+      "flag": "\ud83c\uddf6\ud83c\udde6",
+      "pld": 3,
       "w": 0,
       "d": 1,
       "l": 2,
-      "gf": 2,
-      "ga": 6,
-      "gd": -4,
+      "gf": 1,
+      "ga": 8,
+      "gd": -7,
       "pts": 1,
       "status": "Eliminated"
     }
   ],
   "C": [
+    {
+      "name": "Brazil",
+      "flag": "\ud83c\udde7\ud83c\uddf7",
+      "pld": 3,
+      "w": 2,
+      "d": 1,
+      "l": 0,
+      "gf": 5,
+      "ga": 1,
+      "gd": 4,
+      "pts": 7,
+      "status": "Advanced (Winner)"
+    },
     {
       "name": "Morocco",
       "flag": "\ud83c\uddf2\ud83c\udde6",
@@ -1009,19 +1022,6 @@ const groupStandings = {
       "ga": 1,
       "gd": 2,
       "pts": 7,
-      "status": "Advanced (Winner)"
-    },
-    {
-      "name": "Brazil",
-      "flag": "\ud83c\udde7\ud83c\uddf7",
-      "pld": 3,
-      "w": 1,
-      "d": 2,
-      "l": 0,
-      "gf": 4,
-      "ga": 1,
-      "gd": 3,
-      "pts": 5,
       "status": "Advanced (Runner-up)"
     },
     {
@@ -1029,13 +1029,13 @@ const groupStandings = {
       "flag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc73\udb40\udc63\udb40\udc74\udb40\udc7f",
       "pld": 3,
       "w": 1,
-      "d": 1,
-      "l": 1,
+      "d": 0,
+      "l": 2,
       "gf": 1,
-      "ga": 1,
-      "gd": 0,
-      "pts": 4,
-      "status": "Advanced (Best 3rd)"
+      "ga": 2,
+      "gd": -1,
+      "pts": 3,
+      "status": "Eliminated"
     },
     {
       "name": "Haiti",
@@ -1056,13 +1056,13 @@ const groupStandings = {
       "name": "United States",
       "flag": "\ud83c\uddfa\ud83c\uddf8",
       "pld": 3,
-      "w": 3,
-      "d": 0,
+      "w": 2,
+      "d": 1,
       "l": 0,
-      "gf": 7,
-      "ga": 1,
-      "gd": 6,
-      "pts": 9,
+      "gf": 8,
+      "ga": 3,
+      "gd": 5,
+      "pts": 7,
       "status": "Advanced (Winner)"
     },
     {
@@ -1089,19 +1089,19 @@ const groupStandings = {
       "ga": 3,
       "gd": -1,
       "pts": 3,
-      "status": "Advanced (Best 3rd)"
+      "status": "Eliminated"
     },
     {
       "name": "T\u00fcrkiye",
       "flag": "\ud83c\uddf9\ud83c\uddf7",
       "pld": 3,
       "w": 0,
-      "d": 0,
-      "l": 3,
-      "gf": 0,
-      "ga": 4,
-      "gd": -4,
-      "pts": 0,
+      "d": 1,
+      "l": 2,
+      "gf": 2,
+      "ga": 5,
+      "gd": -3,
+      "pts": 1,
       "status": "Eliminated"
     }
   ],
@@ -1111,51 +1111,51 @@ const groupStandings = {
       "flag": "\ud83c\udde9\ud83c\uddea",
       "pld": 3,
       "w": 2,
-      "d": 0,
-      "l": 1,
-      "gf": 9,
-      "ga": 3,
-      "gd": 6,
-      "pts": 6,
-      "status": "Advanced (Winner)"
-    },
-    {
-      "name": "C\u00f4te d'Ivoire",
-      "flag": "\ud83c\udde8\ud83c\uddee",
-      "pld": 3,
-      "w": 2,
-      "d": 0,
-      "l": 1,
-      "gf": 4,
-      "ga": 2,
-      "gd": 2,
-      "pts": 6,
-      "status": "Advanced (Runner-up)"
-    },
-    {
-      "name": "Ecuador",
-      "flag": "\ud83c\uddea\ud83c\udde8",
-      "pld": 3,
-      "w": 1,
       "d": 1,
-      "l": 1,
-      "gf": 1,
-      "ga": 1,
-      "gd": 0,
-      "pts": 4,
-      "status": "Advanced (Best 3rd)"
+      "l": 0,
+      "gf": 11,
+      "ga": 4,
+      "gd": 7,
+      "pts": 7,
+      "status": "Advanced (Winner)"
     },
     {
       "name": "Cura\u00e7ao",
       "flag": "\ud83c\udde8\ud83c\uddfc",
       "pld": 3,
-      "w": 0,
+      "w": 1,
       "d": 1,
+      "l": 1,
+      "gf": 2,
+      "ga": 7,
+      "gd": -5,
+      "pts": 4,
+      "status": "Advanced (Runner-up)"
+    },
+    {
+      "name": "C\u00f4te d'Ivoire",
+      "flag": "\ud83c\udde8\ud83c\uddee",
+      "pld": 3,
+      "w": 1,
+      "d": 0,
       "l": 2,
-      "gf": 1,
-      "ga": 9,
-      "gd": -8,
-      "pts": 1,
+      "gf": 2,
+      "ga": 3,
+      "gd": -1,
+      "pts": 3,
+      "status": "Advanced (Best 3rd)"
+    },
+    {
+      "name": "Ecuador",
+      "flag": "\ud83c\uddea\ud83c\udde8",
+      "pld": 3,
+      "w": 0,
+      "d": 2,
+      "l": 1,
+      "gf": 2,
+      "ga": 3,
+      "gd": -1,
+      "pts": 2,
       "status": "Eliminated"
     }
   ],
@@ -1167,9 +1167,9 @@ const groupStandings = {
       "w": 2,
       "d": 1,
       "l": 0,
-      "gf": 9,
+      "gf": 8,
       "ga": 3,
-      "gd": 6,
+      "gd": 5,
       "pts": 7,
       "status": "Advanced (Winner)"
     },
@@ -1180,9 +1180,9 @@ const groupStandings = {
       "w": 2,
       "d": 1,
       "l": 0,
-      "gf": 8,
+      "gf": 7,
       "ga": 2,
-      "gd": 6,
+      "gd": 5,
       "pts": 7,
       "status": "Advanced (Runner-up)"
     },
@@ -1194,10 +1194,10 @@ const groupStandings = {
       "d": 0,
       "l": 2,
       "gf": 6,
-      "ga": 8,
-      "gd": -2,
+      "ga": 7,
+      "gd": -1,
       "pts": 3,
-      "status": "Eliminated"
+      "status": "Advanced (Best 3rd)"
     },
     {
       "name": "Tunisia",
@@ -1207,8 +1207,8 @@ const groupStandings = {
       "d": 0,
       "l": 3,
       "gf": 1,
-      "ga": 11,
-      "gd": -10,
+      "ga": 10,
+      "gd": -9,
       "pts": 0,
       "status": "Eliminated"
     }
@@ -1221,8 +1221,8 @@ const groupStandings = {
       "w": 1,
       "d": 2,
       "l": 0,
-      "gf": 4,
-      "ga": 2,
+      "gf": 5,
+      "ga": 3,
       "gd": 2,
       "pts": 5,
       "status": "Advanced (Winner)"
@@ -1234,9 +1234,9 @@ const groupStandings = {
       "w": 1,
       "d": 2,
       "l": 0,
-      "gf": 2,
+      "gf": 3,
       "ga": 1,
-      "gd": 1,
+      "gd": 2,
       "pts": 5,
       "status": "Advanced (Runner-up)"
     },
@@ -1247,8 +1247,8 @@ const groupStandings = {
       "w": 0,
       "d": 3,
       "l": 0,
-      "gf": 2,
-      "ga": 2,
+      "gf": 3,
+      "ga": 3,
       "gd": 0,
       "pts": 3,
       "status": "Advanced (Best 3rd)"
@@ -1261,8 +1261,8 @@ const groupStandings = {
       "d": 1,
       "l": 2,
       "gf": 3,
-      "ga": 6,
-      "gd": -3,
+      "ga": 7,
+      "gd": -4,
       "pts": 1,
       "status": "Eliminated"
     }
@@ -1272,13 +1272,13 @@ const groupStandings = {
       "name": "Spain",
       "flag": "\ud83c\uddea\ud83c\uddf8",
       "pld": 3,
-      "w": 2,
-      "d": 1,
+      "w": 1,
+      "d": 2,
       "l": 0,
-      "gf": 5,
+      "gf": 4,
       "ga": 0,
-      "gd": 5,
-      "pts": 7,
+      "gd": 4,
+      "pts": 5,
       "status": "Advanced (Winner)"
     },
     {
@@ -1288,8 +1288,8 @@ const groupStandings = {
       "w": 0,
       "d": 3,
       "l": 0,
-      "gf": 2,
-      "ga": 2,
+      "gf": 4,
+      "ga": 4,
       "gd": 0,
       "pts": 3,
       "status": "Advanced (Runner-up)"
@@ -1299,13 +1299,13 @@ const groupStandings = {
       "flag": "\ud83c\uddfa\ud83c\uddfe",
       "pld": 3,
       "w": 0,
-      "d": 2,
-      "l": 1,
+      "d": 3,
+      "l": 0,
       "gf": 3,
-      "ga": 4,
-      "gd": -1,
-      "pts": 2,
-      "status": "Eliminated"
+      "ga": 3,
+      "gd": 0,
+      "pts": 3,
+      "status": "Advanced (Best 3rd)"
     },
     {
       "name": "Saudi Arabia",
@@ -1314,8 +1314,8 @@ const groupStandings = {
       "w": 0,
       "d": 2,
       "l": 1,
-      "gf": 1,
-      "ga": 5,
+      "gf": 3,
+      "ga": 7,
       "gd": -4,
       "pts": 2,
       "status": "Eliminated"
@@ -1326,13 +1326,13 @@ const groupStandings = {
       "name": "France",
       "flag": "\ud83c\uddeb\ud83c\uddf7",
       "pld": 3,
-      "w": 3,
-      "d": 0,
+      "w": 2,
+      "d": 1,
       "l": 0,
-      "gf": 8,
-      "ga": 2,
-      "gd": 6,
-      "pts": 9,
+      "gf": 9,
+      "ga": 4,
+      "gd": 5,
+      "pts": 7,
       "status": "Advanced (Winner)"
     },
     {
@@ -1340,45 +1340,45 @@ const groupStandings = {
       "flag": "\ud83c\uddf3\ud83c\uddf4",
       "pld": 3,
       "w": 2,
-      "d": 0,
-      "l": 1,
-      "gf": 7,
-      "ga": 3,
-      "gd": 4,
-      "pts": 6,
+      "d": 1,
+      "l": 0,
+      "gf": 9,
+      "ga": 4,
+      "gd": 5,
+      "pts": 7,
       "status": "Advanced (Runner-up)"
-    },
-    {
-      "name": "Iraq",
-      "flag": "\ud83c\uddee\ud83c\uddf6",
-      "pld": 3,
-      "w": 1,
-      "d": 0,
-      "l": 2,
-      "gf": 3,
-      "ga": 8,
-      "gd": -5,
-      "pts": 3,
-      "status": "Eliminated"
     },
     {
       "name": "Senegal",
       "flag": "\ud83c\uddf8\ud83c\uddf3",
       "pld": 3,
+      "w": 1,
+      "d": 0,
+      "l": 2,
+      "gf": 3,
+      "ga": 6,
+      "gd": -3,
+      "pts": 3,
+      "status": "Eliminated"
+    },
+    {
+      "name": "Iraq",
+      "flag": "\ud83c\uddee\ud83c\uddf6",
+      "pld": 3,
       "w": 0,
       "d": 0,
       "l": 3,
       "gf": 2,
-      "ga": 7,
-      "gd": -5,
+      "ga": 9,
+      "gd": -7,
       "pts": 0,
       "status": "Eliminated"
     }
   ],
   "J": [
     {
-      "name": "Austria",
-      "flag": "\ud83c\udde6\ud83c\uddf9",
+      "name": "Jordan",
+      "flag": "\ud83c\uddef\ud83c\uddf4",
       "pld": 3,
       "w": 2,
       "d": 0,
@@ -1403,21 +1403,75 @@ const groupStandings = {
       "status": "Advanced (Runner-up)"
     },
     {
+      "name": "Austria",
+      "flag": "\ud83c\udde6\ud83c\uddf9",
+      "pld": 3,
+      "w": 1,
+      "d": 0,
+      "l": 2,
+      "gf": 3,
+      "ga": 4,
+      "gd": -1,
+      "pts": 3,
+      "status": "Advanced (Best 3rd)"
+    },
+    {
       "name": "Algeria",
       "flag": "\ud83c\udde9\ud83c\uddff",
       "pld": 3,
       "w": 1,
-      "d": 1,
-      "l": 1,
-      "gf": 4,
+      "d": 0,
+      "l": 2,
+      "gf": 2,
       "ga": 5,
-      "gd": -1,
-      "pts": 4,
-      "status": "Advanced (Best 3rd)"
+      "gd": -3,
+      "pts": 3,
+      "status": "Eliminated"
+    }
+  ],
+  "K": [
+    {
+      "name": "Portugal",
+      "flag": "\ud83c\uddf5\ud83c\uddf9",
+      "pld": 3,
+      "w": 2,
+      "d": 1,
+      "l": 0,
+      "gf": 4,
+      "ga": 1,
+      "gd": 3,
+      "pts": 7,
+      "status": "Advanced (Winner)"
     },
     {
-      "name": "Jordan",
-      "flag": "\ud83c\uddef\ud83c\uddf4",
+      "name": "Congo DR",
+      "flag": "\ud83c\udde8\ud83c\udde9",
+      "pld": 3,
+      "w": 1,
+      "d": 2,
+      "l": 0,
+      "gf": 5,
+      "ga": 3,
+      "gd": 2,
+      "pts": 5,
+      "status": "Advanced (Runner-up)"
+    },
+    {
+      "name": "Colombia",
+      "flag": "\ud83c\udde8\ud83c\uddf4",
+      "pld": 3,
+      "w": 1,
+      "d": 0,
+      "l": 2,
+      "gf": 3,
+      "ga": 5,
+      "gd": -2,
+      "pts": 3,
+      "status": "Eliminated"
+    },
+    {
+      "name": "Uzbekistan",
+      "flag": "\ud83c\uddfa\ud83c\uddff",
       "pld": 3,
       "w": 0,
       "d": 1,
@@ -1429,60 +1483,6 @@ const groupStandings = {
       "status": "Eliminated"
     }
   ],
-  "K": [
-    {
-      "name": "Portugal",
-      "flag": "\ud83c\uddf5\ud83c\uddf9",
-      "pld": 3,
-      "w": 1,
-      "d": 1,
-      "l": 1,
-      "gf": 3,
-      "ga": 2,
-      "gd": 1,
-      "pts": 4,
-      "status": "Advanced (Winner)"
-    },
-    {
-      "name": "Colombia",
-      "flag": "\ud83c\udde8\ud83c\uddf4",
-      "pld": 3,
-      "w": 1,
-      "d": 1,
-      "l": 1,
-      "gf": 5,
-      "ga": 5,
-      "gd": 0,
-      "pts": 4,
-      "status": "Advanced (Runner-up)"
-    },
-    {
-      "name": "Uzbekistan",
-      "flag": "\ud83c\uddfa\ud83c\uddff",
-      "pld": 3,
-      "w": 1,
-      "d": 1,
-      "l": 1,
-      "gf": 2,
-      "ga": 3,
-      "gd": -1,
-      "pts": 4,
-      "status": "Advanced (Best 3rd)"
-    },
-    {
-      "name": "Congo DR",
-      "flag": "\ud83c\udde8\ud83c\udde9",
-      "pld": 3,
-      "w": 0,
-      "d": 3,
-      "l": 0,
-      "gf": 3,
-      "ga": 3,
-      "gd": 0,
-      "pts": 3,
-      "status": "Eliminated"
-    }
-  ],
   "L": [
     {
       "name": "England",
@@ -1491,49 +1491,49 @@ const groupStandings = {
       "w": 3,
       "d": 0,
       "l": 0,
-      "gf": 7,
+      "gf": 6,
       "ga": 2,
-      "gd": 5,
+      "gd": 4,
       "pts": 9,
       "status": "Advanced (Winner)"
-    },
-    {
-      "name": "Panama",
-      "flag": "\ud83c\uddf5\ud83c\udde6",
-      "pld": 3,
-      "w": 1,
-      "d": 0,
-      "l": 2,
-      "gf": 2,
-      "ga": 2,
-      "gd": 0,
-      "pts": 3,
-      "status": "Advanced (Runner-up)"
     },
     {
       "name": "Ghana",
       "flag": "\ud83c\uddec\ud83c\udded",
       "pld": 3,
       "w": 1,
-      "d": 0,
-      "l": 2,
-      "gf": 1,
-      "ga": 3,
-      "gd": -2,
-      "pts": 3,
-      "status": "Eliminated"
+      "d": 1,
+      "l": 1,
+      "gf": 2,
+      "ga": 2,
+      "gd": 0,
+      "pts": 4,
+      "status": "Advanced (Runner-up)"
     },
     {
       "name": "Croatia",
       "flag": "\ud83c\udded\ud83c\uddf7",
       "pld": 3,
       "w": 1,
+      "d": 1,
+      "l": 1,
+      "gf": 4,
+      "ga": 5,
+      "gd": -1,
+      "pts": 4,
+      "status": "Advanced (Best 3rd)"
+    },
+    {
+      "name": "Panama",
+      "flag": "\ud83c\uddf5\ud83c\udde6",
+      "pld": 3,
+      "w": 0,
       "d": 0,
-      "l": 2,
-      "gf": 3,
-      "ga": 6,
+      "l": 3,
+      "gf": 0,
+      "ga": 3,
       "gd": -3,
-      "pts": 3,
+      "pts": 0,
       "status": "Eliminated"
     }
   ]
@@ -1568,8 +1568,8 @@ const groupMatches = {
     {
       "t1": "Mexico",
       "t2": "Czechia",
-      "score": "Draw",
-      "outcome": "Draw",
+      "score": "Mexico Win",
+      "outcome": "Mexico",
       "actual": false,
       "probs": {
         "Mexico": 0.48,
@@ -1642,8 +1642,8 @@ const groupMatches = {
     {
       "t1": "Canada",
       "t2": "Switzerland",
-      "score": "Switzerland Win",
-      "outcome": "Switzerland",
+      "score": "Draw",
+      "outcome": "Draw",
       "actual": false,
       "probs": {
         "Canada": 0.299,
@@ -1654,8 +1654,8 @@ const groupMatches = {
     {
       "t1": "Bosnia and Herzegovina",
       "t2": "Qatar",
-      "score": "Qatar Win",
-      "outcome": "Qatar",
+      "score": "Bosnia and Herzegovina Win",
+      "outcome": "Bosnia and Herzegovina",
       "actual": false,
       "probs": {
         "Bosnia and Herzegovina": 0.285,
@@ -1716,8 +1716,8 @@ const groupMatches = {
     {
       "t1": "Brazil",
       "t2": "Scotland",
-      "score": "Draw",
-      "outcome": "Draw",
+      "score": "Brazil Win",
+      "outcome": "Brazil",
       "actual": false,
       "probs": {
         "Brazil": 0.495,
@@ -1790,8 +1790,8 @@ const groupMatches = {
     {
       "t1": "United States",
       "t2": "T\u00fcrkiye",
-      "score": "United States Win",
-      "outcome": "United States",
+      "score": "Draw",
+      "outcome": "Draw",
       "actual": false,
       "probs": {
         "United States": 0.395,
@@ -1864,8 +1864,8 @@ const groupMatches = {
     {
       "t1": "Germany",
       "t2": "Ecuador",
-      "score": "Ecuador Win",
-      "outcome": "Ecuador",
+      "score": "Draw",
+      "outcome": "Draw",
       "actual": false,
       "probs": {
         "Germany": 0.449,
@@ -1876,8 +1876,8 @@ const groupMatches = {
     {
       "t1": "Cura\u00e7ao",
       "t2": "C\u00f4te d'Ivoire",
-      "score": "C\u00f4te d'Ivoire Win",
-      "outcome": "C\u00f4te d'Ivoire",
+      "score": "Cura\u00e7ao Win",
+      "outcome": "Cura\u00e7ao",
       "actual": false,
       "probs": {
         "Cura\u00e7ao": 0.149,
@@ -2062,8 +2062,8 @@ const groupMatches = {
     {
       "t1": "Spain",
       "t2": "Uruguay",
-      "score": "Spain Win",
-      "outcome": "Spain",
+      "score": "Draw",
+      "outcome": "Draw",
       "actual": false,
       "probs": {
         "Spain": 0.421,
@@ -2148,8 +2148,8 @@ const groupMatches = {
     {
       "t1": "France",
       "t2": "Norway",
-      "score": "France Win",
-      "outcome": "France",
+      "score": "Draw",
+      "outcome": "Draw",
       "actual": false,
       "probs": {
         "France": 0.543,
@@ -2184,8 +2184,8 @@ const groupMatches = {
     {
       "t1": "Senegal",
       "t2": "Iraq",
-      "score": "Iraq Win",
-      "outcome": "Iraq",
+      "score": "Senegal Win",
+      "outcome": "Senegal",
       "actual": false,
       "probs": {
         "Senegal": 0.543,
@@ -2222,8 +2222,8 @@ const groupMatches = {
     {
       "t1": "Argentina",
       "t2": "Austria",
-      "score": "Austria Win",
-      "outcome": "Austria",
+      "score": "Argentina Win",
+      "outcome": "Argentina",
       "actual": false,
       "probs": {
         "Argentina": 0.519,
@@ -2234,8 +2234,8 @@ const groupMatches = {
     {
       "t1": "Argentina",
       "t2": "Jordan",
-      "score": "Argentina Win",
-      "outcome": "Argentina",
+      "score": "Jordan Win",
+      "outcome": "Jordan",
       "actual": false,
       "probs": {
         "Argentina": 0.697,
@@ -2258,8 +2258,8 @@ const groupMatches = {
     {
       "t1": "Algeria",
       "t2": "Jordan",
-      "score": "Draw",
-      "outcome": "Draw",
+      "score": "Jordan Win",
+      "outcome": "Jordan",
       "actual": false,
       "probs": {
         "Algeria": 0.527,
@@ -2308,8 +2308,8 @@ const groupMatches = {
     {
       "t1": "Portugal",
       "t2": "Uzbekistan",
-      "score": "Uzbekistan Win",
-      "outcome": "Uzbekistan",
+      "score": "Portugal Win",
+      "outcome": "Portugal",
       "actual": false,
       "probs": {
         "Portugal": 0.63,
@@ -2320,8 +2320,8 @@ const groupMatches = {
     {
       "t1": "Colombia",
       "t2": "Congo DR",
-      "score": "Draw",
-      "outcome": "Draw",
+      "score": "Congo DR Win",
+      "outcome": "Congo DR",
       "actual": false,
       "probs": {
         "Colombia": 0.565,
@@ -2394,8 +2394,8 @@ const groupMatches = {
     {
       "t1": "Croatia",
       "t2": "Ghana",
-      "score": "Croatia Win",
-      "outcome": "Croatia",
+      "score": "Draw",
+      "outcome": "Draw",
       "actual": false,
       "probs": {
         "Croatia": 0.553,
@@ -2406,8 +2406,8 @@ const groupMatches = {
     {
       "t1": "Croatia",
       "t2": "Panama",
-      "score": "Panama Win",
-      "outcome": "Panama",
+      "score": "Croatia Win",
+      "outcome": "Croatia",
       "actual": false,
       "probs": {
         "Croatia": 0.48,
@@ -2434,67 +2434,67 @@ const knockoutStages = {
   "R32": [
     {
       "t1": "Mexico",
-      "t2": "Ecuador",
+      "t2": "Croatia",
       "winner": "Mexico",
       "probs": {
-        "Mexico": 0.592,
+        "Mexico": 0.527,
         "Draw": 0.0,
-        "Ecuador": 0.408
+        "Croatia": 0.473
       },
       "matchNum": 1
     },
     {
-      "t1": "Switzerland",
-      "t2": "Scotland",
-      "winner": "Switzerland",
+      "t1": "Canada",
+      "t2": "Bosnia and Herzegovina",
+      "winner": "Bosnia and Herzegovina",
       "probs": {
-        "Switzerland": 0.599,
+        "Canada": 0.0,
         "Draw": 0.0,
-        "Scotland": 0.401
+        "Bosnia and Herzegovina": 1.0
       },
       "matchNum": 2
     },
     {
-      "t1": "Morocco",
-      "t2": "Algeria",
-      "winner": "Morocco",
+      "t1": "Brazil",
+      "t2": "Uruguay",
+      "winner": "Brazil",
       "probs": {
-        "Morocco": 0.624,
+        "Brazil": 0.531,
         "Draw": 0.0,
-        "Algeria": 0.376
+        "Uruguay": 0.469
       },
       "matchNum": 3
     },
     {
       "t1": "United States",
-      "t2": "Uzbekistan",
+      "t2": "Iran",
       "winner": "United States",
       "probs": {
-        "United States": 0.728,
+        "United States": 0.566,
         "Draw": 0.0,
-        "Uzbekistan": 0.272
+        "Iran": 0.434
       },
       "matchNum": 4
     },
     {
       "t1": "Germany",
-      "t2": "Qatar",
+      "t2": "Sweden",
       "winner": "Germany",
       "probs": {
-        "Germany": 0.701,
+        "Germany": 0.64,
         "Draw": 0.0,
-        "Qatar": 0.299
+        "Sweden": 0.36
       },
       "matchNum": 5
     },
     {
       "t1": "Netherlands",
-      "t2": "Iran",
+      "t2": "Austria",
       "winner": "Netherlands",
       "probs": {
-        "Netherlands": 0.603,
+        "Netherlands": 0.606,
         "Draw": 0.0,
-        "Iran": 0.397
+        "Austria": 0.394
       },
       "matchNum": 6
     },
@@ -2511,12 +2511,12 @@ const knockoutStages = {
     },
     {
       "t1": "Spain",
-      "t2": "Australia",
+      "t2": "C\u00f4te d'Ivoire",
       "winner": "Spain",
       "probs": {
-        "Spain": 0.668,
+        "Spain": 0.649,
         "Draw": 0.0,
-        "Australia": 0.332
+        "C\u00f4te d'Ivoire": 0.351
       },
       "matchNum": 8
     },
@@ -2532,24 +2532,24 @@ const knockoutStages = {
       "matchNum": 9
     },
     {
-      "t1": "Austria",
-      "t2": "Canada",
-      "winner": "Austria",
+      "t1": "Jordan",
+      "t2": "Switzerland",
+      "winner": "Switzerland",
       "probs": {
-        "Austria": 0.531,
+        "Jordan": 0.27,
         "Draw": 0.0,
-        "Canada": 0.469
+        "Switzerland": 0.73
       },
       "matchNum": 10
     },
     {
       "t1": "Portugal",
-      "t2": "Brazil",
+      "t2": "Morocco",
       "winner": "Portugal",
       "probs": {
-        "Portugal": 0.547,
+        "Portugal": 0.53,
         "Draw": 0.0,
-        "Brazil": 0.453
+        "Morocco": 0.47
       },
       "matchNum": 11
     },
@@ -2565,13 +2565,13 @@ const knockoutStages = {
       "matchNum": 12
     },
     {
-      "t1": "C\u00f4te d'Ivoire",
+      "t1": "Cura\u00e7ao",
       "t2": "Japan",
       "winner": "Japan",
       "probs": {
-        "C\u00f4te d'Ivoire": 0.447,
+        "Cura\u00e7ao": 0.186,
         "Draw": 0.0,
-        "Japan": 0.553
+        "Japan": 0.814
       },
       "matchNum": 13
     },
@@ -2598,13 +2598,13 @@ const knockoutStages = {
       "matchNum": 15
     },
     {
-      "t1": "Colombia",
-      "t2": "Panama",
-      "winner": "Colombia",
+      "t1": "Congo DR",
+      "t2": "Ghana",
+      "winner": "Congo DR",
       "probs": {
-        "Colombia": 0.67,
+        "Congo DR": 0.514,
         "Draw": 0.0,
-        "Panama": 0.33
+        "Ghana": 0.486
       },
       "matchNum": 16
     }
@@ -2612,23 +2612,23 @@ const knockoutStages = {
   "R16": [
     {
       "t1": "Mexico",
-      "t2": "Switzerland",
+      "t2": "Bosnia and Herzegovina",
       "winner": "Mexico",
       "probs": {
-        "Mexico": 0.547,
+        "Mexico": 0.76,
         "Draw": 0.0,
-        "Switzerland": 0.453
+        "Bosnia and Herzegovina": 0.24
       },
       "matchNum": 1
     },
     {
-      "t1": "Morocco",
+      "t1": "Brazil",
       "t2": "United States",
-      "winner": "Morocco",
+      "winner": "Brazil",
       "probs": {
-        "Morocco": 0.549,
+        "Brazil": 0.533,
         "Draw": 0.0,
-        "United States": 0.451
+        "United States": 0.467
       },
       "matchNum": 2
     },
@@ -2656,12 +2656,12 @@ const knockoutStages = {
     },
     {
       "t1": "France",
-      "t2": "Austria",
+      "t2": "Switzerland",
       "winner": "France",
       "probs": {
-        "France": 0.662,
+        "France": 0.625,
         "Draw": 0.0,
-        "Austria": 0.338
+        "Switzerland": 0.375
       },
       "matchNum": 5
     },
@@ -2689,12 +2689,12 @@ const knockoutStages = {
     },
     {
       "t1": "Argentina",
-      "t2": "Colombia",
+      "t2": "Congo DR",
       "winner": "Argentina",
       "probs": {
-        "Argentina": 0.609,
+        "Argentina": 0.815,
         "Draw": 0.0,
-        "Colombia": 0.391
+        "Congo DR": 0.185
       },
       "matchNum": 8
     }
@@ -2702,12 +2702,12 @@ const knockoutStages = {
   "QF": [
     {
       "t1": "Mexico",
-      "t2": "Morocco",
-      "winner": "Morocco",
+      "t2": "Brazil",
+      "winner": "Brazil",
       "probs": {
-        "Mexico": 0.467,
+        "Mexico": 0.484,
         "Draw": 0.0,
-        "Morocco": 0.533
+        "Brazil": 0.516
       },
       "matchNum": 1
     },
@@ -2747,13 +2747,13 @@ const knockoutStages = {
   ],
   "SF": [
     {
-      "t1": "Morocco",
+      "t1": "Brazil",
       "t2": "Spain",
       "winner": "Spain",
       "probs": {
-        "Morocco": 0.469,
+        "Brazil": 0.452,
         "Draw": 0.0,
-        "Spain": 0.531
+        "Spain": 0.548
       },
       "matchNum": 1
     },
@@ -2771,13 +2771,13 @@ const knockoutStages = {
   ],
   "Third": [
     {
-      "t1": "Morocco",
+      "t1": "Brazil",
       "t2": "France",
       "winner": "France",
       "probs": {
-        "Morocco": 0.452,
+        "Brazil": 0.435,
         "Draw": 0.0,
-        "France": 0.452
+        "France": 0.435
       },
       "matchNum": 1
     }
@@ -3386,22 +3386,41 @@ const monteCarloResults = [
 ];
 
 const modelValidation = {
-  "accuracy": 0.5952,
-  "brierScore": 0.5699,
-  "correctCount": 25,
-  "totalCount": 42,
+  "totalCount": 40,
+  "baseline": {
+    "accuracy": 0.6,
+    "brierScore": 0.5745,
+    "correctCount": 24
+  },
+  "live": {
+    "accuracy": 0.6,
+    "brierScore": 0.576,
+    "correctCount": 24
+  },
   "matches": [
     {
       "t1": "Mexico",
       "t2": "South Africa",
       "score": "2-0",
       "actual": "Mexico",
-      "predicted": "Mexico",
-      "correct": true,
-      "probs": {
-        "Mexico": 0.589,
-        "Draw": 0.242,
-        "South Africa": 0.169
+      "date": "2026-06-11",
+      "baseline": {
+        "predicted": "Mexico",
+        "correct": true,
+        "probs": {
+          "Mexico": 0.589,
+          "Draw": 0.242,
+          "South Africa": 0.169
+        }
+      },
+      "live": {
+        "predicted": "Mexico",
+        "correct": true,
+        "probs": {
+          "Mexico": 0.589,
+          "Draw": 0.242,
+          "South Africa": 0.169
+        }
       }
     },
     {
@@ -3409,25 +3428,24 @@ const modelValidation = {
       "t2": "Czechia",
       "score": "2-1",
       "actual": "South Korea",
-      "predicted": "South Korea",
-      "correct": true,
-      "probs": {
-        "South Korea": 0.416,
-        "Draw": 0.285,
-        "Czechia": 0.299
-      }
-    },
-    {
-      "t1": "Czechia",
-      "t2": "South Africa",
-      "score": "1-1",
-      "actual": "Draw",
-      "predicted": "Czechia",
-      "correct": false,
-      "probs": {
-        "Czechia": 0.46,
-        "Draw": 0.28,
-        "South Africa": 0.261
+      "date": "2026-06-11",
+      "baseline": {
+        "predicted": "South Korea",
+        "correct": true,
+        "probs": {
+          "South Korea": 0.416,
+          "Draw": 0.285,
+          "Czechia": 0.299
+        }
+      },
+      "live": {
+        "predicted": "South Korea",
+        "correct": true,
+        "probs": {
+          "South Korea": 0.416,
+          "Draw": 0.285,
+          "Czechia": 0.299
+        }
       }
     },
     {
@@ -3435,64 +3453,24 @@ const modelValidation = {
       "t2": "Bosnia and Herzegovina",
       "score": "1-1",
       "actual": "Draw",
-      "predicted": "Canada",
-      "correct": false,
-      "probs": {
-        "Canada": 0.497,
-        "Draw": 0.268,
-        "Bosnia and Herzegovina": 0.235
-      }
-    },
-    {
-      "t1": "Switzerland",
-      "t2": "Qatar",
-      "score": "1-1",
-      "actual": "Draw",
-      "predicted": "Switzerland",
-      "correct": false,
-      "probs": {
-        "Switzerland": 0.472,
-        "Draw": 0.281,
-        "Qatar": 0.247
-      }
-    },
-    {
-      "t1": "Switzerland",
-      "t2": "Bosnia and Herzegovina",
-      "score": "4-1",
-      "actual": "Switzerland",
-      "predicted": "Switzerland",
-      "correct": true,
-      "probs": {
-        "Switzerland": 0.55,
-        "Draw": 0.261,
-        "Bosnia and Herzegovina": 0.19
-      }
-    },
-    {
-      "t1": "Brazil",
-      "t2": "Morocco",
-      "score": "1-1",
-      "actual": "Draw",
-      "predicted": "Morocco",
-      "correct": false,
-      "probs": {
-        "Brazil": 0.34,
-        "Draw": 0.293,
-        "Morocco": 0.367
-      }
-    },
-    {
-      "t1": "Scotland",
-      "t2": "Haiti",
-      "score": "1-0",
-      "actual": "Scotland",
-      "predicted": "Scotland",
-      "correct": true,
-      "probs": {
-        "Scotland": 0.542,
-        "Draw": 0.26,
-        "Haiti": 0.198
+      "date": "2026-06-12",
+      "baseline": {
+        "predicted": "Canada",
+        "correct": false,
+        "probs": {
+          "Canada": 0.497,
+          "Draw": 0.268,
+          "Bosnia and Herzegovina": 0.235
+        }
+      },
+      "live": {
+        "predicted": "Canada",
+        "correct": false,
+        "probs": {
+          "Canada": 0.497,
+          "Draw": 0.268,
+          "Bosnia and Herzegovina": 0.235
+        }
       }
     },
     {
@@ -3500,12 +3478,99 @@ const modelValidation = {
       "t2": "Paraguay",
       "score": "4-1",
       "actual": "United States",
-      "predicted": "United States",
-      "correct": true,
-      "probs": {
-        "United States": 0.52,
-        "Draw": 0.264,
-        "Paraguay": 0.217
+      "date": "2026-06-12",
+      "baseline": {
+        "predicted": "United States",
+        "correct": true,
+        "probs": {
+          "United States": 0.52,
+          "Draw": 0.264,
+          "Paraguay": 0.217
+        }
+      },
+      "live": {
+        "predicted": "United States",
+        "correct": true,
+        "probs": {
+          "United States": 0.52,
+          "Draw": 0.264,
+          "Paraguay": 0.217
+        }
+      }
+    },
+    {
+      "t1": "Qatar",
+      "t2": "Switzerland",
+      "score": "1-1",
+      "actual": "Draw",
+      "date": "2026-06-13",
+      "baseline": {
+        "predicted": "Switzerland",
+        "correct": false,
+        "probs": {
+          "Qatar": 0.247,
+          "Draw": 0.281,
+          "Switzerland": 0.472
+        }
+      },
+      "live": {
+        "predicted": "Switzerland",
+        "correct": false,
+        "probs": {
+          "Qatar": 0.247,
+          "Draw": 0.281,
+          "Switzerland": 0.472
+        }
+      }
+    },
+    {
+      "t1": "Brazil",
+      "t2": "Morocco",
+      "score": "1-1",
+      "actual": "Draw",
+      "date": "2026-06-13",
+      "baseline": {
+        "predicted": "Morocco",
+        "correct": false,
+        "probs": {
+          "Brazil": 0.34,
+          "Draw": 0.293,
+          "Morocco": 0.367
+        }
+      },
+      "live": {
+        "predicted": "Morocco",
+        "correct": false,
+        "probs": {
+          "Brazil": 0.34,
+          "Draw": 0.293,
+          "Morocco": 0.367
+        }
+      }
+    },
+    {
+      "t1": "Haiti",
+      "t2": "Scotland",
+      "score": "0-1",
+      "actual": "Scotland",
+      "date": "2026-06-13",
+      "baseline": {
+        "predicted": "Scotland",
+        "correct": true,
+        "probs": {
+          "Haiti": 0.198,
+          "Draw": 0.26,
+          "Scotland": 0.542
+        }
+      },
+      "live": {
+        "predicted": "Scotland",
+        "correct": true,
+        "probs": {
+          "Haiti": 0.198,
+          "Draw": 0.26,
+          "Scotland": 0.542
+        }
       }
     },
     {
@@ -3513,12 +3578,24 @@ const modelValidation = {
       "t2": "T\u00fcrkiye",
       "score": "2-0",
       "actual": "Australia",
-      "predicted": "T\u00fcrkiye",
-      "correct": false,
-      "probs": {
-        "Australia": 0.318,
-        "Draw": 0.288,
-        "T\u00fcrkiye": 0.394
+      "date": "2026-06-13",
+      "baseline": {
+        "predicted": "T\u00fcrkiye",
+        "correct": false,
+        "probs": {
+          "Australia": 0.318,
+          "Draw": 0.288,
+          "T\u00fcrkiye": 0.394
+        }
+      },
+      "live": {
+        "predicted": "T\u00fcrkiye",
+        "correct": false,
+        "probs": {
+          "Australia": 0.318,
+          "Draw": 0.288,
+          "T\u00fcrkiye": 0.394
+        }
       }
     },
     {
@@ -3526,12 +3603,24 @@ const modelValidation = {
       "t2": "Cura\u00e7ao",
       "score": "7-1",
       "actual": "Germany",
-      "predicted": "Germany",
-      "correct": true,
-      "probs": {
-        "Germany": 0.707,
-        "Draw": 0.194,
-        "Cura\u00e7ao": 0.099
+      "date": "2026-06-14",
+      "baseline": {
+        "predicted": "Germany",
+        "correct": true,
+        "probs": {
+          "Germany": 0.707,
+          "Draw": 0.194,
+          "Cura\u00e7ao": 0.099
+        }
+      },
+      "live": {
+        "predicted": "Germany",
+        "correct": true,
+        "probs": {
+          "Germany": 0.707,
+          "Draw": 0.194,
+          "Cura\u00e7ao": 0.099
+        }
       }
     },
     {
@@ -3539,298 +3628,24 @@ const modelValidation = {
       "t2": "Ecuador",
       "score": "1-0",
       "actual": "C\u00f4te d'Ivoire",
-      "predicted": "C\u00f4te d'Ivoire",
-      "correct": true,
-      "probs": {
-        "C\u00f4te d'Ivoire": 0.358,
-        "Draw": 0.29,
-        "Ecuador": 0.352
-      }
-    },
-    {
-      "t1": "Netherlands",
-      "t2": "Sweden",
-      "score": "5-1",
-      "actual": "Netherlands",
-      "predicted": "Netherlands",
-      "correct": true,
-      "probs": {
-        "Netherlands": 0.478,
-        "Draw": 0.274,
-        "Sweden": 0.248
-      }
-    },
-    {
-      "t1": "Japan",
-      "t2": "Tunisia",
-      "score": "4-0",
-      "actual": "Japan",
-      "predicted": "Japan",
-      "correct": true,
-      "probs": {
-        "Japan": 0.478,
-        "Draw": 0.283,
-        "Tunisia": 0.24
-      }
-    },
-    {
-      "t1": "Belgium",
-      "t2": "Egypt",
-      "score": "1-1",
-      "actual": "Draw",
-      "predicted": "Belgium",
-      "correct": false,
-      "probs": {
-        "Belgium": 0.475,
-        "Draw": 0.276,
-        "Egypt": 0.249
-      }
-    },
-    {
-      "t1": "Iran",
-      "t2": "New Zealand",
-      "score": "2-2",
-      "actual": "Draw",
-      "predicted": "Iran",
-      "correct": false,
-      "probs": {
-        "Iran": 0.614,
-        "Draw": 0.235,
-        "New Zealand": 0.151
-      }
-    },
-    {
-      "t1": "Spain",
-      "t2": "Cabo Verde",
-      "score": "0-0",
-      "actual": "Draw",
-      "predicted": "Spain",
-      "correct": false,
-      "probs": {
-        "Spain": 0.692,
-        "Draw": 0.2,
-        "Cabo Verde": 0.108
-      }
-    },
-    {
-      "t1": "Uruguay",
-      "t2": "Saudi Arabia",
-      "score": "1-1",
-      "actual": "Draw",
-      "predicted": "Uruguay",
-      "correct": false,
-      "probs": {
-        "Uruguay": 0.531,
-        "Draw": 0.264,
-        "Saudi Arabia": 0.205
-      }
-    },
-    {
-      "t1": "France",
-      "t2": "Iraq",
-      "score": "4-1",
-      "actual": "France",
-      "predicted": "France",
-      "correct": true,
-      "probs": {
-        "France": 0.649,
-        "Draw": 0.221,
-        "Iraq": 0.13
-      }
-    },
-    {
-      "t1": "Norway",
-      "t2": "Senegal",
-      "score": "3-1",
-      "actual": "Norway",
-      "predicted": "Senegal",
-      "correct": false,
-      "probs": {
-        "Norway": 0.289,
-        "Draw": 0.278,
-        "Senegal": 0.433
-      }
-    },
-    {
-      "t1": "Argentina",
-      "t2": "Algeria",
-      "score": "3-0",
-      "actual": "Argentina",
-      "predicted": "Argentina",
-      "correct": true,
-      "probs": {
-        "Argentina": 0.529,
-        "Draw": 0.261,
-        "Algeria": 0.21
-      }
-    },
-    {
-      "t1": "Austria",
-      "t2": "Jordan",
-      "score": "3-1",
-      "actual": "Austria",
-      "predicted": "Austria",
-      "correct": true,
-      "probs": {
-        "Austria": 0.529,
-        "Draw": 0.266,
-        "Jordan": 0.205
-      }
-    },
-    {
-      "t1": "Portugal",
-      "t2": "Congo DR",
-      "score": "1-1",
-      "actual": "Draw",
-      "predicted": "Portugal",
-      "correct": false,
-      "probs": {
-        "Portugal": 0.624,
-        "Draw": 0.231,
-        "Congo DR": 0.145
-      }
-    },
-    {
-      "t1": "Uzbekistan",
-      "t2": "Colombia",
-      "score": "1-3",
-      "actual": "Colombia",
-      "predicted": "Colombia",
-      "correct": true,
-      "probs": {
-        "Uzbekistan": 0.177,
-        "Draw": 0.251,
-        "Colombia": 0.572
-      }
-    },
-    {
-      "t1": "England",
-      "t2": "Croatia",
-      "score": "4-2",
-      "actual": "England",
-      "predicted": "England",
-      "correct": true,
-      "probs": {
-        "England": 0.425,
-        "Draw": 0.289,
-        "Croatia": 0.286
-      }
-    },
-    {
-      "t1": "Ghana",
-      "t2": "Panama",
-      "score": "1-0",
-      "actual": "Ghana",
-      "predicted": "Panama",
-      "correct": false,
-      "probs": {
-        "Ghana": 0.29,
-        "Draw": 0.286,
-        "Panama": 0.424
-      }
-    },
-    {
-      "t1": "Mexico",
-      "t2": "South Korea",
-      "score": "1-0",
-      "actual": "Mexico",
-      "predicted": "Mexico",
-      "correct": true,
-      "probs": {
-        "Mexico": 0.418,
-        "Draw": 0.282,
-        "South Korea": 0.3
-      }
-    },
-    {
-      "t1": "Canada",
-      "t2": "Qatar",
-      "score": "6-0",
-      "actual": "Canada",
-      "predicted": "Canada",
-      "correct": true,
-      "probs": {
-        "Canada": 0.418,
-        "Draw": 0.282,
-        "Qatar": 0.3
-      }
-    },
-    {
-      "t1": "Scotland",
-      "t2": "Morocco",
-      "score": "0-1",
-      "actual": "Morocco",
-      "predicted": "Morocco",
-      "correct": true,
-      "probs": {
-        "Scotland": 0.221,
-        "Draw": 0.275,
-        "Morocco": 0.504
-      }
-    },
-    {
-      "t1": "Brazil",
-      "t2": "Haiti",
-      "score": "3-0",
-      "actual": "Brazil",
-      "predicted": "Brazil",
-      "correct": true,
-      "probs": {
-        "Brazil": 0.683,
-        "Draw": 0.204,
-        "Haiti": 0.112
-      }
-    },
-    {
-      "t1": "United States",
-      "t2": "Australia",
-      "score": "2-0",
-      "actual": "United States",
-      "predicted": "United States",
-      "correct": true,
-      "probs": {
-        "United States": 0.435,
-        "Draw": 0.281,
-        "Australia": 0.284
-      }
-    },
-    {
-      "t1": "T\u00fcrkiye",
-      "t2": "Paraguay",
-      "score": "0-1",
-      "actual": "Paraguay",
-      "predicted": "T\u00fcrkiye",
-      "correct": false,
-      "probs": {
-        "T\u00fcrkiye": 0.477,
-        "Draw": 0.275,
-        "Paraguay": 0.247
-      }
-    },
-    {
-      "t1": "Germany",
-      "t2": "C\u00f4te d'Ivoire",
-      "score": "2-1",
-      "actual": "Germany",
-      "predicted": "Germany",
-      "correct": true,
-      "probs": {
-        "Germany": 0.447,
-        "Draw": 0.284,
-        "C\u00f4te d'Ivoire": 0.27
-      }
-    },
-    {
-      "t1": "Ecuador",
-      "t2": "Cura\u00e7ao",
-      "score": "0-0",
-      "actual": "Draw",
-      "predicted": "Ecuador",
-      "correct": false,
-      "probs": {
-        "Ecuador": 0.615,
-        "Draw": 0.234,
-        "Cura\u00e7ao": 0.151
+      "date": "2026-06-14",
+      "baseline": {
+        "predicted": "C\u00f4te d'Ivoire",
+        "correct": true,
+        "probs": {
+          "C\u00f4te d'Ivoire": 0.358,
+          "Draw": 0.29,
+          "Ecuador": 0.352
+        }
+      },
+      "live": {
+        "predicted": "C\u00f4te d'Ivoire",
+        "correct": true,
+        "probs": {
+          "C\u00f4te d'Ivoire": 0.358,
+          "Draw": 0.29,
+          "Ecuador": 0.352
+        }
       }
     },
     {
@@ -3838,12 +3653,24 @@ const modelValidation = {
       "t2": "Japan",
       "score": "2-2",
       "actual": "Draw",
-      "predicted": "Netherlands",
-      "correct": false,
-      "probs": {
-        "Netherlands": 0.399,
-        "Draw": 0.291,
-        "Japan": 0.31
+      "date": "2026-06-14",
+      "baseline": {
+        "predicted": "Netherlands",
+        "correct": false,
+        "probs": {
+          "Netherlands": 0.399,
+          "Draw": 0.291,
+          "Japan": 0.31
+        }
+      },
+      "live": {
+        "predicted": "Netherlands",
+        "correct": false,
+        "probs": {
+          "Netherlands": 0.399,
+          "Draw": 0.291,
+          "Japan": 0.31
+        }
       }
     },
     {
@@ -3851,64 +3678,124 @@ const modelValidation = {
       "t2": "Tunisia",
       "score": "5-1",
       "actual": "Sweden",
-      "predicted": "Sweden",
-      "correct": true,
-      "probs": {
-        "Sweden": 0.409,
-        "Draw": 0.288,
-        "Tunisia": 0.303
+      "date": "2026-06-14",
+      "baseline": {
+        "predicted": "Sweden",
+        "correct": true,
+        "probs": {
+          "Sweden": 0.409,
+          "Draw": 0.288,
+          "Tunisia": 0.303
+        }
+      },
+      "live": {
+        "predicted": "Sweden",
+        "correct": true,
+        "probs": {
+          "Sweden": 0.409,
+          "Draw": 0.288,
+          "Tunisia": 0.303
+        }
       }
     },
     {
       "t1": "Belgium",
-      "t2": "Iran",
-      "score": "0-0",
+      "t2": "Egypt",
+      "score": "1-1",
       "actual": "Draw",
-      "predicted": "Belgium",
-      "correct": false,
-      "probs": {
-        "Belgium": 0.441,
-        "Draw": 0.282,
-        "Iran": 0.276
+      "date": "2026-06-15",
+      "baseline": {
+        "predicted": "Belgium",
+        "correct": false,
+        "probs": {
+          "Belgium": 0.475,
+          "Draw": 0.276,
+          "Egypt": 0.249
+        }
+      },
+      "live": {
+        "predicted": "Belgium",
+        "correct": false,
+        "probs": {
+          "Belgium": 0.475,
+          "Draw": 0.276,
+          "Egypt": 0.249
+        }
       }
     },
     {
-      "t1": "New Zealand",
-      "t2": "Egypt",
-      "score": "1-3",
-      "actual": "Egypt",
-      "predicted": "Egypt",
-      "correct": true,
-      "probs": {
-        "New Zealand": 0.171,
-        "Draw": 0.248,
-        "Egypt": 0.581
+      "t1": "Iran",
+      "t2": "New Zealand",
+      "score": "2-2",
+      "actual": "Draw",
+      "date": "2026-06-15",
+      "baseline": {
+        "predicted": "Iran",
+        "correct": false,
+        "probs": {
+          "Iran": 0.614,
+          "Draw": 0.235,
+          "New Zealand": 0.151
+        }
+      },
+      "live": {
+        "predicted": "Iran",
+        "correct": false,
+        "probs": {
+          "Iran": 0.614,
+          "Draw": 0.235,
+          "New Zealand": 0.151
+        }
       }
     },
     {
       "t1": "Spain",
-      "t2": "Saudi Arabia",
-      "score": "4-0",
-      "actual": "Spain",
-      "predicted": "Spain",
-      "correct": true,
-      "probs": {
-        "Spain": 0.601,
-        "Draw": 0.24,
-        "Saudi Arabia": 0.159
+      "t2": "Cabo Verde",
+      "score": "0-0",
+      "actual": "Draw",
+      "date": "2026-06-15",
+      "baseline": {
+        "predicted": "Spain",
+        "correct": false,
+        "probs": {
+          "Spain": 0.692,
+          "Draw": 0.2,
+          "Cabo Verde": 0.108
+        }
+      },
+      "live": {
+        "predicted": "Spain",
+        "correct": false,
+        "probs": {
+          "Spain": 0.692,
+          "Draw": 0.2,
+          "Cabo Verde": 0.108
+        }
       }
     },
     {
-      "t1": "Uruguay",
-      "t2": "Cabo Verde",
-      "score": "2-2",
+      "t1": "Saudi Arabia",
+      "t2": "Uruguay",
+      "score": "1-1",
       "actual": "Draw",
-      "predicted": "Uruguay",
-      "correct": false,
-      "probs": {
-        "Uruguay": 0.626,
-        "Draw": 0.23,
-        "Cabo Verde": 0.144
+      "date": "2026-06-15",
+      "baseline": {
+        "predicted": "Uruguay",
+        "correct": false,
+        "probs": {
+          "Saudi Arabia": 0.205,
+          "Draw": 0.264,
+          "Uruguay": 0.531
+        }
+      },
+      "live": {
+        "predicted": "Uruguay",
+        "correct": false,
+        "probs": {
+          "Saudi Arabia": 0.205,
+          "Draw": 0.264,
+          "Uruguay": 0.531
+        }
       }
     },
     {
@@ -3916,12 +3803,24 @@ const modelValidation = {
       "t2": "Senegal",
       "score": "3-1",
       "actual": "France",
-      "predicted": "France",
-      "correct": true,
-      "probs": {
-        "France": 0.454,
-        "Draw": 0.285,
-        "Senegal": 0.261
+      "date": "2026-06-16",
+      "baseline": {
+        "predicted": "France",
+        "correct": true,
+        "probs": {
+          "France": 0.454,
+          "Draw": 0.285,
+          "Senegal": 0.261
+        }
+      },
+      "live": {
+        "predicted": "France",
+        "correct": true,
+        "probs": {
+          "France": 0.454,
+          "Draw": 0.285,
+          "Senegal": 0.261
+        }
       }
     },
     {
@@ -3929,12 +3828,574 @@ const modelValidation = {
       "t2": "Norway",
       "score": "1-4",
       "actual": "Norway",
-      "predicted": "Norway",
-      "correct": true,
-      "probs": {
-        "Iraq": 0.254,
-        "Draw": 0.267,
-        "Norway": 0.479
+      "date": "2026-06-16",
+      "baseline": {
+        "predicted": "Norway",
+        "correct": true,
+        "probs": {
+          "Iraq": 0.254,
+          "Draw": 0.267,
+          "Norway": 0.479
+        }
+      },
+      "live": {
+        "predicted": "Norway",
+        "correct": true,
+        "probs": {
+          "Iraq": 0.254,
+          "Draw": 0.267,
+          "Norway": 0.479
+        }
+      }
+    },
+    {
+      "t1": "Argentina",
+      "t2": "Algeria",
+      "score": "3-0",
+      "actual": "Argentina",
+      "date": "2026-06-16",
+      "baseline": {
+        "predicted": "Argentina",
+        "correct": true,
+        "probs": {
+          "Argentina": 0.529,
+          "Draw": 0.261,
+          "Algeria": 0.21
+        }
+      },
+      "live": {
+        "predicted": "Argentina",
+        "correct": true,
+        "probs": {
+          "Argentina": 0.529,
+          "Draw": 0.261,
+          "Algeria": 0.21
+        }
+      }
+    },
+    {
+      "t1": "Austria",
+      "t2": "Jordan",
+      "score": "3-1",
+      "actual": "Austria",
+      "date": "2026-06-16",
+      "baseline": {
+        "predicted": "Austria",
+        "correct": true,
+        "probs": {
+          "Austria": 0.529,
+          "Draw": 0.266,
+          "Jordan": 0.205
+        }
+      },
+      "live": {
+        "predicted": "Austria",
+        "correct": true,
+        "probs": {
+          "Austria": 0.529,
+          "Draw": 0.266,
+          "Jordan": 0.205
+        }
+      }
+    },
+    {
+      "t1": "Portugal",
+      "t2": "Congo DR",
+      "score": "1-1",
+      "actual": "Draw",
+      "date": "2026-06-17",
+      "baseline": {
+        "predicted": "Portugal",
+        "correct": false,
+        "probs": {
+          "Portugal": 0.624,
+          "Draw": 0.231,
+          "Congo DR": 0.145
+        }
+      },
+      "live": {
+        "predicted": "Portugal",
+        "correct": false,
+        "probs": {
+          "Portugal": 0.624,
+          "Draw": 0.231,
+          "Congo DR": 0.145
+        }
+      }
+    },
+    {
+      "t1": "Uzbekistan",
+      "t2": "Colombia",
+      "score": "1-3",
+      "actual": "Colombia",
+      "date": "2026-06-17",
+      "baseline": {
+        "predicted": "Colombia",
+        "correct": true,
+        "probs": {
+          "Uzbekistan": 0.177,
+          "Draw": 0.251,
+          "Colombia": 0.572
+        }
+      },
+      "live": {
+        "predicted": "Colombia",
+        "correct": true,
+        "probs": {
+          "Uzbekistan": 0.177,
+          "Draw": 0.251,
+          "Colombia": 0.572
+        }
+      }
+    },
+    {
+      "t1": "England",
+      "t2": "Croatia",
+      "score": "4-2",
+      "actual": "England",
+      "date": "2026-06-17",
+      "baseline": {
+        "predicted": "England",
+        "correct": true,
+        "probs": {
+          "England": 0.425,
+          "Draw": 0.289,
+          "Croatia": 0.286
+        }
+      },
+      "live": {
+        "predicted": "England",
+        "correct": true,
+        "probs": {
+          "England": 0.425,
+          "Draw": 0.289,
+          "Croatia": 0.286
+        }
+      }
+    },
+    {
+      "t1": "Ghana",
+      "t2": "Panama",
+      "score": "1-0",
+      "actual": "Ghana",
+      "date": "2026-06-17",
+      "baseline": {
+        "predicted": "Panama",
+        "correct": false,
+        "probs": {
+          "Ghana": 0.29,
+          "Draw": 0.286,
+          "Panama": 0.424
+        }
+      },
+      "live": {
+        "predicted": "Panama",
+        "correct": false,
+        "probs": {
+          "Ghana": 0.29,
+          "Draw": 0.286,
+          "Panama": 0.424
+        }
+      }
+    },
+    {
+      "t1": "Czechia",
+      "t2": "South Africa",
+      "score": "1-1",
+      "actual": "Draw",
+      "date": "2026-06-18",
+      "baseline": {
+        "predicted": "Czechia",
+        "correct": false,
+        "probs": {
+          "Czechia": 0.46,
+          "Draw": 0.28,
+          "South Africa": 0.261
+        }
+      },
+      "live": {
+        "predicted": "Czechia",
+        "correct": false,
+        "probs": {
+          "Czechia": 0.459,
+          "Draw": 0.28,
+          "South Africa": 0.262
+        }
+      }
+    },
+    {
+      "t1": "Mexico",
+      "t2": "South Korea",
+      "score": "1-0",
+      "actual": "Mexico",
+      "date": "2026-06-18",
+      "baseline": {
+        "predicted": "Mexico",
+        "correct": true,
+        "probs": {
+          "Mexico": 0.418,
+          "Draw": 0.282,
+          "South Korea": 0.3
+        }
+      },
+      "live": {
+        "predicted": "Mexico",
+        "correct": true,
+        "probs": {
+          "Mexico": 0.416,
+          "Draw": 0.283,
+          "South Korea": 0.302
+        }
+      }
+    },
+    {
+      "t1": "Switzerland",
+      "t2": "Bosnia and Herzegovina",
+      "score": "4-1",
+      "actual": "Switzerland",
+      "date": "2026-06-18",
+      "baseline": {
+        "predicted": "Switzerland",
+        "correct": true,
+        "probs": {
+          "Switzerland": 0.55,
+          "Draw": 0.261,
+          "Bosnia and Herzegovina": 0.19
+        }
+      },
+      "live": {
+        "predicted": "Switzerland",
+        "correct": true,
+        "probs": {
+          "Switzerland": 0.544,
+          "Draw": 0.262,
+          "Bosnia and Herzegovina": 0.194
+        }
+      }
+    },
+    {
+      "t1": "Canada",
+      "t2": "Qatar",
+      "score": "6-0",
+      "actual": "Canada",
+      "date": "2026-06-18",
+      "baseline": {
+        "predicted": "Canada",
+        "correct": true,
+        "probs": {
+          "Canada": 0.418,
+          "Draw": 0.282,
+          "Qatar": 0.3
+        }
+      },
+      "live": {
+        "predicted": "Canada",
+        "correct": true,
+        "probs": {
+          "Canada": 0.417,
+          "Draw": 0.282,
+          "Qatar": 0.301
+        }
+      }
+    },
+    {
+      "t1": "Scotland",
+      "t2": "Morocco",
+      "score": "0-1",
+      "actual": "Morocco",
+      "date": "2026-06-19",
+      "baseline": {
+        "predicted": "Morocco",
+        "correct": true,
+        "probs": {
+          "Scotland": 0.221,
+          "Draw": 0.275,
+          "Morocco": 0.504
+        }
+      },
+      "live": {
+        "predicted": "Morocco",
+        "correct": true,
+        "probs": {
+          "Scotland": 0.234,
+          "Draw": 0.279,
+          "Morocco": 0.487
+        }
+      }
+    },
+    {
+      "t1": "Brazil",
+      "t2": "Haiti",
+      "score": "3-0",
+      "actual": "Brazil",
+      "date": "2026-06-19",
+      "baseline": {
+        "predicted": "Brazil",
+        "correct": true,
+        "probs": {
+          "Brazil": 0.683,
+          "Draw": 0.204,
+          "Haiti": 0.112
+        }
+      },
+      "live": {
+        "predicted": "Brazil",
+        "correct": true,
+        "probs": {
+          "Brazil": 0.683,
+          "Draw": 0.205,
+          "Haiti": 0.113
+        }
+      }
+    },
+    {
+      "t1": "United States",
+      "t2": "Australia",
+      "score": "2-0",
+      "actual": "United States",
+      "date": "2026-06-19",
+      "baseline": {
+        "predicted": "United States",
+        "correct": true,
+        "probs": {
+          "United States": 0.435,
+          "Draw": 0.281,
+          "Australia": 0.284
+        }
+      },
+      "live": {
+        "predicted": "United States",
+        "correct": true,
+        "probs": {
+          "United States": 0.433,
+          "Draw": 0.281,
+          "Australia": 0.285
+        }
+      }
+    },
+    {
+      "t1": "T\u00fcrkiye",
+      "t2": "Paraguay",
+      "score": "0-1",
+      "actual": "Paraguay",
+      "date": "2026-06-19",
+      "baseline": {
+        "predicted": "T\u00fcrkiye",
+        "correct": false,
+        "probs": {
+          "T\u00fcrkiye": 0.477,
+          "Draw": 0.275,
+          "Paraguay": 0.247
+        }
+      },
+      "live": {
+        "predicted": "T\u00fcrkiye",
+        "correct": false,
+        "probs": {
+          "T\u00fcrkiye": 0.475,
+          "Draw": 0.276,
+          "Paraguay": 0.249
+        }
+      }
+    },
+    {
+      "t1": "Germany",
+      "t2": "C\u00f4te d'Ivoire",
+      "score": "2-1",
+      "actual": "Germany",
+      "date": "2026-06-20",
+      "baseline": {
+        "predicted": "Germany",
+        "correct": true,
+        "probs": {
+          "Germany": 0.447,
+          "Draw": 0.284,
+          "C\u00f4te d'Ivoire": 0.27
+        }
+      },
+      "live": {
+        "predicted": "Germany",
+        "correct": true,
+        "probs": {
+          "Germany": 0.445,
+          "Draw": 0.284,
+          "C\u00f4te d'Ivoire": 0.271
+        }
+      }
+    },
+    {
+      "t1": "Ecuador",
+      "t2": "Cura\u00e7ao",
+      "score": "0-0",
+      "actual": "Draw",
+      "date": "2026-06-20",
+      "baseline": {
+        "predicted": "Ecuador",
+        "correct": false,
+        "probs": {
+          "Ecuador": 0.615,
+          "Draw": 0.234,
+          "Cura\u00e7ao": 0.151
+        }
+      },
+      "live": {
+        "predicted": "Ecuador",
+        "correct": false,
+        "probs": {
+          "Ecuador": 0.611,
+          "Draw": 0.235,
+          "Cura\u00e7ao": 0.153
+        }
+      }
+    },
+    {
+      "t1": "Netherlands",
+      "t2": "Sweden",
+      "score": "5-1",
+      "actual": "Netherlands",
+      "date": "2026-06-20",
+      "baseline": {
+        "predicted": "Netherlands",
+        "correct": true,
+        "probs": {
+          "Netherlands": 0.478,
+          "Draw": 0.274,
+          "Sweden": 0.248
+        }
+      },
+      "live": {
+        "predicted": "Netherlands",
+        "correct": true,
+        "probs": {
+          "Netherlands": 0.461,
+          "Draw": 0.277,
+          "Sweden": 0.262
+        }
+      }
+    },
+    {
+      "t1": "Tunisia",
+      "t2": "Japan",
+      "score": "0-4",
+      "actual": "Japan",
+      "date": "2026-06-20",
+      "baseline": {
+        "predicted": "Japan",
+        "correct": true,
+        "probs": {
+          "Tunisia": 0.24,
+          "Draw": 0.283,
+          "Japan": 0.478
+        }
+      },
+      "live": {
+        "predicted": "Japan",
+        "correct": true,
+        "probs": {
+          "Tunisia": 0.239,
+          "Draw": 0.283,
+          "Japan": 0.478
+        }
+      }
+    },
+    {
+      "t1": "Belgium",
+      "t2": "Iran",
+      "score": "0-0",
+      "actual": "Draw",
+      "date": "2026-06-21",
+      "baseline": {
+        "predicted": "Belgium",
+        "correct": false,
+        "probs": {
+          "Belgium": 0.441,
+          "Draw": 0.282,
+          "Iran": 0.276
+        }
+      },
+      "live": {
+        "predicted": "Belgium",
+        "correct": false,
+        "probs": {
+          "Belgium": 0.441,
+          "Draw": 0.282,
+          "Iran": 0.277
+        }
+      }
+    },
+    {
+      "t1": "New Zealand",
+      "t2": "Egypt",
+      "score": "1-3",
+      "actual": "Egypt",
+      "date": "2026-06-21",
+      "baseline": {
+        "predicted": "Egypt",
+        "correct": true,
+        "probs": {
+          "New Zealand": 0.171,
+          "Draw": 0.248,
+          "Egypt": 0.581
+        }
+      },
+      "live": {
+        "predicted": "Egypt",
+        "correct": true,
+        "probs": {
+          "New Zealand": 0.175,
+          "Draw": 0.25,
+          "Egypt": 0.575
+        }
+      }
+    },
+    {
+      "t1": "Spain",
+      "t2": "Saudi Arabia",
+      "score": "4-0",
+      "actual": "Spain",
+      "date": "2026-06-21",
+      "baseline": {
+        "predicted": "Spain",
+        "correct": true,
+        "probs": {
+          "Spain": 0.601,
+          "Draw": 0.24,
+          "Saudi Arabia": 0.159
+        }
+      },
+      "live": {
+        "predicted": "Spain",
+        "correct": true,
+        "probs": {
+          "Spain": 0.595,
+          "Draw": 0.242,
+          "Saudi Arabia": 0.163
+        }
+      }
+    },
+    {
+      "t1": "Uruguay",
+      "t2": "Cabo Verde",
+      "score": "2-2",
+      "actual": "Draw",
+      "date": "2026-06-21",
+      "baseline": {
+        "predicted": "Uruguay",
+        "correct": false,
+        "probs": {
+          "Uruguay": 0.626,
+          "Draw": 0.23,
+          "Cabo Verde": 0.144
+        }
+      },
+      "live": {
+        "predicted": "Uruguay",
+        "correct": false,
+        "probs": {
+          "Uruguay": 0.621,
+          "Draw": 0.232,
+          "Cabo Verde": 0.147
+        }
       }
     }
   ]

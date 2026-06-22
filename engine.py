@@ -528,6 +528,23 @@ actual_results = {
     ("Ghana", "Panama"): {"score": (1, 0), "played": True},
 }
 
+played_matches_chronological = []
+
+def update_team_form(teams_dict, team_name, result):
+    """
+    Update a team's recent form dynamically using a sliding window approximation.
+    result: 'w' (win), 'd' (draw), or 'l' (loss).
+    """
+    team = teams_dict[team_name]
+    recent_form = team["recent_form"]
+    total = recent_form["w"] + recent_form["d"] + recent_form["l"]
+    if total > 0:
+        factor = 9.0 / 10.0
+        recent_form["w"] = round(recent_form["w"] * factor, 3)
+        recent_form["d"] = round(recent_form["d"] * factor, 3)
+        recent_form["l"] = round(recent_form["l"] * factor, 3)
+    recent_form[result] = round(recent_form[result] + 1.0, 3)
+
 def fetch_live_results():
     """
     Fetch live match results from openfootball JSON feed and update actual_results in memory.
@@ -550,6 +567,7 @@ def fetch_live_results():
             data = json.loads(response.read().decode('utf-8'))
             matches = data.get("matches", [])
             updated_count = 0
+            played_temp = []
             
             for m in matches:
                 t1 = m.get("team1")
@@ -574,8 +592,19 @@ def fetch_live_results():
                                 actual_results[key_rev] = {"score": (g2, g1), "played": True}
                             else:
                                 actual_results[key] = {"score": (g1, g2), "played": True}
+                            
+                            played_temp.append({
+                                "t1": t1,
+                                "t2": t2,
+                                "score": (g1, g2),
+                                "date": m.get("date", "2026-06-11")
+                            })
                             updated_count += 1
                             
+            # Sort chronologically by date
+            played_temp.sort(key=lambda x: x["date"])
+            played_matches_chronological.clear()
+            played_matches_chronological.extend(played_temp)
             print(f"Successfully integrated {updated_count} played matches from openfootball JSON.")
     except Exception as e:
         print(f"Warning: Could not fetch live scores from API ({e}). Using hardcoded fallbacks.")
@@ -614,9 +643,11 @@ def calculate_injury_impact(injuries):
             
     return attack_penalty, defense_penalty
 
-def get_effective_ratings(team_name):
+def get_effective_ratings(team_name, teams_dict=None):
     """Calculate effective attack/defense ratings with all modifiers"""
-    t = teams_data[team_name]
+    if teams_dict is None:
+        teams_dict = teams_data
+    t = teams_dict[team_name]
     attack = t["attack"]
     defense = t["defense"]
     form_mult = calculate_form_multiplier(t["recent_form"])
@@ -651,12 +682,14 @@ def dixon_coles_adjustment(p1_goals, p2_goals, lambda1, lambda2, rho=-0.13):
         tau = 1.0 - rho
     return tau
 
-def predict_match(team1, team2, is_knockout=False):
+def predict_match(team1, team2, is_knockout=False, teams_dict=None):
     """Predict match outcome using enhanced Dixon-Coles Poisson model"""
-    att1, def1 = get_effective_ratings(team1)
-    att2, def2 = get_effective_ratings(team2)
-    avg_att = sum(t["attack"] for t in teams_data.values()) / len(teams_data)
-    avg_def = sum(t["defense"] for t in teams_data.values()) / len(teams_data)
+    if teams_dict is None:
+        teams_dict = teams_data
+    att1, def1 = get_effective_ratings(team1, teams_dict)
+    att2, def2 = get_effective_ratings(team2, teams_dict)
+    avg_att = sum(t["attack"] for t in teams_dict.values()) / len(teams_dict)
+    avg_def = sum(t["defense"] for t in teams_dict.values()) / len(teams_dict)
     
     lambda1 = 1.35 * (att1 / avg_att) * (avg_def / def2)
     lambda2 = 1.35 * (att2 / avg_att) * (avg_def / def1)
@@ -699,12 +732,14 @@ def predict_match(team1, team2, is_knockout=False):
         
     return {"t1_win": p_t1_win, "draw": p_draw, "t2_win": p_t2_win}
 
-def predict_score(team1, team2):
+def predict_score(team1, team2, teams_dict=None):
     """Predict most likely score for a match"""
-    att1, def1 = get_effective_ratings(team1)
-    att2, def2 = get_effective_ratings(team2)
-    avg_att = sum(t["attack"] for t in teams_data.values()) / len(teams_data)
-    avg_def = sum(t["defense"] for t in teams_data.values()) / len(teams_data)
+    if teams_dict is None:
+        teams_dict = teams_data
+    att1, def1 = get_effective_ratings(team1, teams_dict)
+    att2, def2 = get_effective_ratings(team2, teams_dict)
+    avg_att = sum(t["attack"] for t in teams_dict.values()) / len(teams_dict)
+    avg_def = sum(t["defense"] for t in teams_dict.values()) / len(teams_dict)
     
     lambda1 = 1.35 * (att1 / avg_att) * (avg_def / def2)
     lambda2 = 1.35 * (att2 / avg_att) * (avg_def / def1)
