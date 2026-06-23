@@ -894,52 +894,52 @@ const groupStandings = {
       "name": "Mexico",
       "flag": "\ud83c\uddf2\ud83c\uddfd",
       "pld": 3,
-      "w": 3,
-      "d": 0,
+      "w": 2,
+      "d": 1,
       "l": 0,
       "gf": 5,
-      "ga": 0,
-      "gd": 5,
-      "pts": 9,
+      "ga": 2,
+      "gd": 3,
+      "pts": 7,
       "status": "Advanced (Winner)"
+    },
+    {
+      "name": "South Africa",
+      "flag": "\ud83c\uddff\ud83c\udde6",
+      "pld": 3,
+      "w": 1,
+      "d": 1,
+      "l": 1,
+      "gf": 2,
+      "ga": 3,
+      "gd": -1,
+      "pts": 4,
+      "status": "Advanced (Runner-up)"
     },
     {
       "name": "South Korea",
       "flag": "\ud83c\uddf0\ud83c\uddf7",
       "pld": 3,
-      "w": 2,
+      "w": 1,
       "d": 0,
-      "l": 1,
-      "gf": 3,
-      "ga": 2,
-      "gd": 1,
-      "pts": 6,
-      "status": "Advanced (Runner-up)"
+      "l": 2,
+      "gf": 2,
+      "ga": 3,
+      "gd": -1,
+      "pts": 3,
+      "status": "Advanced (Best 3rd)"
     },
     {
       "name": "Czechia",
       "flag": "\ud83c\udde8\ud83c\uddff",
       "pld": 3,
       "w": 0,
-      "d": 1,
-      "l": 2,
-      "gf": 2,
+      "d": 2,
+      "l": 1,
+      "gf": 4,
       "ga": 5,
-      "gd": -3,
-      "pts": 1,
-      "status": "Eliminated"
-    },
-    {
-      "name": "South Africa",
-      "flag": "\ud83c\uddff\ud83c\udde6",
-      "pld": 3,
-      "w": 0,
-      "d": 1,
-      "l": 2,
-      "gf": 1,
-      "ga": 4,
-      "gd": -3,
-      "pts": 1,
+      "gd": -1,
+      "pts": 2,
       "status": "Eliminated"
     }
   ],
@@ -971,29 +971,29 @@ const groupStandings = {
       "status": "Advanced (Runner-up)"
     },
     {
+      "name": "Qatar",
+      "flag": "\ud83c\uddf6\ud83c\udde6",
+      "pld": 3,
+      "w": 1,
+      "d": 1,
+      "l": 1,
+      "gf": 2,
+      "ga": 7,
+      "gd": -5,
+      "pts": 4,
+      "status": "Advanced (Best 3rd)"
+    },
+    {
       "name": "Bosnia and Herzegovina",
       "flag": "\ud83c\udde7\ud83c\udde6",
       "pld": 3,
       "w": 0,
-      "d": 2,
-      "l": 1,
+      "d": 1,
+      "l": 2,
       "gf": 2,
-      "ga": 5,
-      "gd": -3,
-      "pts": 2,
-      "status": "Eliminated"
-    },
-    {
-      "name": "Qatar",
-      "flag": "\ud83c\uddf6\ud83c\udde6",
-      "pld": 3,
-      "w": 0,
-      "d": 2,
-      "l": 1,
-      "gf": 1,
-      "ga": 7,
-      "gd": -6,
-      "pts": 2,
+      "ga": 6,
+      "gd": -4,
+      "pts": 1,
       "status": "Eliminated"
     }
   ],
@@ -1002,26 +1002,26 @@ const groupStandings = {
       "name": "Brazil",
       "flag": "\ud83c\udde7\ud83c\uddf7",
       "pld": 3,
-      "w": 1,
-      "d": 2,
+      "w": 2,
+      "d": 1,
       "l": 0,
-      "gf": 4,
+      "gf": 5,
       "ga": 1,
-      "gd": 3,
-      "pts": 5,
+      "gd": 4,
+      "pts": 7,
       "status": "Advanced (Winner)"
     },
     {
       "name": "Morocco",
       "flag": "\ud83c\uddf2\ud83c\udde6",
       "pld": 3,
-      "w": 1,
-      "d": 2,
+      "w": 2,
+      "d": 1,
       "l": 0,
       "gf": 3,
-      "ga": 2,
-      "gd": 1,
-      "pts": 5,
+      "ga": 1,
+      "gd": 2,
+      "pts": 7,
       "status": "Advanced (Runner-up)"
     },
     {
@@ -1029,71 +1029,17 @@ const groupStandings = {
       "flag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc73\udb40\udc63\udb40\udc74\udb40\udc7f",
       "pld": 3,
       "w": 1,
-      "d": 1,
-      "l": 1,
+      "d": 0,
+      "l": 2,
       "gf": 1,
-      "ga": 1,
-      "gd": 0,
-      "pts": 4,
+      "ga": 2,
+      "gd": -1,
+      "pts": 3,
       "status": "Advanced (Best 3rd)"
     },
     {
       "name": "Haiti",
       "flag": "\ud83c\udded\ud83c\uddf9",
-      "pld": 3,
-      "w": 0,
-      "d": 1,
-      "l": 2,
-      "gf": 1,
-      "ga": 5,
-      "gd": -4,
-      "pts": 1,
-      "status": "Eliminated"
-    }
-  ],
-  "D": [
-    {
-      "name": "United States",
-      "flag": "\ud83c\uddfa\ud83c\uddf8",
-      "pld": 3,
-      "w": 3,
-      "d": 0,
-      "l": 0,
-      "gf": 8,
-      "ga": 1,
-      "gd": 7,
-      "pts": 9,
-      "status": "Advanced (Winner)"
-    },
-    {
-      "name": "Australia",
-      "flag": "\ud83c\udde6\ud83c\uddfa",
-      "pld": 3,
-      "w": 1,
-      "d": 1,
-      "l": 1,
-      "gf": 2,
-      "ga": 2,
-      "gd": 0,
-      "pts": 4,
-      "status": "Advanced (Runner-up)"
-    },
-    {
-      "name": "Paraguay",
-      "flag": "\ud83c\uddf5\ud83c\uddfe",
-      "pld": 3,
-      "w": 1,
-      "d": 1,
-      "l": 1,
-      "gf": 2,
-      "ga": 4,
-      "gd": -2,
-      "pts": 4,
-      "status": "Advanced (Best 3rd)"
-    },
-    {
-      "name": "T\u00fcrkiye",
-      "flag": "\ud83c\uddf9\ud83c\uddf7",
       "pld": 3,
       "w": 0,
       "d": 0,
@@ -1105,31 +1051,85 @@ const groupStandings = {
       "status": "Eliminated"
     }
   ],
+  "D": [
+    {
+      "name": "United States",
+      "flag": "\ud83c\uddfa\ud83c\uddf8",
+      "pld": 3,
+      "w": 3,
+      "d": 0,
+      "l": 0,
+      "gf": 7,
+      "ga": 1,
+      "gd": 6,
+      "pts": 9,
+      "status": "Advanced (Winner)"
+    },
+    {
+      "name": "Paraguay",
+      "flag": "\ud83c\uddf5\ud83c\uddfe",
+      "pld": 3,
+      "w": 2,
+      "d": 0,
+      "l": 1,
+      "gf": 3,
+      "ga": 4,
+      "gd": -1,
+      "pts": 6,
+      "status": "Advanced (Runner-up)"
+    },
+    {
+      "name": "Australia",
+      "flag": "\ud83c\udde6\ud83c\uddfa",
+      "pld": 3,
+      "w": 1,
+      "d": 0,
+      "l": 2,
+      "gf": 2,
+      "ga": 3,
+      "gd": -1,
+      "pts": 3,
+      "status": "Advanced (Best 3rd)"
+    },
+    {
+      "name": "T\u00fcrkiye",
+      "flag": "\ud83c\uddf9\ud83c\uddf7",
+      "pld": 3,
+      "w": 0,
+      "d": 0,
+      "l": 3,
+      "gf": 0,
+      "ga": 4,
+      "gd": -4,
+      "pts": 0,
+      "status": "Eliminated"
+    }
+  ],
   "E": [
     {
       "name": "Germany",
       "flag": "\ud83c\udde9\ud83c\uddea",
       "pld": 3,
-      "w": 2,
-      "d": 1,
+      "w": 3,
+      "d": 0,
       "l": 0,
-      "gf": 9,
+      "gf": 10,
       "ga": 2,
-      "gd": 7,
-      "pts": 7,
+      "gd": 8,
+      "pts": 9,
       "status": "Advanced (Winner)"
     },
     {
       "name": "C\u00f4te d'Ivoire",
       "flag": "\ud83c\udde8\ud83c\uddee",
       "pld": 3,
-      "w": 1,
-      "d": 1,
+      "w": 2,
+      "d": 0,
       "l": 1,
-      "gf": 2,
+      "gf": 3,
       "ga": 2,
-      "gd": 0,
-      "pts": 4,
+      "gd": 1,
+      "pts": 6,
       "status": "Advanced (Runner-up)"
     },
     {
@@ -1137,12 +1137,12 @@ const groupStandings = {
       "flag": "\ud83c\uddea\ud83c\udde8",
       "pld": 3,
       "w": 0,
-      "d": 2,
-      "l": 1,
+      "d": 1,
+      "l": 2,
       "gf": 0,
-      "ga": 1,
-      "gd": -1,
-      "pts": 2,
+      "ga": 2,
+      "gd": -2,
+      "pts": 1,
       "status": "Eliminated"
     },
     {
@@ -1150,12 +1150,12 @@ const groupStandings = {
       "flag": "\ud83c\udde8\ud83c\uddfc",
       "pld": 3,
       "w": 0,
-      "d": 2,
-      "l": 1,
+      "d": 1,
+      "l": 2,
       "gf": 1,
-      "ga": 7,
-      "gd": -6,
-      "pts": 2,
+      "ga": 8,
+      "gd": -7,
+      "pts": 1,
       "status": "Eliminated"
     }
   ],
@@ -1164,38 +1164,38 @@ const groupStandings = {
       "name": "Netherlands",
       "flag": "\ud83c\uddf3\ud83c\uddf1",
       "pld": 3,
-      "w": 1,
-      "d": 2,
+      "w": 2,
+      "d": 1,
       "l": 0,
-      "gf": 9,
-      "ga": 5,
-      "gd": 4,
-      "pts": 5,
+      "gf": 8,
+      "ga": 3,
+      "gd": 5,
+      "pts": 7,
       "status": "Advanced (Winner)"
+    },
+    {
+      "name": "Sweden",
+      "flag": "\ud83c\uddf8\ud83c\uddea",
+      "pld": 3,
+      "w": 2,
+      "d": 0,
+      "l": 1,
+      "gf": 7,
+      "ga": 6,
+      "gd": 1,
+      "pts": 6,
+      "status": "Advanced (Runner-up)"
     },
     {
       "name": "Japan",
       "flag": "\ud83c\uddef\ud83c\uddf5",
       "pld": 3,
       "w": 1,
-      "d": 2,
-      "l": 0,
-      "gf": 8,
-      "ga": 4,
-      "gd": 4,
-      "pts": 5,
-      "status": "Advanced (Runner-up)"
-    },
-    {
-      "name": "Sweden",
-      "flag": "\ud83c\uddf8\ud83c\uddea",
-      "pld": 3,
-      "w": 1,
       "d": 1,
       "l": 1,
-      "gf": 8,
-      "ga": 8,
-      "gd": 0,
+      "gf": 6,
+      "ga": 3,
+      "gd": 3,
       "pts": 4,
       "status": "Advanced (Best 3rd)"
     },
@@ -1204,12 +1204,12 @@ const groupStandings = {
       "flag": "\ud83c\uddf9\ud83c\uddf3",
       "pld": 3,
       "w": 0,
-      "d": 1,
-      "l": 2,
-      "gf": 3,
-      "ga": 11,
-      "gd": -8,
-      "pts": 1,
+      "d": 0,
+      "l": 3,
+      "gf": 1,
+      "ga": 10,
+      "gd": -9,
+      "pts": 0,
       "status": "Eliminated"
     }
   ],
@@ -1221,24 +1221,11 @@ const groupStandings = {
       "w": 1,
       "d": 2,
       "l": 0,
-      "gf": 4,
+      "gf": 3,
       "ga": 2,
-      "gd": 2,
-      "pts": 5,
-      "status": "Advanced (Winner)"
-    },
-    {
-      "name": "Belgium",
-      "flag": "\ud83c\udde7\ud83c\uddea",
-      "pld": 3,
-      "w": 1,
-      "d": 2,
-      "l": 0,
-      "gf": 2,
-      "ga": 1,
       "gd": 1,
       "pts": 5,
-      "status": "Advanced (Runner-up)"
+      "status": "Advanced (Winner)"
     },
     {
       "name": "Egypt",
@@ -1248,42 +1235,14 @@ const groupStandings = {
       "d": 1,
       "l": 1,
       "gf": 4,
-      "ga": 4,
-      "gd": 0,
+      "ga": 3,
+      "gd": 1,
       "pts": 4,
-      "status": "Advanced (Best 3rd)"
+      "status": "Advanced (Runner-up)"
     },
     {
-      "name": "New Zealand",
-      "flag": "\ud83c\uddf3\ud83c\uddff",
-      "pld": 3,
-      "w": 0,
-      "d": 1,
-      "l": 2,
-      "gf": 3,
-      "ga": 6,
-      "gd": -3,
-      "pts": 1,
-      "status": "Eliminated"
-    }
-  ],
-  "H": [
-    {
-      "name": "Spain",
-      "flag": "\ud83c\uddea\ud83c\uddf8",
-      "pld": 3,
-      "w": 2,
-      "d": 1,
-      "l": 0,
-      "gf": 5,
-      "ga": 0,
-      "gd": 5,
-      "pts": 7,
-      "status": "Advanced (Winner)"
-    },
-    {
-      "name": "Cabo Verde",
-      "flag": "\ud83c\udde8\ud83c\uddfb",
+      "name": "Belgium",
+      "flag": "\ud83c\udde7\ud83c\uddea",
       "pld": 3,
       "w": 0,
       "d": 3,
@@ -1292,19 +1251,60 @@ const groupStandings = {
       "ga": 3,
       "gd": 0,
       "pts": 3,
-      "status": "Advanced (Runner-up)"
+      "status": "Advanced (Best 3rd)"
     },
     {
-      "name": "Uruguay",
-      "flag": "\ud83c\uddfa\ud83c\uddfe",
+      "name": "New Zealand",
+      "flag": "\ud83c\uddf3\ud83c\uddff",
       "pld": 3,
       "w": 0,
       "d": 2,
       "l": 1,
-      "gf": 3,
-      "ga": 4,
-      "gd": -1,
+      "gf": 5,
+      "ga": 7,
+      "gd": -2,
       "pts": 2,
+      "status": "Eliminated"
+    }
+  ],
+  "H": [
+    {
+      "name": "Uruguay",
+      "flag": "\ud83c\uddfa\ud83c\uddfe",
+      "pld": 3,
+      "w": 1,
+      "d": 2,
+      "l": 0,
+      "gf": 4,
+      "ga": 3,
+      "gd": 1,
+      "pts": 5,
+      "status": "Advanced (Winner)"
+    },
+    {
+      "name": "Spain",
+      "flag": "\ud83c\uddea\ud83c\uddf8",
+      "pld": 3,
+      "w": 1,
+      "d": 1,
+      "l": 1,
+      "gf": 4,
+      "ga": 1,
+      "gd": 3,
+      "pts": 4,
+      "status": "Advanced (Runner-up)"
+    },
+    {
+      "name": "Cabo Verde",
+      "flag": "\ud83c\udde8\ud83c\uddfb",
+      "pld": 3,
+      "w": 0,
+      "d": 3,
+      "l": 0,
+      "gf": 4,
+      "ga": 4,
+      "gd": 0,
+      "pts": 3,
       "status": "Advanced (Best 3rd)"
     },
     {
@@ -1314,8 +1314,8 @@ const groupStandings = {
       "w": 0,
       "d": 2,
       "l": 1,
-      "gf": 2,
-      "ga": 6,
+      "gf": 3,
+      "ga": 7,
       "gd": -4,
       "pts": 2,
       "status": "Eliminated"
@@ -1323,28 +1323,28 @@ const groupStandings = {
   ],
   "I": [
     {
-      "name": "Norway",
-      "flag": "\ud83c\uddf3\ud83c\uddf4",
+      "name": "France",
+      "flag": "\ud83c\uddeb\ud83c\uddf7",
       "pld": 3,
       "w": 3,
       "d": 0,
       "l": 0,
-      "gf": 8,
-      "ga": 3,
-      "gd": 5,
+      "gf": 7,
+      "ga": 1,
+      "gd": 6,
       "pts": 9,
       "status": "Advanced (Winner)"
     },
     {
-      "name": "France",
-      "flag": "\ud83c\uddeb\ud83c\uddf7",
+      "name": "Norway",
+      "flag": "\ud83c\uddf3\ud83c\uddf4",
       "pld": 3,
       "w": 2,
       "d": 0,
       "l": 1,
-      "gf": 6,
-      "ga": 2,
-      "gd": 4,
+      "gf": 7,
+      "ga": 4,
+      "gd": 3,
       "pts": 6,
       "status": "Advanced (Runner-up)"
     },
@@ -1352,26 +1352,26 @@ const groupStandings = {
       "name": "Senegal",
       "flag": "\ud83c\uddf8\ud83c\uddf3",
       "pld": 3,
-      "w": 0,
-      "d": 1,
+      "w": 1,
+      "d": 0,
       "l": 2,
-      "gf": 3,
+      "gf": 5,
       "ga": 6,
-      "gd": -3,
-      "pts": 1,
-      "status": "Eliminated"
+      "gd": -1,
+      "pts": 3,
+      "status": "Advanced (Best 3rd)"
     },
     {
       "name": "Iraq",
       "flag": "\ud83c\uddee\ud83c\uddf6",
       "pld": 3,
       "w": 0,
-      "d": 1,
-      "l": 2,
+      "d": 0,
+      "l": 3,
       "gf": 1,
-      "ga": 7,
-      "gd": -6,
-      "pts": 1,
+      "ga": 9,
+      "gd": -8,
+      "pts": 0,
       "status": "Eliminated"
     }
   ],
@@ -1380,52 +1380,52 @@ const groupStandings = {
       "name": "Argentina",
       "flag": "\ud83c\udde6\ud83c\uddf7",
       "pld": 3,
-      "w": 2,
-      "d": 1,
-      "l": 0,
-      "gf": 7,
-      "ga": 2,
-      "gd": 5,
-      "pts": 7,
-      "status": "Advanced (Winner)"
-    },
-    {
-      "name": "Austria",
-      "flag": "\ud83c\udde6\ud83c\uddf9",
-      "pld": 3,
-      "w": 2,
+      "w": 3,
       "d": 0,
-      "l": 1,
-      "gf": 4,
-      "ga": 3,
-      "gd": 1,
-      "pts": 6,
-      "status": "Advanced (Runner-up)"
+      "l": 0,
+      "gf": 6,
+      "ga": 0,
+      "gd": 6,
+      "pts": 9,
+      "status": "Advanced (Winner)"
     },
     {
       "name": "Algeria",
       "flag": "\ud83c\udde9\ud83c\uddff",
       "pld": 3,
+      "w": 2,
+      "d": 0,
+      "l": 1,
+      "gf": 4,
+      "ga": 4,
+      "gd": 0,
+      "pts": 6,
+      "status": "Advanced (Runner-up)"
+    },
+    {
+      "name": "Austria",
+      "flag": "\ud83c\udde6\ud83c\uddf9",
+      "pld": 3,
       "w": 1,
       "d": 0,
       "l": 2,
-      "gf": 2,
+      "gf": 3,
       "ga": 5,
-      "gd": -3,
+      "gd": -2,
       "pts": 3,
-      "status": "Advanced (Best 3rd)"
+      "status": "Eliminated"
     },
     {
       "name": "Jordan",
       "flag": "\ud83c\uddef\ud83c\uddf4",
       "pld": 3,
       "w": 0,
-      "d": 1,
-      "l": 2,
-      "gf": 4,
-      "ga": 7,
-      "gd": -3,
-      "pts": 1,
+      "d": 0,
+      "l": 3,
+      "gf": 2,
+      "ga": 6,
+      "gd": -4,
+      "pts": 0,
       "status": "Eliminated"
     }
   ],
@@ -1434,51 +1434,51 @@ const groupStandings = {
       "name": "Colombia",
       "flag": "\ud83c\udde8\ud83c\uddf4",
       "pld": 3,
-      "w": 3,
-      "d": 0,
-      "l": 0,
-      "gf": 5,
-      "ga": 1,
-      "gd": 4,
-      "pts": 9,
-      "status": "Advanced (Winner)"
-    },
-    {
-      "name": "Uzbekistan",
-      "flag": "\ud83c\uddfa\ud83c\uddff",
-      "pld": 3,
-      "w": 1,
+      "w": 2,
       "d": 1,
-      "l": 1,
-      "gf": 2,
-      "ga": 3,
-      "gd": -1,
-      "pts": 4,
-      "status": "Advanced (Runner-up)"
+      "l": 0,
+      "gf": 6,
+      "ga": 2,
+      "gd": 4,
+      "pts": 7,
+      "status": "Advanced (Winner)"
     },
     {
       "name": "Portugal",
       "flag": "\ud83c\uddf5\ud83c\uddf9",
       "pld": 3,
-      "w": 0,
+      "w": 1,
       "d": 2,
-      "l": 1,
-      "gf": 1,
+      "l": 0,
+      "gf": 3,
       "ga": 2,
-      "gd": -1,
-      "pts": 2,
-      "status": "Advanced (Best 3rd)"
+      "gd": 1,
+      "pts": 5,
+      "status": "Advanced (Runner-up)"
     },
     {
       "name": "Congo DR",
       "flag": "\ud83c\udde8\ud83c\udde9",
       "pld": 3,
       "w": 0,
+      "d": 2,
+      "l": 1,
+      "gf": 2,
+      "ga": 4,
+      "gd": -2,
+      "pts": 2,
+      "status": "Eliminated"
+    },
+    {
+      "name": "Uzbekistan",
+      "flag": "\ud83c\uddfa\ud83c\uddff",
+      "pld": 3,
+      "w": 0,
       "d": 1,
       "l": 2,
-      "gf": 1,
-      "ga": 3,
-      "gd": -2,
+      "gf": 2,
+      "ga": 5,
+      "gd": -3,
       "pts": 1,
       "status": "Eliminated"
     }
@@ -1488,26 +1488,26 @@ const groupStandings = {
       "name": "England",
       "flag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
       "pld": 3,
-      "w": 2,
-      "d": 1,
+      "w": 3,
+      "d": 0,
       "l": 0,
-      "gf": 5,
+      "gf": 6,
       "ga": 2,
-      "gd": 3,
-      "pts": 7,
+      "gd": 4,
+      "pts": 9,
       "status": "Advanced (Winner)"
     },
     {
       "name": "Croatia",
       "flag": "\ud83c\udded\ud83c\uddf7",
       "pld": 3,
-      "w": 2,
-      "d": 0,
+      "w": 1,
+      "d": 1,
       "l": 1,
-      "gf": 6,
+      "gf": 4,
       "ga": 4,
-      "gd": 2,
-      "pts": 6,
+      "gd": 0,
+      "pts": 4,
       "status": "Advanced (Runner-up)"
     },
     {
@@ -1521,7 +1521,7 @@ const groupStandings = {
       "ga": 3,
       "gd": -2,
       "pts": 3,
-      "status": "Advanced (Best 3rd)"
+      "status": "Eliminated"
     },
     {
       "name": "Panama",
@@ -1531,8 +1531,8 @@ const groupStandings = {
       "d": 1,
       "l": 2,
       "gf": 0,
-      "ga": 3,
-      "gd": -3,
+      "ga": 2,
+      "gd": -2,
       "pts": 1,
       "status": "Eliminated"
     }
@@ -1568,8 +1568,8 @@ const groupMatches = {
     {
       "t1": "Mexico",
       "t2": "Czechia",
-      "score": "Mexico Win",
-      "outcome": "Mexico",
+      "score": "Draw",
+      "outcome": "Draw",
       "actual": false,
       "probs": {
         "Mexico": 0.48,
@@ -1580,8 +1580,8 @@ const groupMatches = {
     {
       "t1": "South Africa",
       "t2": "South Korea",
-      "score": "South Korea Win",
-      "outcome": "South Korea",
+      "score": "South Africa Win",
+      "outcome": "South Africa",
       "actual": false,
       "probs": {
         "South Africa": 0.212,
@@ -1654,8 +1654,8 @@ const groupMatches = {
     {
       "t1": "Bosnia and Herzegovina",
       "t2": "Qatar",
-      "score": "Draw",
-      "outcome": "Draw",
+      "score": "Qatar Win",
+      "outcome": "Qatar",
       "actual": false,
       "probs": {
         "Bosnia and Herzegovina": 0.285,
@@ -1716,8 +1716,8 @@ const groupMatches = {
     {
       "t1": "Brazil",
       "t2": "Scotland",
-      "score": "Draw",
-      "outcome": "Draw",
+      "score": "Brazil Win",
+      "outcome": "Brazil",
       "actual": false,
       "probs": {
         "Brazil": 0.495,
@@ -1728,8 +1728,8 @@ const groupMatches = {
     {
       "t1": "Morocco",
       "t2": "Haiti",
-      "score": "Draw",
-      "outcome": "Draw",
+      "score": "Morocco Win",
+      "outcome": "Morocco",
       "actual": false,
       "probs": {
         "Morocco": 0.69,
@@ -1802,8 +1802,8 @@ const groupMatches = {
     {
       "t1": "Paraguay",
       "t2": "Australia",
-      "score": "Draw",
-      "outcome": "Draw",
+      "score": "Paraguay Win",
+      "outcome": "Paraguay",
       "actual": false,
       "probs": {
         "Paraguay": 0.28,
@@ -1864,8 +1864,8 @@ const groupMatches = {
     {
       "t1": "Germany",
       "t2": "Ecuador",
-      "score": "Draw",
-      "outcome": "Draw",
+      "score": "Germany Win",
+      "outcome": "Germany",
       "actual": false,
       "probs": {
         "Germany": 0.449,
@@ -1876,8 +1876,8 @@ const groupMatches = {
     {
       "t1": "Cura\u00e7ao",
       "t2": "C\u00f4te d'Ivoire",
-      "score": "Draw",
-      "outcome": "Draw",
+      "score": "C\u00f4te d'Ivoire Win",
+      "outcome": "C\u00f4te d'Ivoire",
       "actual": false,
       "probs": {
         "Cura\u00e7ao": 0.149,
@@ -1938,8 +1938,8 @@ const groupMatches = {
     {
       "t1": "Netherlands",
       "t2": "Tunisia",
-      "score": "Draw",
-      "outcome": "Draw",
+      "score": "Netherlands Win",
+      "outcome": "Netherlands",
       "actual": false,
       "probs": {
         "Netherlands": 0.535,
@@ -1950,8 +1950,8 @@ const groupMatches = {
     {
       "t1": "Japan",
       "t2": "Sweden",
-      "score": "Draw",
-      "outcome": "Draw",
+      "score": "Sweden Win",
+      "outcome": "Sweden",
       "actual": false,
       "probs": {
         "Japan": 0.423,
@@ -2012,8 +2012,8 @@ const groupMatches = {
     {
       "t1": "Belgium",
       "t2": "New Zealand",
-      "score": "Belgium Win",
-      "outcome": "Belgium",
+      "score": "Draw",
+      "outcome": "Draw",
       "actual": false,
       "probs": {
         "Belgium": 0.699,
@@ -2062,8 +2062,8 @@ const groupMatches = {
     {
       "t1": "Spain",
       "t2": "Uruguay",
-      "score": "Spain Win",
-      "outcome": "Spain",
+      "score": "Uruguay Win",
+      "outcome": "Uruguay",
       "actual": false,
       "probs": {
         "Spain": 0.421,
@@ -2148,8 +2148,8 @@ const groupMatches = {
     {
       "t1": "France",
       "t2": "Norway",
-      "score": "Norway Win",
-      "outcome": "Norway",
+      "score": "France Win",
+      "outcome": "France",
       "actual": false,
       "probs": {
         "France": 0.543,
@@ -2184,8 +2184,8 @@ const groupMatches = {
     {
       "t1": "Senegal",
       "t2": "Iraq",
-      "score": "Draw",
-      "outcome": "Draw",
+      "score": "Senegal Win",
+      "outcome": "Senegal",
       "actual": false,
       "probs": {
         "Senegal": 0.543,
@@ -2234,8 +2234,8 @@ const groupMatches = {
     {
       "t1": "Argentina",
       "t2": "Jordan",
-      "score": "Draw",
-      "outcome": "Draw",
+      "score": "Argentina Win",
+      "outcome": "Argentina",
       "actual": false,
       "probs": {
         "Argentina": 0.697,
@@ -2246,8 +2246,8 @@ const groupMatches = {
     {
       "t1": "Algeria",
       "t2": "Austria",
-      "score": "Austria Win",
-      "outcome": "Austria",
+      "score": "Algeria Win",
+      "outcome": "Algeria",
       "actual": false,
       "probs": {
         "Algeria": 0.349,
@@ -2284,8 +2284,8 @@ const groupMatches = {
     {
       "t1": "Portugal",
       "t2": "Colombia",
-      "score": "Colombia Win",
-      "outcome": "Colombia",
+      "score": "Draw",
+      "outcome": "Draw",
       "actual": false,
       "probs": {
         "Portugal": 0.411,
@@ -2308,8 +2308,8 @@ const groupMatches = {
     {
       "t1": "Portugal",
       "t2": "Uzbekistan",
-      "score": "Draw",
-      "outcome": "Draw",
+      "score": "Portugal Win",
+      "outcome": "Portugal",
       "actual": false,
       "probs": {
         "Portugal": 0.63,
@@ -2344,8 +2344,8 @@ const groupMatches = {
     {
       "t1": "Congo DR",
       "t2": "Uzbekistan",
-      "score": "Uzbekistan Win",
-      "outcome": "Uzbekistan",
+      "score": "Draw",
+      "outcome": "Draw",
       "actual": false,
       "probs": {
         "Congo DR": 0.36,
@@ -2382,8 +2382,8 @@ const groupMatches = {
     {
       "t1": "England",
       "t2": "Panama",
-      "score": "Draw",
-      "outcome": "Draw",
+      "score": "England Win",
+      "outcome": "England",
       "actual": false,
       "probs": {
         "England": 0.561,
@@ -2406,8 +2406,8 @@ const groupMatches = {
     {
       "t1": "Croatia",
       "t2": "Panama",
-      "score": "Croatia Win",
-      "outcome": "Croatia",
+      "score": "Draw",
+      "outcome": "Draw",
       "actual": false,
       "probs": {
         "Croatia": 0.48,
@@ -2434,100 +2434,100 @@ const knockoutStages = {
   "R32": [
     {
       "t1": "Mexico",
-      "t2": "Sweden",
+      "t2": "Japan",
       "winner": "Mexico",
       "probs": {
-        "Mexico": 0.621,
+        "Mexico": 0.535,
         "Draw": 0.0,
-        "Sweden": 0.379
+        "Japan": 0.465
       },
       "matchNum": 1
     },
     {
       "t1": "Canada",
-      "t2": "Egypt",
+      "t2": "Qatar",
       "winner": "Canada",
       "probs": {
-        "Canada": 0.503,
+        "Canada": 1.0,
         "Draw": 0.0,
-        "Egypt": 0.497
+        "Qatar": 0.0
       },
       "matchNum": 2
     },
     {
       "t1": "Brazil",
-      "t2": "Scotland",
+      "t2": "Cabo Verde",
       "winner": "Brazil",
       "probs": {
-        "Brazil": 0.66,
+        "Brazil": 0.808,
         "Draw": 0.0,
-        "Scotland": 0.34
+        "Cabo Verde": 0.192
       },
       "matchNum": 3
     },
     {
       "t1": "United States",
-      "t2": "Paraguay",
-      "winner": "United States",
+      "t2": "Belgium",
+      "winner": "Belgium",
       "probs": {
-        "United States": 1.0,
+        "United States": 0.464,
         "Draw": 0.0,
-        "Paraguay": 0.0
+        "Belgium": 0.536
       },
       "matchNum": 4
     },
     {
       "t1": "Germany",
-      "t2": "Ghana",
+      "t2": "Senegal",
       "winner": "Germany",
       "probs": {
-        "Germany": 0.763,
+        "Germany": 0.562,
         "Draw": 0.0,
-        "Ghana": 0.237
+        "Senegal": 0.438
       },
       "matchNum": 5
     },
     {
       "t1": "Netherlands",
-      "t2": "Algeria",
+      "t2": "South Korea",
       "winner": "Netherlands",
       "probs": {
-        "Netherlands": 0.614,
+        "Netherlands": 0.593,
         "Draw": 0.0,
-        "Algeria": 0.386
+        "South Korea": 0.407
       },
       "matchNum": 6
     },
     {
       "t1": "Iran",
-      "t2": "Uruguay",
-      "winner": "Uruguay",
+      "t2": "Australia",
+      "winner": "Iran",
       "probs": {
-        "Iran": 0.433,
+        "Iran": 0.526,
         "Draw": 0.0,
-        "Uruguay": 0.567
+        "Australia": 0.474
       },
       "matchNum": 7
     },
     {
-      "t1": "Spain",
-      "t2": "Portugal",
-      "winner": "Spain",
+      "t1": "Uruguay",
+      "t2": "Scotland",
+      "winner": "Uruguay",
       "probs": {
-        "Spain": 0.501,
+        "Uruguay": 0.631,
         "Draw": 0.0,
-        "Portugal": 0.499
+        "Scotland": 0.369
       },
       "matchNum": 8
     },
     {
-      "t1": "Norway",
-      "t2": "South Korea",
-      "winner": "South Korea",
+      "t1": "France",
+      "t2": "South Africa",
+      "winner": "France",
       "probs": {
-        "Norway": 0.443,
+        "France": 0.809,
         "Draw": 0.0,
-        "South Korea": 0.557
+        "South Africa": 0.191
       },
       "matchNum": 9
     },
@@ -2555,56 +2555,56 @@ const knockoutStages = {
     },
     {
       "t1": "England",
-      "t2": "Australia",
+      "t2": "Paraguay",
       "winner": "England",
       "probs": {
-        "England": 0.664,
+        "England": 0.747,
         "Draw": 0.0,
-        "Australia": 0.336
+        "Paraguay": 0.253
       },
       "matchNum": 12
     },
     {
       "t1": "C\u00f4te d'Ivoire",
-      "t2": "Japan",
-      "winner": "Japan",
+      "t2": "Sweden",
+      "winner": "C\u00f4te d'Ivoire",
       "probs": {
-        "C\u00f4te d'Ivoire": 0.447,
+        "C\u00f4te d'Ivoire": 0.533,
         "Draw": 0.0,
-        "Japan": 0.553
+        "Sweden": 0.467
       },
       "matchNum": 13
     },
     {
-      "t1": "Belgium",
-      "t2": "Cabo Verde",
-      "winner": "Belgium",
+      "t1": "Egypt",
+      "t2": "Spain",
+      "winner": "Spain",
       "probs": {
-        "Belgium": 0.811,
+        "Egypt": 0.321,
         "Draw": 0.0,
-        "Cabo Verde": 0.189
+        "Spain": 0.679
       },
       "matchNum": 14
     },
     {
-      "t1": "France",
-      "t2": "Austria",
-      "winner": "France",
+      "t1": "Norway",
+      "t2": "Algeria",
+      "winner": "Algeria",
       "probs": {
-        "France": 0.662,
+        "Norway": 0.465,
         "Draw": 0.0,
-        "Austria": 0.338
+        "Algeria": 0.535
       },
       "matchNum": 15
     },
     {
-      "t1": "Uzbekistan",
+      "t1": "Portugal",
       "t2": "Croatia",
-      "winner": "Croatia",
+      "winner": "Portugal",
       "probs": {
-        "Uzbekistan": 0.284,
+        "Portugal": 0.589,
         "Draw": 0.0,
-        "Croatia": 0.716
+        "Croatia": 0.411
       },
       "matchNum": 16
     }
@@ -2623,12 +2623,12 @@ const knockoutStages = {
     },
     {
       "t1": "Brazil",
-      "t2": "United States",
-      "winner": "Brazil",
+      "t2": "Belgium",
+      "winner": "Belgium",
       "probs": {
-        "Brazil": 0.533,
+        "Brazil": 0.496,
         "Draw": 0.0,
-        "United States": 0.467
+        "Belgium": 0.504
       },
       "matchNum": 2
     },
@@ -2644,24 +2644,24 @@ const knockoutStages = {
       "matchNum": 3
     },
     {
-      "t1": "Uruguay",
-      "t2": "Spain",
-      "winner": "Spain",
+      "t1": "Iran",
+      "t2": "Uruguay",
+      "winner": "Uruguay",
       "probs": {
-        "Uruguay": 0.421,
+        "Iran": 0.433,
         "Draw": 0.0,
-        "Spain": 0.579
+        "Uruguay": 0.567
       },
       "matchNum": 4
     },
     {
-      "t1": "South Korea",
+      "t1": "France",
       "t2": "Argentina",
       "winner": "Argentina",
       "probs": {
-        "South Korea": 0.327,
+        "France": 0.476,
         "Draw": 0.0,
-        "Argentina": 0.673
+        "Argentina": 0.524
       },
       "matchNum": 5
     },
@@ -2677,24 +2677,24 @@ const knockoutStages = {
       "matchNum": 6
     },
     {
-      "t1": "Japan",
-      "t2": "Belgium",
-      "winner": "Belgium",
+      "t1": "C\u00f4te d'Ivoire",
+      "t2": "Spain",
+      "winner": "Spain",
       "probs": {
-        "Japan": 0.446,
+        "C\u00f4te d'Ivoire": 0.351,
         "Draw": 0.0,
-        "Belgium": 0.554
+        "Spain": 0.649
       },
       "matchNum": 7
     },
     {
-      "t1": "France",
-      "t2": "Croatia",
-      "winner": "France",
+      "t1": "Algeria",
+      "t2": "Portugal",
+      "winner": "Portugal",
       "probs": {
-        "France": 0.606,
+        "Algeria": 0.346,
         "Draw": 0.0,
-        "Croatia": 0.394
+        "Portugal": 0.654
       },
       "matchNum": 8
     }
@@ -2702,23 +2702,23 @@ const knockoutStages = {
   "QF": [
     {
       "t1": "Mexico",
-      "t2": "Brazil",
-      "winner": "Brazil",
+      "t2": "Belgium",
+      "winner": "Belgium",
       "probs": {
-        "Mexico": 0.484,
+        "Mexico": 0.48,
         "Draw": 0.0,
-        "Brazil": 0.516
+        "Belgium": 0.52
       },
       "matchNum": 1
     },
     {
       "t1": "Germany",
-      "t2": "Spain",
-      "winner": "Spain",
+      "t2": "Uruguay",
+      "winner": "Germany",
       "probs": {
-        "Germany": 0.458,
+        "Germany": 0.537,
         "Draw": 0.0,
-        "Spain": 0.542
+        "Uruguay": 0.463
       },
       "matchNum": 2
     },
@@ -2734,63 +2734,63 @@ const knockoutStages = {
       "matchNum": 3
     },
     {
-      "t1": "Belgium",
-      "t2": "France",
-      "winner": "France",
+      "t1": "Spain",
+      "t2": "Portugal",
+      "winner": "Spain",
       "probs": {
-        "Belgium": 0.438,
+        "Spain": 0.501,
         "Draw": 0.0,
-        "France": 0.562
+        "Portugal": 0.499
       },
       "matchNum": 4
     }
   ],
   "SF": [
     {
-      "t1": "Brazil",
-      "t2": "Spain",
-      "winner": "Spain",
+      "t1": "Belgium",
+      "t2": "Germany",
+      "winner": "Germany",
       "probs": {
-        "Brazil": 0.452,
+        "Belgium": 0.498,
         "Draw": 0.0,
-        "Spain": 0.548
+        "Germany": 0.502
       },
       "matchNum": 1
     },
     {
       "t1": "Argentina",
-      "t2": "France",
+      "t2": "Spain",
       "winner": "Argentina",
       "probs": {
-        "Argentina": 0.524,
+        "Argentina": 0.541,
         "Draw": 0.0,
-        "France": 0.476
+        "Spain": 0.459
       },
       "matchNum": 2
     }
   ],
   "Third": [
     {
-      "t1": "Brazil",
-      "t2": "France",
-      "winner": "France",
+      "t1": "Belgium",
+      "t2": "Spain",
+      "winner": "Spain",
       "probs": {
-        "Brazil": 0.435,
+        "Belgium": 0.456,
         "Draw": 0.0,
-        "France": 0.435
+        "Spain": 0.456
       },
       "matchNum": 1
     }
   ],
   "Final": [
     {
-      "t1": "Spain",
+      "t1": "Germany",
       "t2": "Argentina",
       "winner": "Argentina",
       "probs": {
-        "Spain": 0.459,
+        "Germany": 0.417,
         "Draw": 0.0,
-        "Argentina": 0.541
+        "Argentina": 0.583
       },
       "matchNum": 1
     }
@@ -2803,12 +2803,12 @@ const podium = {
     "flag": "\ud83c\udde6\ud83c\uddf7"
   },
   "runnerUp": {
-    "name": "Spain",
-    "flag": "\ud83c\uddea\ud83c\uddf8"
+    "name": "Germany",
+    "flag": "\ud83c\udde9\ud83c\uddea"
   },
   "third": {
-    "name": "France",
-    "flag": "\ud83c\uddeb\ud83c\uddf7"
+    "name": "Spain",
+    "flag": "\ud83c\uddea\ud83c\uddf8"
   }
 };
 
