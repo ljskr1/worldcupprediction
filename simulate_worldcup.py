@@ -474,6 +474,8 @@ for idx, p in enumerate(mc_results[:15]):
 md = []
 md.append("# FIFA World Cup 2026 Prediction Report (Enhanced Dixon-Coles Model)")
 md.append("")
+md.append("> **Disclaimer:** This project was created solely for educational purposes and personal enjoyment. All predictions, probabilities, and simulated tournament outcomes are for fun and should not be used for commercial forecasting or sports betting.")
+md.append("")
 md.append("This report uses an **Enhanced Dixon-Coles Poisson Model** with:")
 md.append("- FIFA Rankings as ELO baseline")
 md.append("- Recent form weighting (last 10 matches)")

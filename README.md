@@ -161,6 +161,11 @@ python3 -m http.server 8080
 - **Knockout resolution**: Higher-probability team advances (no penalty simulation in MC)
 - **Third-place selection**: Top 8 third-place teams by (pts, GD, GF)
 
+## Disclaimer
+
+This project was created solely for educational purposes and personal enjoyment. All tournament predictions, match outcome probabilities, and statistical results are simulated for fun and should not be used for commercial forecasting, real-world decision-making, or sports betting.
+
 ## License
 
 MIT
+
