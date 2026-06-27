@@ -1390,29 +1390,29 @@ const groupStandings = {
       "status": "Advanced (Winner)"
     },
     {
+      "name": "Algeria",
+      "flag": "\ud83c\udde9\ud83c\uddff",
+      "pld": 3,
+      "w": 2,
+      "d": 0,
+      "l": 1,
+      "gf": 3,
+      "ga": 4,
+      "gd": -1,
+      "pts": 6,
+      "status": "Advanced (Runner-up)"
+    },
+    {
       "name": "Austria",
       "flag": "\ud83c\udde6\ud83c\uddf9",
       "pld": 3,
       "w": 1,
-      "d": 1,
-      "l": 1,
-      "gf": 4,
-      "ga": 4,
-      "gd": 0,
-      "pts": 4,
-      "status": "Advanced (Runner-up)"
-    },
-    {
-      "name": "Algeria",
-      "flag": "\ud83c\udde9\ud83c\uddff",
-      "pld": 3,
-      "w": 1,
-      "d": 1,
-      "l": 1,
+      "d": 0,
+      "l": 2,
       "gf": 3,
-      "ga": 5,
-      "gd": -2,
-      "pts": 4,
+      "ga": 4,
+      "gd": -1,
+      "pts": 3,
       "status": "Advanced (Best 3rd)"
     },
     {
@@ -1463,9 +1463,9 @@ const groupStandings = {
       "w": 1,
       "d": 0,
       "l": 2,
-      "gf": 3,
+      "gf": 2,
       "ga": 8,
-      "gd": -5,
+      "gd": -6,
       "pts": 3,
       "status": "Eliminated"
     },
@@ -1477,8 +1477,8 @@ const groupStandings = {
       "d": 1,
       "l": 2,
       "gf": 1,
-      "ga": 4,
-      "gd": -3,
+      "ga": 3,
+      "gd": -2,
       "pts": 1,
       "status": "Eliminated"
     }
@@ -1491,9 +1491,9 @@ const groupStandings = {
       "w": 2,
       "d": 1,
       "l": 0,
-      "gf": 6,
+      "gf": 5,
       "ga": 2,
-      "gd": 4,
+      "gd": 3,
       "pts": 7,
       "status": "Advanced (Winner)"
     },
@@ -1531,8 +1531,8 @@ const groupStandings = {
       "d": 0,
       "l": 3,
       "gf": 0,
-      "ga": 4,
-      "gd": -4,
+      "ga": 3,
+      "gd": -3,
       "pts": 0,
       "status": "Eliminated"
     }
@@ -2246,8 +2246,8 @@ const groupMatches = {
     {
       "t1": "Algeria",
       "t2": "Austria",
-      "score": "Draw",
-      "outcome": "Draw",
+      "score": "Algeria Win",
+      "outcome": "Algeria",
       "actual": false,
       "probs": {
         "Algeria": 0.349,
@@ -2478,45 +2478,45 @@ const knockoutStages = {
     },
     {
       "t1": "Germany",
-      "t2": "Algeria",
+      "t2": "Paraguay",
       "winner": "Germany",
       "probs": {
-        "Germany": 0.614,
+        "Germany": 0.715,
         "Draw": 0.0,
-        "Algeria": 0.386
+        "Paraguay": 0.285
       },
       "matchNum": 5
     },
     {
       "t1": "Netherlands",
-      "t2": "Paraguay",
+      "t2": "Senegal",
       "winner": "Netherlands",
       "probs": {
-        "Netherlands": 0.716,
+        "Netherlands": 0.561,
         "Draw": 0.0,
-        "Paraguay": 0.284
+        "Senegal": 0.439
       },
       "matchNum": 6
     },
     {
       "t1": "Belgium",
-      "t2": "Senegal",
-      "winner": "Belgium",
+      "t2": "Iran",
+      "winner": "Iran",
       "probs": {
-        "Belgium": 0.56,
+        "Belgium": 0.0,
         "Draw": 0.0,
-        "Senegal": 0.44
+        "Iran": 1.0
       },
       "matchNum": 7
     },
     {
       "t1": "Spain",
-      "t2": "Iran",
+      "t2": "Austria",
       "winner": "Spain",
       "probs": {
-        "Spain": 0.644,
+        "Spain": 0.647,
         "Draw": 0.0,
-        "Iran": 0.356
+        "Austria": 0.353
       },
       "matchNum": 8
     },
@@ -2588,12 +2588,12 @@ const knockoutStages = {
     },
     {
       "t1": "Norway",
-      "t2": "Austria",
-      "winner": "Austria",
+      "t2": "Algeria",
+      "winner": "Algeria",
       "probs": {
-        "Norway": 0.459,
+        "Norway": 0.465,
         "Draw": 0.0,
-        "Austria": 0.541
+        "Algeria": 0.535
       },
       "matchNum": 15
     },
@@ -2644,13 +2644,13 @@ const knockoutStages = {
       "matchNum": 3
     },
     {
-      "t1": "Belgium",
+      "t1": "Iran",
       "t2": "Spain",
       "winner": "Spain",
       "probs": {
-        "Belgium": 0.456,
+        "Iran": 0.356,
         "Draw": 0.0,
-        "Spain": 0.544
+        "Spain": 0.644
       },
       "matchNum": 4
     },
@@ -2688,13 +2688,13 @@ const knockoutStages = {
       "matchNum": 7
     },
     {
-      "t1": "Austria",
+      "t1": "Algeria",
       "t2": "Portugal",
       "winner": "Portugal",
       "probs": {
-        "Austria": 0.354,
+        "Algeria": 0.346,
         "Draw": 0.0,
-        "Portugal": 0.646
+        "Portugal": 0.654
       },
       "matchNum": 8
     }
