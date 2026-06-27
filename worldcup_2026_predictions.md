@@ -13,26 +13,26 @@ This report uses an **Enhanced Dixon-Coles Poisson Model** with:
 ## 📊 Monte Carlo Simulation Results (10,000 Runs)
 | Pos | Team | Champion % | Reach Final % | Reach Semis % | Qualify % |
 |---|---|---|---|---|---|
-| 1 | 🇦🇷 Argentina | **9.7%** | 15.6% | 24.2% | 100.0% |
-| 2 | 🇫🇷 France | **9.0%** | 15.3% | 24.7% | 100.0% |
-| 3 | 🇵🇹 Portugal | **7.2%** | 12.6% | 22.8% | 100.0% |
-| 4 | 🇪🇸 Spain | **6.8%** | 12.6% | 20.9% | 100.0% |
-| 5 | 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England | **6.5%** | 11.3% | 19.8% | 100.0% |
-| 6 | 🇧🇷 Brazil | **6.1%** | 12.5% | 24.6% | 100.0% |
-| 7 | 🇳🇱 Netherlands | **5.5%** | 10.5% | 18.8% | 100.0% |
-| 8 | 🇩🇪 Germany | **5.4%** | 10.7% | 18.8% | 100.0% |
-| 9 | 🇲🇽 Mexico | **4.4%** | 9.2% | 18.7% | 100.0% |
-| 10 | 🇧🇪 Belgium | **4.3%** | 8.7% | 15.8% | 100.0% |
-| 11 | 🇺🇸 United States | **4.2%** | 9.3% | 19.6% | 100.0% |
-| 12 | 🇲🇦 Morocco | **4.0%** | 7.5% | 13.7% | 100.0% |
-| 13 | 🇨🇴 Colombia | **3.6%** | 7.1% | 14.3% | 100.0% |
-| 14 | 🇯🇵 Japan | **3.4%** | 7.2% | 16.9% | 100.0% |
-| 15 | 🇨🇭 Switzerland | **2.5%** | 5.9% | 12.9% | 100.0% |
-| 16 | 🇨🇮 Côte d'Ivoire | **2.1%** | 4.6% | 11.6% | 100.0% |
-| 17 | 🇸🇳 Senegal | **2.1%** | 4.6% | 9.4% | 100.0% |
-| 18 | 🇭🇷 Croatia | **1.9%** | 4.7% | 10.8% | 85.0% |
-| 19 | 🇪🇬 Egypt | **1.7%** | 4.2% | 12.6% | 100.0% |
-| 20 | 🇪🇨 Ecuador | **1.5%** | 3.8% | 9.5% | 100.0% |
+| 1 | 🇦🇷 Argentina | **10.6%** | 16.6% | 24.9% | 100.0% |
+| 2 | 🇫🇷 France | **9.1%** | 15.4% | 24.8% | 100.0% |
+| 3 | 🇪🇸 Spain | **7.0%** | 12.9% | 21.1% | 100.0% |
+| 4 | 🇵🇹 Portugal | **6.5%** | 11.3% | 20.7% | 100.0% |
+| 5 | 🇧🇷 Brazil | **6.0%** | 13.1% | 25.3% | 100.0% |
+| 6 | 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England | **5.9%** | 10.5% | 17.4% | 100.0% |
+| 7 | 🇩🇪 Germany | **5.9%** | 11.5% | 20.0% | 100.0% |
+| 8 | 🇳🇱 Netherlands | **5.3%** | 10.2% | 18.3% | 100.0% |
+| 9 | 🇲🇽 Mexico | **4.7%** | 9.6% | 19.5% | 100.0% |
+| 10 | 🇺🇸 United States | **4.5%** | 9.7% | 21.3% | 100.0% |
+| 11 | 🇧🇪 Belgium | **4.2%** | 8.8% | 15.9% | 100.0% |
+| 12 | 🇲🇦 Morocco | **3.8%** | 7.4% | 12.6% | 100.0% |
+| 13 | 🇯🇵 Japan | **3.5%** | 7.4% | 18.0% | 100.0% |
+| 14 | 🇨🇴 Colombia | **3.3%** | 6.4% | 13.7% | 100.0% |
+| 15 | 🇭🇷 Croatia | **3.1%** | 6.3% | 14.5% | 100.0% |
+| 16 | 🇨🇭 Switzerland | **2.4%** | 5.8% | 13.1% | 100.0% |
+| 17 | 🇸🇳 Senegal | **2.2%** | 5.0% | 10.0% | 100.0% |
+| 18 | 🇨🇮 Côte d'Ivoire | **1.7%** | 3.9% | 11.3% | 100.0% |
+| 19 | 🇦🇹 Austria | **1.5%** | 3.4% | 8.5% | 80.0% |
+| 20 | 🇪🇬 Egypt | **1.5%** | 4.2% | 12.8% | 100.0% |
 
 ## ⚽ Group Stage Results & Remaining Fixtures
 
@@ -203,7 +203,7 @@ This report uses an **Enhanced Dixon-Coles Poisson Model** with:
 |---|---|---|---|
 | 🇦🇷 Argentina vs 🇩🇿 Algeria | **3-0** ✓ | **Argentina Win** | Argentina: 52.9%, Draw: 26.1%, Algeria: 21.0% |
 | 🇦🇷 Argentina vs 🇦🇹 Austria | **2-0** ✓ | **Argentina Win** | Argentina: 51.9%, Draw: 26.6%, Austria: 21.4% |
-| 🇦🇷 Argentina vs 🇯🇴 Jordan | Argentina Win | **Argentina Win** | Argentina: 69.7%, Draw: 19.8%, Jordan: 10.5% |
+| 🇦🇷 Argentina vs 🇯🇴 Jordan | Draw | Draw | Argentina: 69.7%, Draw: 19.8%, Jordan: 10.5% |
 | 🇩🇿 Algeria vs 🇦🇹 Austria | Draw | Draw | Algeria: 34.9%, Draw: 29.2%, Austria: 36.0% |
 | 🇩🇿 Algeria vs 🇯🇴 Jordan | **2-1** ✓ | **Algeria Win** | Algeria: 52.7%, Draw: 26.4%, Jordan: 20.9% |
 | 🇦🇹 Austria vs 🇯🇴 Jordan | **3-1** ✓ | **Austria Win** | Austria: 52.9%, Draw: 26.6%, Jordan: 20.5% |
@@ -211,10 +211,10 @@ This report uses an **Enhanced Dixon-Coles Poisson Model** with:
 **Current Standings:**
 | Pos | Team | Pld | W | D | L | GF | GA | GD | Pts |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | 🇦🇷 Argentina ✅ | 3 | 3 | 0 | 0 | 6 | 0 | +6 | **9** |
+| 1 | 🇦🇷 Argentina ✅ | 3 | 2 | 1 | 0 | 5 | 0 | +5 | **7** |
 | 2 | 🇦🇹 Austria ✅ | 3 | 1 | 1 | 1 | 4 | 4 | +0 | **4** |
 | 3 | 🇩🇿 Algeria ✅ | 3 | 1 | 1 | 1 | 3 | 5 | -2 | **4** |
-| 4 | 🇯🇴 Jordan ❌ | 3 | 0 | 0 | 3 | 2 | 6 | -4 | **0** |
+| 4 | 🇯🇴 Jordan ❌ | 3 | 0 | 1 | 2 | 2 | 5 | -3 | **1** |
 
 ### Group K
 | Match | Score | Outcome | Model Probabilities |
@@ -224,33 +224,33 @@ This report uses an **Enhanced Dixon-Coles Poisson Model** with:
 | 🇵🇹 Portugal vs 🇺🇿 Uzbekistan | **5-0** ✓ | **Portugal Win** | Portugal: 63.0%, Draw: 22.8%, Uzbekistan: 14.1% |
 | 🇨🇴 Colombia vs 🇨🇩 Congo DR | **1-0** ✓ | **Colombia Win** | Colombia: 56.5%, Draw: 25.4%, Congo DR: 18.2% |
 | 🇨🇴 Colombia vs 🇺🇿 Uzbekistan | **3-1** ✓ | **Colombia Win** | Colombia: 57.2%, Draw: 25.1%, Uzbekistan: 17.7% |
-| 🇨🇩 Congo DR vs 🇺🇿 Uzbekistan | Uzbekistan Win | **Uzbekistan Win** | Congo DR: 36.0%, Draw: 29.2%, Uzbekistan: 34.8% |
+| 🇨🇩 Congo DR vs 🇺🇿 Uzbekistan | Draw | Draw | Congo DR: 36.0%, Draw: 29.2%, Uzbekistan: 34.8% |
 
 **Current Standings:**
 | Pos | Team | Pld | W | D | L | GF | GA | GD | Pts |
 |---|---|---|---|---|---|---|---|---|---|
 | 1 | 🇵🇹 Portugal ✅ | 3 | 2 | 1 | 0 | 7 | 1 | +6 | **7** |
 | 2 | 🇨🇴 Colombia ✅ | 3 | 2 | 0 | 1 | 4 | 2 | +2 | **6** |
-| 3 | 🇺🇿 Uzbekistan ⏳ | 3 | 1 | 0 | 2 | 2 | 8 | -6 | **3** |
-| 4 | 🇨🇩 Congo DR ❌ | 3 | 0 | 1 | 2 | 1 | 3 | -2 | **1** |
+| 3 | 🇨🇩 Congo DR ⏳ | 3 | 0 | 2 | 1 | 3 | 4 | -1 | **2** |
+| 4 | 🇺🇿 Uzbekistan ❌ | 3 | 0 | 1 | 2 | 3 | 10 | -7 | **1** |
 
 ### Group L
 | Match | Score | Outcome | Model Probabilities |
 |---|---|---|---|
 | 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England vs 🇭🇷 Croatia | **4-2** ✓ | **England Win** | England: 42.5%, Draw: 28.9%, Croatia: 28.6% |
 | 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England vs 🇬🇭 Ghana | **0-0** ✓ | Draw | England: 63.4%, Draw: 22.6%, Ghana: 14.0% |
-| 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England vs 🇵🇦 Panama | England Win | **England Win** | England: 56.1%, Draw: 25.4%, Panama: 18.5% |
-| 🇭🇷 Croatia vs 🇬🇭 Ghana | Draw | Draw | Croatia: 55.3%, Draw: 25.9%, Ghana: 18.8% |
+| 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England vs 🇵🇦 Panama | **2-0** ✓ | **England Win** | England: 56.1%, Draw: 25.4%, Panama: 18.5% |
+| 🇭🇷 Croatia vs 🇬🇭 Ghana | **2-1** ✓ | **Croatia Win** | Croatia: 55.3%, Draw: 25.9%, Ghana: 18.8% |
 | 🇭🇷 Croatia vs 🇵🇦 Panama | **1-0** ✓ | **Croatia Win** | Croatia: 48.0%, Draw: 28.0%, Panama: 24.0% |
 | 🇬🇭 Ghana vs 🇵🇦 Panama | **1-0** ✓ | **Ghana Win** | Ghana: 29.0%, Draw: 28.6%, Panama: 42.4% |
 
 **Current Standings:**
 | Pos | Team | Pld | W | D | L | GF | GA | GD | Pts |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England ✅ | 3 | 2 | 1 | 0 | 5 | 2 | +3 | **7** |
-| 2 | 🇬🇭 Ghana ✅ | 3 | 1 | 2 | 0 | 1 | 0 | +1 | **5** |
-| 3 | 🇭🇷 Croatia ✅ | 3 | 1 | 1 | 1 | 3 | 4 | -1 | **4** |
-| 4 | 🇵🇦 Panama ❌ | 3 | 0 | 0 | 3 | 0 | 3 | -3 | **0** |
+| 1 | 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England ✅ | 3 | 2 | 1 | 0 | 6 | 2 | +4 | **7** |
+| 2 | 🇭🇷 Croatia ✅ | 3 | 2 | 0 | 1 | 5 | 5 | +0 | **6** |
+| 3 | 🇬🇭 Ghana ✅ | 3 | 1 | 1 | 1 | 2 | 2 | +0 | **4** |
+| 4 | 🇵🇦 Panama ❌ | 3 | 0 | 0 | 3 | 0 | 4 | -4 | **0** |
 
 ## 🏆 Knockout Stage Predictions
 
@@ -259,8 +259,8 @@ This report uses an **Enhanced Dixon-Coles Poisson Model** with:
 |---|---|---|---|
 | Match 1 | 🇲🇽 Mexico vs 🇸🇪 Sweden | **🇲🇽 Mexico** | 62.1% |
 | Match 2 | 🇨🇭 Switzerland vs 🇪🇨 Ecuador | **🇨🇭 Switzerland** | 54.4% |
-| Match 3 | 🇧🇷 Brazil vs 🇧🇦 Bosnia and Herzegovina | **🇧🇷 Brazil** | 77.1% |
-| Match 4 | 🇺🇸 United States vs 🇭🇷 Croatia | **🇺🇸 United States** | 51.1% |
+| Match 3 | 🇧🇷 Brazil vs 🇬🇭 Ghana | **🇧🇷 Brazil** | 75.9% |
+| Match 4 | 🇺🇸 United States vs 🇧🇦 Bosnia and Herzegovina | **🇺🇸 United States** | 74.6% |
 | Match 5 | 🇩🇪 Germany vs 🇩🇿 Algeria | **🇩🇪 Germany** | 61.4% |
 | Match 6 | 🇳🇱 Netherlands vs 🇵🇾 Paraguay | **🇳🇱 Netherlands** | 71.6% |
 | Match 7 | 🇧🇪 Belgium vs 🇸🇳 Senegal | **🇧🇪 Belgium** | 56.0% |
@@ -272,7 +272,7 @@ This report uses an **Enhanced Dixon-Coles Poisson Model** with:
 | Match 13 | 🇨🇮 Côte d'Ivoire vs 🇯🇵 Japan | **🇯🇵 Japan** | 55.3% |
 | Match 14 | 🇪🇬 Egypt vs 🇨🇻 Cabo Verde | **🇪🇬 Egypt** | 70.0% |
 | Match 15 | 🇳🇴 Norway vs 🇦🇹 Austria | **🇦🇹 Austria** | 54.1% |
-| Match 16 | 🇨🇴 Colombia vs 🇬🇭 Ghana | **🇨🇴 Colombia** | 74.2% |
+| Match 16 | 🇨🇴 Colombia vs 🇭🇷 Croatia | **🇨🇴 Colombia** | 52.3% |
 
 ### Round of 16
 | Match | Matchup | Predicted Winner | Win Probability |
