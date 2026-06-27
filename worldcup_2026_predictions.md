@@ -51,7 +51,7 @@ This report uses an **Enhanced Dixon-Coles Poisson Model** with:
 |---|---|---|---|---|---|---|---|---|---|
 | 1 | 🇲🇽 Mexico ✅ | 3 | 3 | 0 | 0 | 6 | 0 | +6 | **9** |
 | 2 | 🇿🇦 South Africa ✅ | 3 | 1 | 1 | 1 | 2 | 3 | -1 | **4** |
-| 3 | 🇰🇷 South Korea ✅ | 3 | 1 | 0 | 2 | 2 | 3 | -1 | **3** |
+| 3 | 🇰🇷 South Korea ⏳ | 3 | 1 | 0 | 2 | 2 | 3 | -1 | **3** |
 | 4 | 🇨🇿 Czechia ❌ | 3 | 0 | 1 | 2 | 2 | 6 | -4 | **1** |
 
 ### Group B
@@ -211,28 +211,28 @@ This report uses an **Enhanced Dixon-Coles Poisson Model** with:
 **Current Standings:**
 | Pos | Team | Pld | W | D | L | GF | GA | GD | Pts |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | 🇦🇷 Argentina ✅ | 3 | 3 | 0 | 0 | 6 | 0 | +6 | **9** |
+| 1 | 🇦🇷 Argentina ✅ | 3 | 3 | 0 | 0 | 7 | 0 | +7 | **9** |
 | 2 | 🇩🇿 Algeria ✅ | 3 | 2 | 0 | 1 | 4 | 4 | +0 | **6** |
 | 3 | 🇦🇹 Austria ⏳ | 3 | 1 | 0 | 2 | 3 | 5 | -2 | **3** |
-| 4 | 🇯🇴 Jordan ❌ | 3 | 0 | 0 | 3 | 2 | 6 | -4 | **0** |
+| 4 | 🇯🇴 Jordan ❌ | 3 | 0 | 0 | 3 | 2 | 7 | -5 | **0** |
 
 ### Group K
 | Match | Score | Outcome | Model Probabilities |
 |---|---|---|---|
-| 🇵🇹 Portugal vs 🇨🇴 Colombia | Colombia Win | **Colombia Win** | Portugal: 41.1%, Draw: 28.7%, Colombia: 30.2% |
+| 🇵🇹 Portugal vs 🇨🇴 Colombia | Portugal Win | **Portugal Win** | Portugal: 41.1%, Draw: 28.7%, Colombia: 30.2% |
 | 🇵🇹 Portugal vs 🇨🇩 Congo DR | **1-1** ✓ | Draw | Portugal: 62.4%, Draw: 23.1%, Congo DR: 14.5% |
 | 🇵🇹 Portugal vs 🇺🇿 Uzbekistan | **5-0** ✓ | **Portugal Win** | Portugal: 63.0%, Draw: 22.8%, Uzbekistan: 14.1% |
 | 🇨🇴 Colombia vs 🇨🇩 Congo DR | **1-0** ✓ | **Colombia Win** | Colombia: 56.5%, Draw: 25.4%, Congo DR: 18.2% |
 | 🇨🇴 Colombia vs 🇺🇿 Uzbekistan | **3-1** ✓ | **Colombia Win** | Colombia: 57.2%, Draw: 25.1%, Uzbekistan: 17.7% |
-| 🇨🇩 Congo DR vs 🇺🇿 Uzbekistan | Uzbekistan Win | **Uzbekistan Win** | Congo DR: 36.0%, Draw: 29.2%, Uzbekistan: 34.8% |
+| 🇨🇩 Congo DR vs 🇺🇿 Uzbekistan | Congo DR Win | **Congo DR Win** | Congo DR: 36.0%, Draw: 29.2%, Uzbekistan: 34.8% |
 
 **Current Standings:**
 | Pos | Team | Pld | W | D | L | GF | GA | GD | Pts |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | 🇨🇴 Colombia ✅ | 3 | 3 | 0 | 0 | 5 | 1 | +4 | **9** |
-| 2 | 🇵🇹 Portugal ✅ | 3 | 1 | 1 | 1 | 6 | 2 | +4 | **4** |
-| 3 | 🇺🇿 Uzbekistan ⏳ | 3 | 1 | 0 | 2 | 2 | 8 | -6 | **3** |
-| 4 | 🇨🇩 Congo DR ❌ | 3 | 0 | 1 | 2 | 1 | 3 | -2 | **1** |
+| 1 | 🇵🇹 Portugal ✅ | 3 | 2 | 1 | 0 | 7 | 1 | +6 | **7** |
+| 2 | 🇨🇴 Colombia ✅ | 3 | 2 | 0 | 1 | 4 | 2 | +2 | **6** |
+| 3 | 🇨🇩 Congo DR ✅ | 3 | 1 | 1 | 1 | 2 | 2 | +0 | **4** |
+| 4 | 🇺🇿 Uzbekistan ❌ | 3 | 0 | 0 | 3 | 1 | 9 | -8 | **0** |
 
 ### Group L
 | Match | Score | Outcome | Model Probabilities |
@@ -248,9 +248,9 @@ This report uses an **Enhanced Dixon-Coles Poisson Model** with:
 | Pos | Team | Pld | W | D | L | GF | GA | GD | Pts |
 |---|---|---|---|---|---|---|---|---|---|
 | 1 | 🇭🇷 Croatia ✅ | 3 | 2 | 0 | 1 | 5 | 4 | +1 | **6** |
-| 2 | 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England ✅ | 3 | 1 | 2 | 0 | 6 | 4 | +2 | **5** |
+| 2 | 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England ✅ | 3 | 1 | 2 | 0 | 5 | 3 | +2 | **5** |
 | 3 | 🇬🇭 Ghana ✅ | 3 | 1 | 1 | 1 | 1 | 2 | -1 | **4** |
-| 4 | 🇵🇦 Panama ❌ | 3 | 0 | 1 | 2 | 2 | 4 | -2 | **1** |
+| 4 | 🇵🇦 Panama ❌ | 3 | 0 | 1 | 2 | 1 | 3 | -2 | **1** |
 
 ## 🏆 Knockout Stage Predictions
 
@@ -259,20 +259,20 @@ This report uses an **Enhanced Dixon-Coles Poisson Model** with:
 |---|---|---|---|
 | Match 1 | 🇲🇽 Mexico vs 🇸🇪 Sweden | **🇲🇽 Mexico** | 62.1% |
 | Match 2 | 🇨🇭 Switzerland vs 🇪🇨 Ecuador | **🇨🇭 Switzerland** | 54.4% |
-| Match 3 | 🇧🇷 Brazil vs 🇧🇦 Bosnia and Herzegovina | **🇧🇷 Brazil** | 77.1% |
-| Match 4 | 🇺🇸 United States vs 🇬🇭 Ghana | **🇺🇸 United States** | 73.4% |
-| Match 5 | 🇩🇪 Germany vs 🇵🇾 Paraguay | **🇩🇪 Germany** | 71.5% |
-| Match 6 | 🇳🇱 Netherlands vs 🇸🇳 Senegal | **🇳🇱 Netherlands** | 56.1% |
-| Match 7 | 🇧🇪 Belgium vs 🇮🇷 Iran | **🇮🇷 Iran** | 100.0% |
-| Match 8 | 🇪🇸 Spain vs 🇰🇷 South Korea | **🇪🇸 Spain** | 63.4% |
+| Match 3 | 🇧🇷 Brazil vs 🇨🇩 Congo DR | **🇧🇷 Brazil** | 74.8% |
+| Match 4 | 🇺🇸 United States vs 🇧🇦 Bosnia and Herzegovina | **🇺🇸 United States** | 74.6% |
+| Match 5 | 🇩🇪 Germany vs 🇬🇭 Ghana | **🇩🇪 Germany** | 76.3% |
+| Match 6 | 🇳🇱 Netherlands vs 🇵🇾 Paraguay | **🇳🇱 Netherlands** | 71.6% |
+| Match 7 | 🇧🇪 Belgium vs 🇸🇳 Senegal | **🇧🇪 Belgium** | 56.0% |
+| Match 8 | 🇪🇸 Spain vs 🇮🇷 Iran | **🇪🇸 Spain** | 64.4% |
 | Match 9 | 🇫🇷 France vs 🇿🇦 South Africa | **🇫🇷 France** | 80.9% |
 | Match 10 | 🇦🇷 Argentina vs 🇨🇦 Canada | **🇦🇷 Argentina** | 71.5% |
-| Match 11 | 🇨🇴 Colombia vs 🇲🇦 Morocco | **🇲🇦 Morocco** | 53.7% |
+| Match 11 | 🇵🇹 Portugal vs 🇲🇦 Morocco | **🇵🇹 Portugal** | 53.0% |
 | Match 12 | 🇭🇷 Croatia vs 🇦🇺 Australia | **🇭🇷 Croatia** | 58.0% |
 | Match 13 | 🇨🇮 Côte d'Ivoire vs 🇯🇵 Japan | **🇯🇵 Japan** | 55.3% |
 | Match 14 | 🇪🇬 Egypt vs 🇨🇻 Cabo Verde | **🇪🇬 Egypt** | 70.0% |
 | Match 15 | 🇳🇴 Norway vs 🇩🇿 Algeria | **🇩🇿 Algeria** | 53.5% |
-| Match 16 | 🇵🇹 Portugal vs 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England | **🇵🇹 Portugal** | 50.4% |
+| Match 16 | 🇨🇴 Colombia vs 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England | **🏴󠁧󠁢󠁥󠁮󠁧󠁿 England** | 56.3% |
 
 ### Round of 16
 | Match | Matchup | Predicted Winner | Win Probability |
@@ -280,30 +280,30 @@ This report uses an **Enhanced Dixon-Coles Poisson Model** with:
 | Match 1 | 🇲🇽 Mexico vs 🇨🇭 Switzerland | **🇲🇽 Mexico** | 54.7% |
 | Match 2 | 🇧🇷 Brazil vs 🇺🇸 United States | **🇧🇷 Brazil** | 53.3% |
 | Match 3 | 🇩🇪 Germany vs 🇳🇱 Netherlands | **🇩🇪 Germany** | 50.1% |
-| Match 4 | 🇮🇷 Iran vs 🇪🇸 Spain | **🇪🇸 Spain** | 64.4% |
+| Match 4 | 🇧🇪 Belgium vs 🇪🇸 Spain | **🇪🇸 Spain** | 54.4% |
 | Match 5 | 🇫🇷 France vs 🇦🇷 Argentina | **🇦🇷 Argentina** | 52.4% |
-| Match 6 | 🇲🇦 Morocco vs 🇭🇷 Croatia | **🇲🇦 Morocco** | 55.9% |
+| Match 6 | 🇵🇹 Portugal vs 🇭🇷 Croatia | **🇵🇹 Portugal** | 58.9% |
 | Match 7 | 🇯🇵 Japan vs 🇪🇬 Egypt | **🇯🇵 Japan** | 58.4% |
-| Match 8 | 🇩🇿 Algeria vs 🇵🇹 Portugal | **🇵🇹 Portugal** | 65.4% |
+| Match 8 | 🇩🇿 Algeria vs 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England | **🏴󠁧󠁢󠁥󠁮󠁧󠁿 England** | 65.0% |
 
 ### Quarterfinals
 | Match | Matchup | Predicted Winner | Win Probability |
 |---|---|---|---|
 | Match 1 | 🇲🇽 Mexico vs 🇧🇷 Brazil | **🇧🇷 Brazil** | 51.6% |
 | Match 2 | 🇩🇪 Germany vs 🇪🇸 Spain | **🇪🇸 Spain** | 54.2% |
-| Match 3 | 🇦🇷 Argentina vs 🇲🇦 Morocco | **🇦🇷 Argentina** | 57.2% |
-| Match 4 | 🇯🇵 Japan vs 🇵🇹 Portugal | **🇵🇹 Portugal** | 59.6% |
+| Match 3 | 🇦🇷 Argentina vs 🇵🇹 Portugal | **🇦🇷 Argentina** | 54.2% |
+| Match 4 | 🇯🇵 Japan vs 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England | **🏴󠁧󠁢󠁥󠁮󠁧󠁿 England** | 59.3% |
 
 ### Semifinals
 | Match | Matchup | Predicted Winner | Win Probability |
 |---|---|---|---|
 | Match 1 | 🇧🇷 Brazil vs 🇪🇸 Spain | **🇪🇸 Spain** | 54.8% |
-| Match 2 | 🇦🇷 Argentina vs 🇵🇹 Portugal | **🇦🇷 Argentina** | 54.2% |
+| Match 2 | 🇦🇷 Argentina vs 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England | **🇦🇷 Argentina** | 54.6% |
 
 ### Third Place Playoff
 | Match | Matchup | Predicted Winner | Win Probability |
 |---|---|---|---|
-| Match 1 | 🇧🇷 Brazil vs 🇵🇹 Portugal | **🇵🇹 Portugal** | 54.7% |
+| Match 1 | 🇧🇷 Brazil vs 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England | **🏴󠁧󠁢󠁥󠁮󠁧󠁿 England** | 54.3% |
 
 ### Final
 | Match | Matchup | Predicted Winner | Win Probability |
@@ -313,4 +313,4 @@ This report uses an **Enhanced Dixon-Coles Poisson Model** with:
 ## 🎖️ Final Tournament Podium
 1. 🥇 **🇦🇷 Argentina** (World Cup Champion)
 2. 🥈 **🇪🇸 Spain** (Runner-up)
-3. 🥉 **🇵🇹 Portugal** (Third Place)
+3. 🥉 **🏴󠁧󠁢󠁥󠁮󠁧󠁿 England** (Third Place)
