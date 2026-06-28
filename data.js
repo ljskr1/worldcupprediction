@@ -3386,16 +3386,16 @@ const monteCarloResults = [
 ];
 
 const modelValidation = {
-  "totalCount": 72,
+  "totalCount": 73,
   "baseline": {
-    "accuracy": 0.6111,
-    "brierScore": 0.5423,
-    "correctCount": 44
+    "accuracy": 0.6164,
+    "brierScore": 0.5403,
+    "correctCount": 45
   },
   "live": {
-    "accuracy": 0.6111,
-    "brierScore": 0.5424,
-    "correctCount": 44
+    "accuracy": 0.6164,
+    "brierScore": 0.5406,
+    "correctCount": 45
   },
   "matches": [
     {
@@ -5195,6 +5195,31 @@ const modelValidation = {
           "Croatia": 0.543,
           "Draw": 0.262,
           "Ghana": 0.194
+        }
+      }
+    },
+    {
+      "t1": "South Africa",
+      "t2": "Canada",
+      "score": "0-1",
+      "actual": "Canada",
+      "date": "2026-06-28",
+      "baseline": {
+        "predicted": "Canada",
+        "correct": true,
+        "probs": {
+          "South Africa": 0.243,
+          "Draw": 0.27,
+          "Canada": 0.487
+        }
+      },
+      "live": {
+        "predicted": "Canada",
+        "correct": true,
+        "probs": {
+          "South Africa": 0.25,
+          "Draw": 0.272,
+          "Canada": 0.478
         }
       }
     }
