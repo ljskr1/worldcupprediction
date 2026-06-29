@@ -3386,15 +3386,15 @@ const monteCarloResults = [
 ];
 
 const modelValidation = {
-  "totalCount": 74,
+  "totalCount": 75,
   "baseline": {
-    "accuracy": 0.6216,
-    "brierScore": 0.5404,
+    "accuracy": 0.6133,
+    "brierScore": 0.545,
     "correctCount": 46
   },
   "live": {
-    "accuracy": 0.6216,
-    "brierScore": 0.5404,
+    "accuracy": 0.6133,
+    "brierScore": 0.5449,
     "correctCount": 46
   },
   "matches": [
@@ -5220,6 +5220,31 @@ const modelValidation = {
           "South Africa": 0.25,
           "Draw": 0.272,
           "Canada": 0.478
+        }
+      }
+    },
+    {
+      "t1": "Germany",
+      "t2": "Paraguay",
+      "score": "1-1",
+      "actual": "Draw",
+      "date": "2026-06-29",
+      "baseline": {
+        "predicted": "Germany",
+        "correct": false,
+        "probs": {
+          "Germany": 0.549,
+          "Draw": 0.259,
+          "Paraguay": 0.193
+        }
+      },
+      "live": {
+        "predicted": "Germany",
+        "correct": false,
+        "probs": {
+          "Germany": 0.546,
+          "Draw": 0.26,
+          "Paraguay": 0.195
         }
       }
     },
