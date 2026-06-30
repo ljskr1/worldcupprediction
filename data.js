@@ -3386,16 +3386,16 @@ const monteCarloResults = [
 ];
 
 const modelValidation = {
-  "totalCount": 77,
+  "totalCount": 78,
   "baseline": {
-    "accuracy": 0.5974,
-    "brierScore": 0.5496,
-    "correctCount": 46
+    "accuracy": 0.6026,
+    "brierScore": 0.5468,
+    "correctCount": 47
   },
   "live": {
-    "accuracy": 0.5974,
-    "brierScore": 0.5493,
-    "correctCount": 46
+    "accuracy": 0.6026,
+    "brierScore": 0.5463,
+    "correctCount": 47
   },
   "matches": [
     {
@@ -5295,6 +5295,31 @@ const modelValidation = {
           "Brazil": 0.409,
           "Draw": 0.293,
           "Japan": 0.298
+        }
+      }
+    },
+    {
+      "t1": "France",
+      "t2": "Sweden",
+      "score": "3-0",
+      "actual": "France",
+      "date": "2026-06-30",
+      "baseline": {
+        "predicted": "France",
+        "correct": true,
+        "probs": {
+          "France": 0.527,
+          "Draw": 0.265,
+          "Sweden": 0.207
+        }
+      },
+      "live": {
+        "predicted": "France",
+        "correct": true,
+        "probs": {
+          "France": 0.543,
+          "Draw": 0.26,
+          "Sweden": 0.196
         }
       }
     },
