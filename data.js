@@ -3386,15 +3386,15 @@ const monteCarloResults = [
 ];
 
 const modelValidation = {
-  "totalCount": 76,
+  "totalCount": 77,
   "baseline": {
-    "accuracy": 0.6053,
-    "brierScore": 0.5478,
+    "accuracy": 0.5974,
+    "brierScore": 0.5496,
     "correctCount": 46
   },
   "live": {
-    "accuracy": 0.6053,
-    "brierScore": 0.5477,
+    "accuracy": 0.5974,
+    "brierScore": 0.5493,
     "correctCount": 46
   },
   "matches": [
@@ -5295,6 +5295,31 @@ const modelValidation = {
           "Brazil": 0.409,
           "Draw": 0.293,
           "Japan": 0.298
+        }
+      }
+    },
+    {
+      "t1": "C\u00f4te d'Ivoire",
+      "t2": "Norway",
+      "score": "1-2",
+      "actual": "Norway",
+      "date": "2026-06-30",
+      "baseline": {
+        "predicted": "C\u00f4te d'Ivoire",
+        "correct": false,
+        "probs": {
+          "C\u00f4te d'Ivoire": 0.393,
+          "Draw": 0.279,
+          "Norway": 0.328
+        }
+      },
+      "live": {
+        "predicted": "C\u00f4te d'Ivoire",
+        "correct": false,
+        "probs": {
+          "C\u00f4te d'Ivoire": 0.388,
+          "Draw": 0.279,
+          "Norway": 0.333
         }
       }
     }
