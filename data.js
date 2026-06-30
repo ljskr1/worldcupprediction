@@ -3386,15 +3386,15 @@ const monteCarloResults = [
 ];
 
 const modelValidation = {
-  "totalCount": 75,
+  "totalCount": 76,
   "baseline": {
-    "accuracy": 0.6133,
-    "brierScore": 0.545,
+    "accuracy": 0.6053,
+    "brierScore": 0.5478,
     "correctCount": 46
   },
   "live": {
-    "accuracy": 0.6133,
-    "brierScore": 0.5449,
+    "accuracy": 0.6053,
+    "brierScore": 0.5477,
     "correctCount": 46
   },
   "matches": [
@@ -5245,6 +5245,31 @@ const modelValidation = {
           "Germany": 0.546,
           "Draw": 0.26,
           "Paraguay": 0.195
+        }
+      }
+    },
+    {
+      "t1": "Netherlands",
+      "t2": "Morocco",
+      "score": "1-1",
+      "actual": "Draw",
+      "date": "2026-06-29",
+      "baseline": {
+        "predicted": "Morocco",
+        "correct": false,
+        "probs": {
+          "Netherlands": 0.344,
+          "Draw": 0.291,
+          "Morocco": 0.364
+        }
+      },
+      "live": {
+        "predicted": "Morocco",
+        "correct": false,
+        "probs": {
+          "Netherlands": 0.347,
+          "Draw": 0.291,
+          "Morocco": 0.361
         }
       }
     },
