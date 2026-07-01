@@ -3386,16 +3386,16 @@ const monteCarloResults = [
 ];
 
 const modelValidation = {
-  "totalCount": 78,
+  "totalCount": 79,
   "baseline": {
-    "accuracy": 0.6026,
-    "brierScore": 0.5468,
-    "correctCount": 47
+    "accuracy": 0.6076,
+    "brierScore": 0.546,
+    "correctCount": 48
   },
   "live": {
-    "accuracy": 0.6026,
-    "brierScore": 0.5463,
-    "correctCount": 47
+    "accuracy": 0.6076,
+    "brierScore": 0.5451,
+    "correctCount": 48
   },
   "matches": [
     {
@@ -5345,6 +5345,31 @@ const modelValidation = {
           "C\u00f4te d'Ivoire": 0.388,
           "Draw": 0.279,
           "Norway": 0.333
+        }
+      }
+    },
+    {
+      "t1": "Mexico",
+      "t2": "Ecuador",
+      "score": "2-0",
+      "actual": "Mexico",
+      "date": "2026-06-30",
+      "baseline": {
+        "predicted": "Mexico",
+        "correct": true,
+        "probs": {
+          "Mexico": 0.434,
+          "Draw": 0.281,
+          "Ecuador": 0.285
+        }
+      },
+      "live": {
+        "predicted": "Mexico",
+        "correct": true,
+        "probs": {
+          "Mexico": 0.452,
+          "Draw": 0.279,
+          "Ecuador": 0.269
         }
       }
     }
