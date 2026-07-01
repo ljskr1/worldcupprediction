@@ -3386,15 +3386,15 @@ const monteCarloResults = [
 ];
 
 const modelValidation = {
-  "totalCount": 80,
+  "totalCount": 81,
   "baseline": {
-    "accuracy": 0.6125,
-    "brierScore": 0.5419,
+    "accuracy": 0.6049,
+    "brierScore": 0.5446,
     "correctCount": 49
   },
   "live": {
-    "accuracy": 0.6125,
-    "brierScore": 0.541,
+    "accuracy": 0.6049,
+    "brierScore": 0.5437,
     "correctCount": 49
   },
   "matches": [
@@ -5395,6 +5395,31 @@ const modelValidation = {
           "England": 0.623,
           "Draw": 0.232,
           "Congo DR": 0.146
+        }
+      }
+    },
+    {
+      "t1": "Belgium",
+      "t2": "Senegal",
+      "score": "2-2",
+      "actual": "Draw",
+      "date": "2026-07-01",
+      "baseline": {
+        "predicted": "Belgium",
+        "correct": false,
+        "probs": {
+          "Belgium": 0.403,
+          "Draw": 0.29,
+          "Senegal": 0.307
+        }
+      },
+      "live": {
+        "predicted": "Belgium",
+        "correct": false,
+        "probs": {
+          "Belgium": 0.409,
+          "Draw": 0.29,
+          "Senegal": 0.301
         }
       }
     }
