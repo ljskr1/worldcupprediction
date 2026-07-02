@@ -3386,16 +3386,16 @@ const monteCarloResults = [
 ];
 
 const modelValidation = {
-  "totalCount": 81,
+  "totalCount": 82,
   "baseline": {
-    "accuracy": 0.6049,
-    "brierScore": 0.5446,
-    "correctCount": 49
+    "accuracy": 0.6098,
+    "brierScore": 0.5412,
+    "correctCount": 50
   },
   "live": {
-    "accuracy": 0.6049,
-    "brierScore": 0.5437,
-    "correctCount": 49
+    "accuracy": 0.6098,
+    "brierScore": 0.5404,
+    "correctCount": 50
   },
   "matches": [
     {
@@ -5395,6 +5395,31 @@ const modelValidation = {
           "England": 0.623,
           "Draw": 0.232,
           "Congo DR": 0.146
+        }
+      }
+    },
+    {
+      "t1": "United States",
+      "t2": "Bosnia and Herzegovina",
+      "score": "2-0",
+      "actual": "United States",
+      "date": "2026-07-01",
+      "baseline": {
+        "predicted": "United States",
+        "correct": true,
+        "probs": {
+          "United States": 0.585,
+          "Draw": 0.243,
+          "Bosnia and Herzegovina": 0.172
+        }
+      },
+      "live": {
+        "predicted": "United States",
+        "correct": true,
+        "probs": {
+          "United States": 0.576,
+          "Draw": 0.247,
+          "Bosnia and Herzegovina": 0.178
         }
       }
     },
