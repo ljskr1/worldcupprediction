@@ -272,7 +272,7 @@ This report uses an **Enhanced Dixon-Coles Poisson Model** with:
 | Match 13 | 🇨🇮 Côte d'Ivoire vs 🇯🇵 Japan | **🇯🇵 Japan** | 55.3% |
 | Match 14 | 🇪🇬 Egypt vs 🇨🇻 Cabo Verde | **🇪🇬 Egypt** | 70.0% |
 | Match 15 | 🇳🇴 Norway vs 🇦🇹 Austria | **🇦🇹 Austria** | 54.1% |
-| Match 16 | 🇵🇹 Portugal vs 🇭🇷 Croatia | **🇵🇹 Portugal** | 58.9% |
+| Match 16 | 🇵🇹 Portugal vs 🇭🇷 Croatia | **🇵🇹 Portugal** | 100.0% |
 
 ### Round of 16
 | Match | Matchup | Predicted Winner | Win Probability |

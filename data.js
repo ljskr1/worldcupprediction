@@ -2602,9 +2602,9 @@ const knockoutStages = {
       "t2": "Croatia",
       "winner": "Portugal",
       "probs": {
-        "Portugal": 0.589,
+        "Portugal": 1.0,
         "Draw": 0.0,
-        "Croatia": 0.411
+        "Croatia": 0.0
       },
       "matchNum": 16
     }
@@ -3386,16 +3386,16 @@ const monteCarloResults = [
 ];
 
 const modelValidation = {
-  "totalCount": 83,
+  "totalCount": 84,
   "baseline": {
-    "accuracy": 0.6145,
-    "brierScore": 0.5395,
-    "correctCount": 51
+    "accuracy": 0.619,
+    "brierScore": 0.5389,
+    "correctCount": 52
   },
   "live": {
-    "accuracy": 0.6145,
-    "brierScore": 0.5386,
-    "correctCount": 51
+    "accuracy": 0.619,
+    "brierScore": 0.5384,
+    "correctCount": 52
   },
   "matches": [
     {
@@ -5445,6 +5445,31 @@ const modelValidation = {
           "Belgium": 0.409,
           "Draw": 0.29,
           "Senegal": 0.301
+        }
+      }
+    },
+    {
+      "t1": "Portugal",
+      "t2": "Croatia",
+      "score": "2-1",
+      "actual": "Portugal",
+      "date": "2026-07-02",
+      "baseline": {
+        "predicted": "Portugal",
+        "correct": true,
+        "probs": {
+          "Portugal": 0.428,
+          "Draw": 0.288,
+          "Croatia": 0.283
+        }
+      },
+      "live": {
+        "predicted": "Portugal",
+        "correct": true,
+        "probs": {
+          "Portugal": 0.41,
+          "Draw": 0.291,
+          "Croatia": 0.3
         }
       }
     },
