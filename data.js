@@ -3386,15 +3386,15 @@ const monteCarloResults = [
 ];
 
 const modelValidation = {
-  "totalCount": 86,
+  "totalCount": 87,
   "baseline": {
-    "accuracy": 0.6163,
-    "brierScore": 0.5416,
+    "accuracy": 0.6092,
+    "brierScore": 0.5493,
     "correctCount": 53
   },
   "live": {
-    "accuracy": 0.6163,
-    "brierScore": 0.5408,
+    "accuracy": 0.6092,
+    "brierScore": 0.5486,
     "correctCount": 53
   },
   "matches": [
@@ -5524,6 +5524,31 @@ const modelValidation = {
       }
     },
     {
+      "t1": "Argentina",
+      "t2": "Cabo Verde",
+      "score": "1-1",
+      "actual": "Draw",
+      "date": "2026-07-03",
+      "baseline": {
+        "predicted": "Argentina",
+        "correct": false,
+        "probs": {
+          "Argentina": 0.727,
+          "Draw": 0.182,
+          "Cabo Verde": 0.091
+        }
+      },
+      "live": {
+        "predicted": "Argentina",
+        "correct": false,
+        "probs": {
+          "Argentina": 0.734,
+          "Draw": 0.178,
+          "Cabo Verde": 0.087
+        }
+      }
+    },
+    {
       "t1": "Australia",
       "t2": "Egypt",
       "score": "1-1",
@@ -5550,4 +5575,4 @@ const modelValidation = {
     }
   ]
 };
-const lastUpdated = "JUL 03";
+const lastUpdated = "JUL 04";
