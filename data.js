@@ -3386,16 +3386,16 @@ const monteCarloResults = [
 ];
 
 const modelValidation = {
-  "totalCount": 88,
+  "totalCount": 89,
   "baseline": {
-    "accuracy": 0.6136,
-    "brierScore": 0.5461,
-    "correctCount": 54
+    "accuracy": 0.618,
+    "brierScore": 0.5445,
+    "correctCount": 55
   },
   "live": {
-    "accuracy": 0.6136,
-    "brierScore": 0.5454,
-    "correctCount": 54
+    "accuracy": 0.618,
+    "brierScore": 0.544,
+    "correctCount": 55
   },
   "matches": [
     {
@@ -5595,6 +5595,31 @@ const modelValidation = {
           "Australia": 0.358,
           "Draw": 0.29,
           "Egypt": 0.352
+        }
+      }
+    },
+    {
+      "t1": "Canada",
+      "t2": "Morocco",
+      "score": "0-3",
+      "actual": "Morocco",
+      "date": "2026-07-04",
+      "baseline": {
+        "predicted": "Morocco",
+        "correct": true,
+        "probs": {
+          "Canada": 0.242,
+          "Draw": 0.275,
+          "Morocco": 0.483
+        }
+      },
+      "live": {
+        "predicted": "Morocco",
+        "correct": true,
+        "probs": {
+          "Canada": 0.25,
+          "Draw": 0.277,
+          "Morocco": 0.473
         }
       }
     }
