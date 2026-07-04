@@ -3386,16 +3386,16 @@ const monteCarloResults = [
 ];
 
 const modelValidation = {
-  "totalCount": 89,
+  "totalCount": 90,
   "baseline": {
-    "accuracy": 0.618,
-    "brierScore": 0.5445,
-    "correctCount": 55
+    "accuracy": 0.6222,
+    "brierScore": 0.5411,
+    "correctCount": 56
   },
   "live": {
-    "accuracy": 0.618,
-    "brierScore": 0.544,
-    "correctCount": 55
+    "accuracy": 0.6222,
+    "brierScore": 0.5405,
+    "correctCount": 56
   },
   "matches": [
     {
@@ -5595,6 +5595,31 @@ const modelValidation = {
           "Australia": 0.358,
           "Draw": 0.29,
           "Egypt": 0.352
+        }
+      }
+    },
+    {
+      "t1": "Paraguay",
+      "t2": "France",
+      "score": "0-1",
+      "actual": "France",
+      "date": "2026-07-04",
+      "baseline": {
+        "predicted": "France",
+        "correct": true,
+        "probs": {
+          "Paraguay": 0.159,
+          "Draw": 0.241,
+          "France": 0.6
+        }
+      },
+      "live": {
+        "predicted": "France",
+        "correct": true,
+        "probs": {
+          "Paraguay": 0.149,
+          "Draw": 0.235,
+          "France": 0.616
         }
       }
     },
