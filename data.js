@@ -3386,16 +3386,16 @@ const monteCarloResults = [
 ];
 
 const modelValidation = {
-  "totalCount": 87,
+  "totalCount": 88,
   "baseline": {
-    "accuracy": 0.6092,
-    "brierScore": 0.5493,
-    "correctCount": 53
+    "accuracy": 0.6136,
+    "brierScore": 0.5461,
+    "correctCount": 54
   },
   "live": {
-    "accuracy": 0.6092,
-    "brierScore": 0.5486,
-    "correctCount": 53
+    "accuracy": 0.6136,
+    "brierScore": 0.5454,
+    "correctCount": 54
   },
   "matches": [
     {
@@ -5545,6 +5545,31 @@ const modelValidation = {
           "Argentina": 0.734,
           "Draw": 0.178,
           "Cabo Verde": 0.087
+        }
+      }
+    },
+    {
+      "t1": "Colombia",
+      "t2": "Ghana",
+      "score": "1-0",
+      "actual": "Colombia",
+      "date": "2026-07-03",
+      "baseline": {
+        "predicted": "Colombia",
+        "correct": true,
+        "probs": {
+          "Colombia": 0.578,
+          "Draw": 0.248,
+          "Ghana": 0.174
+        }
+      },
+      "live": {
+        "predicted": "Colombia",
+        "correct": true,
+        "probs": {
+          "Colombia": 0.581,
+          "Draw": 0.247,
+          "Ghana": 0.172
         }
       }
     },
