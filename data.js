@@ -3386,16 +3386,16 @@ const monteCarloResults = [
 ];
 
 const modelValidation = {
-  "totalCount": 94,
+  "totalCount": 95,
   "baseline": {
-    "accuracy": 0.6277,
-    "brierScore": 0.5456,
-    "correctCount": 59
+    "accuracy": 0.6316,
+    "brierScore": 0.5431,
+    "correctCount": 60
   },
   "live": {
-    "accuracy": 0.6277,
-    "brierScore": 0.5451,
-    "correctCount": 59
+    "accuracy": 0.6316,
+    "brierScore": 0.5425,
+    "correctCount": 60
   },
   "matches": [
     {
@@ -5745,6 +5745,31 @@ const modelValidation = {
           "United States": 0.343,
           "Draw": 0.286,
           "Belgium": 0.371
+        }
+      }
+    },
+    {
+      "t1": "Argentina",
+      "t2": "Egypt",
+      "score": "3-2",
+      "actual": "Argentina",
+      "date": "2026-07-07",
+      "baseline": {
+        "predicted": "Argentina",
+        "correct": true,
+        "probs": {
+          "Argentina": 0.552,
+          "Draw": 0.255,
+          "Egypt": 0.193
+        }
+      },
+      "live": {
+        "predicted": "Argentina",
+        "correct": true,
+        "probs": {
+          "Argentina": 0.558,
+          "Draw": 0.253,
+          "Egypt": 0.189
         }
       }
     }
