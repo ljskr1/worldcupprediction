@@ -3386,16 +3386,16 @@ const monteCarloResults = [
 ];
 
 const modelValidation = {
-  "totalCount": 93,
+  "totalCount": 94,
   "baseline": {
-    "accuracy": 0.6237,
-    "brierScore": 0.5454,
-    "correctCount": 58
+    "accuracy": 0.6277,
+    "brierScore": 0.5456,
+    "correctCount": 59
   },
   "live": {
-    "accuracy": 0.6237,
-    "brierScore": 0.5446,
-    "correctCount": 58
+    "accuracy": 0.6277,
+    "brierScore": 0.5451,
+    "correctCount": 59
   },
   "matches": [
     {
@@ -5722,7 +5722,32 @@ const modelValidation = {
           "Spain": 0.367
         }
       }
+    },
+    {
+      "t1": "United States",
+      "t2": "Belgium",
+      "score": "1-4",
+      "actual": "Belgium",
+      "date": "2026-07-06",
+      "baseline": {
+        "predicted": "Belgium",
+        "correct": true,
+        "probs": {
+          "United States": 0.328,
+          "Draw": 0.285,
+          "Belgium": 0.387
+        }
+      },
+      "live": {
+        "predicted": "Belgium",
+        "correct": true,
+        "probs": {
+          "United States": 0.343,
+          "Draw": 0.286,
+          "Belgium": 0.371
+        }
+      }
     }
   ]
 };
-const lastUpdated = "JUL 06";
+const lastUpdated = "JUL 07";
