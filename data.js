@@ -2648,9 +2648,9 @@ const knockoutStages = {
       "t2": "Spain",
       "winner": "Spain",
       "probs": {
-        "Belgium": 0.456,
+        "Belgium": 0.0,
         "Draw": 0.0,
-        "Spain": 0.544
+        "Spain": 1.0
       },
       "matchNum": 4
     },
@@ -3386,16 +3386,16 @@ const monteCarloResults = [
 ];
 
 const modelValidation = {
-  "totalCount": 97,
+  "totalCount": 98,
   "baseline": {
-    "accuracy": 0.6289,
+    "accuracy": 0.6327,
     "brierScore": 0.5454,
-    "correctCount": 61
+    "correctCount": 62
   },
   "live": {
-    "accuracy": 0.6289,
-    "brierScore": 0.5444,
-    "correctCount": 61
+    "accuracy": 0.6327,
+    "brierScore": 0.5443,
+    "correctCount": 62
   },
   "matches": [
     {
@@ -5820,6 +5820,31 @@ const modelValidation = {
           "France": 0.41,
           "Draw": 0.293,
           "Morocco": 0.298
+        }
+      }
+    },
+    {
+      "t1": "Spain",
+      "t2": "Belgium",
+      "score": "2-1",
+      "actual": "Spain",
+      "date": "2026-07-10",
+      "baseline": {
+        "predicted": "Spain",
+        "correct": true,
+        "probs": {
+          "Spain": 0.393,
+          "Draw": 0.287,
+          "Belgium": 0.32
+        }
+      },
+      "live": {
+        "predicted": "Spain",
+        "correct": true,
+        "probs": {
+          "Spain": 0.407,
+          "Draw": 0.286,
+          "Belgium": 0.307
         }
       }
     }
