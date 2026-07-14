@@ -3386,15 +3386,15 @@ const monteCarloResults = [
 ];
 
 const modelValidation = {
-  "totalCount": 100,
+  "totalCount": 101,
   "baseline": {
-    "accuracy": 0.62,
-    "brierScore": 0.5514,
+    "accuracy": 0.6139,
+    "brierScore": 0.5525,
     "correctCount": 62
   },
   "live": {
-    "accuracy": 0.62,
-    "brierScore": 0.5501,
+    "accuracy": 0.6139,
+    "brierScore": 0.5513,
     "correctCount": 62
   },
   "matches": [
@@ -5895,6 +5895,31 @@ const modelValidation = {
           "Argentina": 0.477,
           "Draw": 0.278,
           "Switzerland": 0.245
+        }
+      }
+    },
+    {
+      "t1": "France",
+      "t2": "Spain",
+      "score": "0-2",
+      "actual": "Spain",
+      "date": "2026-07-14",
+      "baseline": {
+        "predicted": "France",
+        "correct": false,
+        "probs": {
+          "France": 0.369,
+          "Draw": 0.291,
+          "Spain": 0.341
+        }
+      },
+      "live": {
+        "predicted": "France",
+        "correct": false,
+        "probs": {
+          "France": 0.376,
+          "Draw": 0.29,
+          "Spain": 0.334
         }
       }
     }
