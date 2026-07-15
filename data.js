@@ -2727,9 +2727,9 @@ const knockoutStages = {
       "t2": "England",
       "winner": "Argentina",
       "probs": {
-        "Argentina": 0.546,
+        "Argentina": 1.0,
         "Draw": 0.0,
-        "England": 0.454
+        "England": 0.0
       },
       "matchNum": 3
     },
@@ -3386,16 +3386,16 @@ const monteCarloResults = [
 ];
 
 const modelValidation = {
-  "totalCount": 101,
+  "totalCount": 102,
   "baseline": {
-    "accuracy": 0.6139,
+    "accuracy": 0.6176,
     "brierScore": 0.5525,
-    "correctCount": 62
+    "correctCount": 63
   },
   "live": {
-    "accuracy": 0.6139,
-    "brierScore": 0.5513,
-    "correctCount": 62
+    "accuracy": 0.6176,
+    "brierScore": 0.5515,
+    "correctCount": 63
   },
   "matches": [
     {
@@ -5920,6 +5920,31 @@ const modelValidation = {
           "France": 0.376,
           "Draw": 0.29,
           "Spain": 0.334
+        }
+      }
+    },
+    {
+      "t1": "England",
+      "t2": "Argentina",
+      "score": "1-2",
+      "actual": "Argentina",
+      "date": "2026-07-15",
+      "baseline": {
+        "predicted": "Argentina",
+        "correct": true,
+        "probs": {
+          "England": 0.32,
+          "Draw": 0.285,
+          "Argentina": 0.395
+        }
+      },
+      "live": {
+        "predicted": "Argentina",
+        "correct": true,
+        "probs": {
+          "England": 0.332,
+          "Draw": 0.286,
+          "Argentina": 0.382
         }
       }
     }
